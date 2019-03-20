@@ -160,9 +160,11 @@ MonoBehaviour:
   dipSpeed: 2
   balanceAngle: -4
   accelRatio: 3
-  timeToBarrel: 2
+  maxTurningAngle: 0
   display: {fileID: 0}
   currentSpeed: 0
+  yaw: 0
+  pitch: 0
 --- !u!1 &2026526095
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,3 +268,4 @@ MonoBehaviour:
   cameraHeight: 0.2
   maxFOV: 110
   minFOV: 50
+  offsetAngle: 90

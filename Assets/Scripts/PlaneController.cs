@@ -28,6 +28,9 @@ namespace POTM
         private CameraController cam;
         private MeshRenderer planeMesh;
 
+        [HideInInspector] public float yaw;
+        [HideInInspector] public float pitch;
+
         private float pitchAngle;
         private bool right = false,
             left = false;
@@ -53,8 +56,8 @@ namespace POTM
         void FixedUpdate()
         {
             //Get controls
-            float yaw = Input.GetAxis("Horizontal");
-            float pitch = Input.GetAxis("Vertical");
+            yaw = Input.GetAxis("Horizontal");
+            pitch = Input.GetAxis("Vertical");
 
 
             //Move bcack to horizontal, turn, and go back
@@ -64,12 +67,6 @@ namespace POTM
                 transform.Rotate(new Vector3(-currentRotation, 0, 0));
                 transform.Rotate(new Vector3(0, yaw * turnSpeed, 0));
                 transform.Rotate(new Vector3(currentRotation, 0, 0));
-
-                //turn the model To the left or right (barrel roll)
-
-                /***********
-                 * ADAPT TO JOYSTICK (intermediate turning)
-                 * *********/
 
                 if (yaw > 0)
                 {
@@ -91,6 +88,10 @@ namespace POTM
                         rollStartAngle = planeMesh.transform.rotation.eulerAngles.z;
                         right = false;
                     }
+                    if (!left)
+                    {
+                     //   cam.LeftOffset(yaw);
+                    }
                     resetRoll();
                     planeMesh.transform.Rotate(new Vector3(0, 0, yaw * maxTurningAngle));
                     //cam.LeftOffset();
@@ -98,10 +99,7 @@ namespace POTM
                 }
             }
             else
-
             {
-                cam.ResetOffset();
-
                 if (right)
                 {
                     resetRoll();
@@ -143,7 +141,7 @@ namespace POTM
             //Get plane's angle to set it's acceleration
             pitchAngle = transform.rotation.eulerAngles.x;
             if (pitchAngle > 200) pitchAngle -= 360;
-            //Normaalize
+            //Normalize
             pitchAngle /= 90;
 
             //Calculate its acceleration
@@ -163,7 +161,7 @@ namespace POTM
 
         public void updateDisplay()
         {
-            display.text = "Speed : " + currentSpeed + "\nAngle : " + pitchAngle + "\n Roll angle : " + rollStartAngle ;
+            display.text = "PLANE\nSpeed : " + currentSpeed + "\nAngle : " + pitchAngle + "\n Roll angle : " + rollStartAngle ;
         }
 
         public void resetRoll()

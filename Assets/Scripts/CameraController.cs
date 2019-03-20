@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace POTM
 {
@@ -21,9 +22,18 @@ namespace POTM
 
         [Tooltip("Max and min FOV. Fov will be calculated by your speed / acceleration / environment")]
         public float maxFOV, minFOV;
+        [Tooltip("Max offset angle of the camera for up and down")]
+        public float pitchOffsetAngle;
+        [Tooltip("The max angle of the camera while turning")]
+        public float yawOffsetAngle;
+
+        public Text display;
 
         private Camera cam;
         private bool isTurningRight = false, isTurningLeft = false;
+        private float speedDiff;
+        private float distDiff;
+        private float diffFov;
 
         // Start is called before the first frame update
         void Start()
@@ -32,68 +42,40 @@ namespace POTM
             transform.position = player.transform.position + (-player.transform.forward * baseDistanceFromPlayer);
             transform.position += player.transform.up * cameraHeight;
             transform.Rotate(new Vector3(cameraAngle, 0, 0));
+
+            speedDiff = player.maxSpeed - player.minSpeed;
+            distDiff = maxDist - minDist;
+            diffFov = maxFOV - minFOV;
         }
 
         // Update is called once per frame
         void FixedUpdate()
         {
-            float speedDiff = player.maxSpeed - player.minSpeed;
-            float distDiff = maxDist - minDist;
-            float diffFov = maxFOV - minFOV;
             float additionalDist = (player.currentSpeed * distDiff) / speedDiff;
             float additionalFOV = (player.currentSpeed * diffFov) / speedDiff;
             
             //Change camera distance + reset height
             transform.position = (player.transform.position + -player.transform.forward * (minDist + additionalDist) + player.transform.up * cameraHeight);
 
+            transform.rotation = Quaternion.Euler(new Vector3(cameraAngle + player.transform.rotation.eulerAngles.x + (player.pitch * pitchOffsetAngle), (player.yaw*yawOffsetAngle) + player.transform.rotation.eulerAngles.y, player.transform.rotation.eulerAngles.z ));
+
+            transform.RotateAround(player.transform.position, player.transform.right, player.pitch * pitchOffsetAngle);
+            transform.RotateAround(player.transform.position, Vector3.up, player.yaw * yawOffsetAngle);
+
             //Set FOV according to speed
             cam.fieldOfView = minFOV + additionalFOV;
+
+            updateDisplay();
         }
 
-        public void RightOffset()
+        public void resetRotation()
         {
-
-            /// /!\
-            /// Add boolean in PlaneController to use as an event
-            /// This is done on top of the turning in plane controller
-
-            if (!isTurningRight)
-            {
-                transform.Rotate(new Vector3(-cameraAngle, 0, 0));
-                transform.Rotate(new Vector3(0, 5, 0));
-                transform.Rotate(new Vector3(cameraAngle, 0, 0));
-                isTurningRight = true;
-            }
+            transform.rotation = Quaternion.Euler(new Vector3(player.transform.rotation.eulerAngles.x + cameraAngle, player.transform.rotation.eulerAngles.y, 0));
         }
 
-        public void LeftOffset()
+        public void updateDisplay()
         {
-            if (!isTurningLeft)
-            {
-                transform.Rotate(new Vector3(-cameraAngle, 0, 0));
-                transform.Rotate(new Vector3(0, -5, 0));
-                transform.Rotate(new Vector3(cameraAngle, 0, 0));
-                isTurningLeft = true;
-            }
+            display.text = "CAMERA\ncamera offset angle yaw : " + player.yaw * yawOffsetAngle + "\n pitch angle : " + player.pitch * pitchOffsetAngle;
         }
-
-        public void ResetOffset()
-        {
-            if (isTurningLeft)
-            {
-                transform.Rotate(new Vector3(-cameraAngle, 0, 0));
-                transform.Rotate(new Vector3(0, 5, 0));
-                transform.Rotate(new Vector3(cameraAngle, 0, 0));
-                isTurningLeft = false;
-            }
-            if(isTurningRight)
-            {
-                transform.Rotate(new Vector3(-cameraAngle, 0, 0));
-                transform.Rotate(new Vector3(0, -5, 0));
-                transform.Rotate(new Vector3(cameraAngle, 0, 0));
-                isTurningRight = false;
-            }
-        }
-
     }
 }
