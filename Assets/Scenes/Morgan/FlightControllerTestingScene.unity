@@ -237,6 +237,10 @@ PrefabInstance:
       propertyPath: display
       value: 
       objectReference: {fileID: 1755251254}
+    - target: {fileID: 1784855988, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
+      propertyPath: maxTurningAngle
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 1046660599, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
@@ -244,10 +248,6 @@ PrefabInstance:
     - target: {fileID: 1046660599, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 2026526099, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
-      propertyPath: maxDist
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}

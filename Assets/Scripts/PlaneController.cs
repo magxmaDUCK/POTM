@@ -15,10 +15,10 @@ namespace POTM
         public float dipSpeed;
         [Tooltip("Angle at which the plane stays at a constant speed")]
         public float balanceAngle;
-        [Tooltip("How fast the plane accelerates")]
+        [Tooltip("How fast the plane accelerates (gravity strength)")]
         public float accelRatio;
-        [Tooltip("How long it takes for the turning animation to be complete")]
-        public float timeToBarrel;
+        [Tooltip("Max angle when turning. has to be lower than 90")]
+        public float maxTurningAngle;
 
         [Tooltip("UI for info")]
         public Text display;
@@ -43,6 +43,10 @@ namespace POTM
             planeMesh = GetComponentInChildren<MeshRenderer>();
             currentSpeed = (maxSpeed + minSpeed) / 2;
             planeRB.velocity = transform.forward * maxSpeed;
+            if(maxTurningAngle >= 90)
+            {
+                maxTurningAngle = 89;
+            }
         }
 
         // Update is called once per frame
@@ -71,10 +75,11 @@ namespace POTM
                 {
                     if (left)
                     {
+                        rollStartAngle = planeMesh.transform.rotation.eulerAngles.z;
                         left = false;
                     }
                     resetRoll();
-                    planeMesh.transform.Rotate(new Vector3(0, 0, yaw * 33));
+                    planeMesh.transform.Rotate(new Vector3(0, 0, yaw * maxTurningAngle));
                     //cam.RightOffset();
                     right = true;
                 }
@@ -83,10 +88,11 @@ namespace POTM
                 {
                     if (right)
                     {
+                        rollStartAngle = planeMesh.transform.rotation.eulerAngles.z;
                         right = false;
                     }
                     resetRoll();
-                    planeMesh.transform.Rotate(new Vector3(0, 0, yaw * 33));
+                    planeMesh.transform.Rotate(new Vector3(0, 0, yaw * maxTurningAngle));
                     //cam.LeftOffset();
                     left = true;
                 }
