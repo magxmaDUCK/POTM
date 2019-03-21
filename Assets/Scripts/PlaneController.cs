@@ -156,7 +156,8 @@ namespace POTM
             planeRB.velocity = transform.forward * currentSpeed;
 
             //Change camera to look where you are turning
-            
+            //Set le RTPC de vitesse Wwise
+            AkSoundEngine.SetRTPCValue("Speed", currentSpeed);
         }
 
         public void updateDisplay()
