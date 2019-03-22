@@ -13,30 +13,27 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAY_TESTEVENT = 2351864238U;
+        static const AkUniqueID PLAY_AMBOCEAN = 1570489620U;
+        static const AkUniqueID PLAY_SS_WIND = 39205609U;
+        static const AkUniqueID PLAY_WATERFALL = 467174588U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID DOPPLER = 4247512087U;
         static const AkUniqueID PLAYBACK_RATE = 1524500807U;
         static const AkUniqueID RPM = 796049864U;
-        static const AkUniqueID SPEED = 640949982U;
-        static const AkUniqueID SS_AIR_FEAR = 1351367891U;
-        static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
-        static const AkUniqueID SS_AIR_FURY = 1029930033U;
-        static const AkUniqueID SS_AIR_MONTH = 2648548617U;
-        static const AkUniqueID SS_AIR_PRESENCE = 3847924954U;
-        static const AkUniqueID SS_AIR_RPM = 822163944U;
-        static const AkUniqueID SS_AIR_SIZE = 3074696722U;
-        static const AkUniqueID SS_AIR_STORM = 3715662592U;
-        static const AkUniqueID SS_AIR_TIMEOFDAY = 3203397129U;
-        static const AkUniqueID SS_AIR_TURBULENCE = 4160247818U;
+        static const AkUniqueID RTPC_DISTANCE = 262290038U;
+        static const AkUniqueID WIND_MOVE = 1191899237U;
+        static const AkUniqueID WIND_PITCH = 2818241024U;
+        static const AkUniqueID WIND_SPEED = 3110594711U;
+        static const AkUniqueID WIND_YAW = 4252835159U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID TESTSOUNDBANK = 1831431028U;
+        static const AkUniqueID POTM = 1575124651U;
     } // namespace BANKS
 
     namespace BUSSES

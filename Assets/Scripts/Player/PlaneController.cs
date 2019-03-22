@@ -63,8 +63,17 @@ namespace POTM
         {
             //Get controls
             yaw = Input.GetAxis("Horizontal");
+            AkSoundEngine.SetRTPCValue("Wind_Yaw", yaw);
             pitch = Input.GetAxis("Vertical");
-
+            AkSoundEngine.SetRTPCValue("Wind_Pitch", pitch);
+            if (Mathf.Abs(yaw) > Mathf.Abs(pitch))
+            {
+                AkSoundEngine.SetRTPCValue("Wind_Move", yaw);
+            }
+            else
+            {
+                AkSoundEngine.SetRTPCValue("Wind_Move", pitch);
+            }
 
             //Move bcack to horizontal, turn, and go back
             if (yaw != 0)
@@ -163,7 +172,7 @@ namespace POTM
 
             //Change camera to look where you are turning
             //Set le RTPC de vitesse Wwise
-            AkSoundEngine.SetRTPCValue("Speed", currentSpeed);
+            AkSoundEngine.SetRTPCValue("Wind_Speed", currentSpeed);
         }
 
         public void updateDisplay()
