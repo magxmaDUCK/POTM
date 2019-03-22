@@ -2,24 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightCollectible : MonoBehaviour
+namespace POTM
 {
-    // Start is called before the first frame update
-    void Start()
+    public class LightCollectible : MonoBehaviour
     {
-        
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        }
 
-    void turnOff()
-    {
-        
-        //destroy this script
-        Destroy(this);
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+
+        public void turnOff()
+        {
+
+            //destroy this script
+            Destroy(this);
+        }
     }
 }

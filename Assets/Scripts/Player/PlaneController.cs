@@ -27,6 +27,7 @@ namespace POTM
         [HideInInspector]public float currentSpeed;
         private CameraController cam;
         private MeshRenderer planeMesh;
+        private SphereCollider triggerZone;
 
         [HideInInspector] public float yaw;
         [HideInInspector] public float pitch;
@@ -37,6 +38,9 @@ namespace POTM
 
         private float lerpLength;
         private float rollStartAngle;
+
+        //score is the number of stars
+        private int score = 0;
 
         // Start is called before the first frame update
         void Start()
@@ -50,6 +54,8 @@ namespace POTM
             {
                 maxTurningAngle = 89;
             }
+
+            triggerZone = GetComponent<SphereCollider>();
         }
 
         // Update is called once per frame
@@ -168,6 +174,17 @@ namespace POTM
         public void resetRoll()
         {
             planeMesh.transform.rotation = Quaternion.Euler(planeMesh.transform.rotation.eulerAngles.x, planeMesh.transform.rotation.eulerAngles.y, 0);
+        }
+
+        //Add a big trigger collider around the plane, for light detection and pickups.
+        private void OnTriggerEnter(Collider other)
+        {
+            LightCollectible light = other.gameObject.GetComponent<LightCollectible>();
+            if(light != null)
+            {
+                score++;
+                light.turnOff();
+            }
         }
     }
 }
