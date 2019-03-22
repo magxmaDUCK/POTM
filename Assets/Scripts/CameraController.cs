@@ -35,6 +35,9 @@ namespace POTM
         private float distDiff;
         private float diffFov;
 
+        private float perlinX = 1f;
+        private float perlinY = 1f;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -53,9 +56,9 @@ namespace POTM
         {
             float additionalDist = (player.currentSpeed * distDiff) / speedDiff;
             float additionalFOV = (player.currentSpeed * diffFov) / speedDiff;
-            
+
             //Change camera distance + reset height
-            transform.position = (player.transform.position + -player.transform.forward * (minDist + additionalDist) + player.transform.up * cameraHeight);
+            transform.position = (player.transform.position + -player.transform.forward * (minDist + additionalDist) + player.transform.up * cameraHeight) + CameraShake();
 
             transform.rotation = Quaternion.Euler(new Vector3(cameraAngle + player.transform.rotation.eulerAngles.x + (player.pitch * pitchOffsetAngle), (player.yaw*yawOffsetAngle) + player.transform.rotation.eulerAngles.y, player.transform.rotation.eulerAngles.z ));
 
@@ -65,17 +68,23 @@ namespace POTM
             //Set FOV according to speed
             cam.fieldOfView = minFOV + additionalFOV;
 
-            updateDisplay();
+            UpdateDisplay();
         }
 
-        public void resetRotation()
+        public void ResetRotation()
         {
             transform.rotation = Quaternion.Euler(new Vector3(player.transform.rotation.eulerAngles.x + cameraAngle, player.transform.rotation.eulerAngles.y, 0));
         }
 
-        public void updateDisplay()
+        public void UpdateDisplay()
         {
             display.text = "CAMERA\ncamera offset angle yaw : " + player.yaw * yawOffsetAngle + "\n pitch angle : " + player.pitch * pitchOffsetAngle;
+        }
+
+        public Vector3 CameraShake()
+        {
+            float perlinValue = Mathf.PerlinNoise(Time.time * perlinX, Time.time * perlinY) - 0.5f;
+            return new Vector3(perlinValue * 0.01f, perlinValue * 0.01f, 0);
         }
     }
 }
