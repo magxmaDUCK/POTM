@@ -56,11 +56,12 @@ namespace POTM
         {
             float additionalDist = (player.currentSpeed * distDiff) / speedDiff;
             float additionalFOV = (player.currentSpeed * diffFov) / speedDiff;
+            Vector3 playerRot = player.transform.rotation.eulerAngles;
 
             //Change camera distance + reset height
             transform.position = (player.transform.position + -player.transform.forward * (minDist + additionalDist) + player.transform.up * cameraHeight) + CameraShake();
 
-            transform.rotation = Quaternion.Euler(new Vector3(cameraAngle + player.transform.rotation.eulerAngles.x + (player.pitch * pitchOffsetAngle), (player.yaw*yawOffsetAngle) + player.transform.rotation.eulerAngles.y, player.transform.rotation.eulerAngles.z ));
+            transform.rotation = Quaternion.Euler(new Vector3(cameraAngle + playerRot.x + (player.pitch * pitchOffsetAngle), (player.yaw*yawOffsetAngle) + playerRot.y, playerRot.z ));
 
             transform.RotateAround(player.transform.position, player.transform.right, player.pitch * pitchOffsetAngle);
             transform.RotateAround(player.transform.position, Vector3.up, player.yaw * yawOffsetAngle);
