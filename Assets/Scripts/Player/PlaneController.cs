@@ -14,8 +14,10 @@ namespace POTM
         [Tooltip("Speed at which the plane changes it pitchs")]
         public float dipSpeed;
         [Tooltip("Angle at which the plane stays at a constant speed")]
+        [Range(-90, 90)]
         public float balanceAngle;
-        [Tooltip("The offset from the balanced angle so that the plane doesn't aim for it's average speed, from 0 - 1")]
+        [Tooltip("The offset from the balanced angle so that the plane doesn't aim for it's average speed, from 0 - 90")]
+        [Range(0, 90)]
         public float balanceDeadZone;
         [Tooltip("The average speed the plane will aim for at balanced angles")]
         public float cruisingSpeed;
@@ -24,10 +26,15 @@ namespace POTM
         [Tooltip("How fast the plane slows down to go to cruising speed")]
         public float decelRatio;
         [Tooltip("Max angle when turning. has to be lower than 90")]
+        [Range(0, 90)]
         public float maxTurningAngle;
 
         [Tooltip("UI for info")]
         public Text display;
+
+        public bool newControls = false;
+        
+        public float yawTurningSpeed;
 
         private Rigidbody planeRB;
         [HideInInspector]public float currentSpeed;
@@ -42,8 +49,15 @@ namespace POTM
         private bool right = false,
             left = false;
 
+        private float planeYaw = 0;
+
         private float lerpLength;
         private float rollStartAngle;
+
+
+        private const float MinSpeed = 5;
+        private const float MaxSpeed = 25;
+
 
         //score is the number of stars
         private int score = 0;
@@ -72,65 +86,14 @@ namespace POTM
             AkSoundEngine.SetRTPCValue("Wind_Yaw", yaw);
             pitch = Input.GetAxis("Vertical");
             AkSoundEngine.SetRTPCValue("Wind_Pitch", pitch);
-            if (Mathf.Abs(yaw) > Mathf.Abs(pitch))
+
+            if (!newControls)
             {
-                AkSoundEngine.SetRTPCValue("Wind_Move", yaw);
+                Turning1();
             }
             else
             {
-                AkSoundEngine.SetRTPCValue("Wind_Move", pitch);
-            }
-
-            //Move bcack to horizontal, turn, and go back
-            if (yaw != 0)
-            {
-                float currentRotation = transform.rotation.eulerAngles.x;
-                transform.Rotate(new Vector3(-currentRotation, 0, 0));
-                transform.Rotate(new Vector3(0, yaw * turnSpeed, 0));
-                transform.Rotate(new Vector3(currentRotation, 0, 0));
-
-                if (yaw > 0)
-                {
-                    if (left)
-                    {
-                        rollStartAngle = planeMesh.transform.rotation.eulerAngles.z;
-                        left = false;
-                    }
-                    resetRoll();
-                    planeMesh.transform.Rotate(new Vector3(0, 0, yaw * maxTurningAngle));
-                    //cam.RightOffset();
-                    right = true;
-                }
-
-                if (yaw < 0)
-                {
-                    if (right)
-                    {
-                        rollStartAngle = planeMesh.transform.rotation.eulerAngles.z;
-                        right = false;
-                    }
-                    if (!left)
-                    {
-                     //   cam.LeftOffset(yaw);
-                    }
-                    resetRoll();
-                    planeMesh.transform.Rotate(new Vector3(0, 0, yaw * maxTurningAngle));
-                    //cam.LeftOffset();
-                    left = true;
-                }
-            }
-            else
-            {
-                if (right)
-                {
-                    resetRoll();
-                    right = false;
-                }
-                if (left)
-                {
-                    resetRoll();
-                    left = false;
-                }
+                Turning2();
             }
 
             //Down
@@ -226,6 +189,111 @@ namespace POTM
             {
                 score++;
                 light.turnOff();
+            }
+        }
+
+        private void Turning1()
+        {
+            if (Mathf.Abs(yaw) > Mathf.Abs(pitch))
+            {
+                AkSoundEngine.SetRTPCValue("Wind_Move", yaw);
+            }
+            else
+            {
+                AkSoundEngine.SetRTPCValue("Wind_Move", pitch);
+            }
+
+            //Move bcack to horizontal, turn, and go back
+            if (yaw != 0)
+            {
+                float currentRotation = transform.rotation.eulerAngles.x;
+                transform.Rotate(new Vector3(-currentRotation, 0, 0));
+                transform.Rotate(new Vector3(0, yaw * turnSpeed, 0));
+                transform.Rotate(new Vector3(currentRotation, 0, 0));
+
+                if (yaw > 0)
+                {
+                    if (left)
+                    {
+                        rollStartAngle = planeMesh.transform.rotation.eulerAngles.z;
+                        left = false;
+                    }
+                    resetRoll();
+                    planeMesh.transform.Rotate(new Vector3(0, 0, yaw * maxTurningAngle));
+                    right = true;
+                }
+
+                if (yaw < 0)
+                {
+                    if (right)
+                    {
+                        rollStartAngle = planeMesh.transform.rotation.eulerAngles.z;
+                        right = false;
+                    }
+                    resetRoll();
+                    planeMesh.transform.Rotate(new Vector3(0, 0, yaw * maxTurningAngle));
+                    left = true;
+                }
+            }
+            else
+            {
+                if (right)
+                {
+                    resetRoll();
+                    right = false;
+                }
+                if (left)
+                {
+                    resetRoll();
+                    left = false;
+                }
+            }
+        }
+
+        private void Turning2()
+        {
+            if (Mathf.Abs(planeYaw) > Mathf.Abs(pitch))
+            {
+                AkSoundEngine.SetRTPCValue("Wind_Move", yaw);
+            }
+            else
+            {
+                AkSoundEngine.SetRTPCValue("Wind_Move", pitch);
+            }
+
+
+            if(planeYaw < yaw + 0.05f && planeYaw > yaw - 0.05f)
+            {
+                planeYaw = yaw;
+            }
+            else if (planeYaw < yaw)
+            {
+                planeYaw += yawTurningSpeed * Time.deltaTime;
+            }
+            else
+            {
+                planeYaw -= yawTurningSpeed * Time.deltaTime;
+            }
+
+            float currentRotation = transform.rotation.eulerAngles.x;
+            transform.Rotate(new Vector3(-currentRotation, 0, 0));
+            transform.Rotate(new Vector3(0, planeYaw * turnSpeed, 0));
+            transform.Rotate(new Vector3(currentRotation, 0, 0));
+
+            resetRoll();
+            planeMesh.transform.Rotate(new Vector3(0, 0, planeYaw * maxTurningAngle));
+        }
+
+        [ExecuteInEditMode]
+        private void OnValidate()
+        {
+            if(cruisingSpeed < minSpeed)
+            {
+                cruisingSpeed = minSpeed;
+            }
+            if(cruisingSpeed > maxSpeed)
+            {
+                cruisingSpeed = maxSpeed;
             }
         }
     }

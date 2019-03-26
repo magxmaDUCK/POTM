@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 namespace POTM
 {
@@ -21,13 +22,20 @@ namespace POTM
         public float cameraHeight;
 
         [Tooltip("Max and min FOV. Fov will be calculated by your speed / acceleration / environment")]
+        [HideInInspector]
         public float maxFOV, minFOV;
         [Tooltip("Max offset angle of the camera for up and down")]
         public float pitchOffsetAngle;
         [Tooltip("The max angle of the camera while turning")]
         public float yawOffsetAngle;
 
+        [Tooltip("Where the camera is looking at")]
+        public GameObject target;
+
         public Text display;
+
+        [Tooltip("Use target camera type")]
+        public bool target_cam = false;
 
         private Camera cam;
         private bool isTurningRight = false, isTurningLeft = false;
