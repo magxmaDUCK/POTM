@@ -46,6 +46,11 @@ namespace POTM
         private float perlinX = 1f;
         private float perlinY = 1f;
 
+        private float camYaw = 0;
+        private float camPitch = 0;
+        //Make a lerp like behavior with the two variables above
+
+
         // Start is called before the first frame update
         void Start()
         {

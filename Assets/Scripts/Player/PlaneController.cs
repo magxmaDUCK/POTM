@@ -269,10 +269,12 @@ namespace POTM
             else if (planeYaw < yaw)
             {
                 planeYaw += yawTurningSpeed * Time.deltaTime;
+                if (planeYaw > yaw) planeYaw = yaw;
             }
             else
             {
                 planeYaw -= yawTurningSpeed * Time.deltaTime;
+                if (planeYaw < yaw) planeYaw = yaw;
             }
 
             float currentRotation = transform.rotation.eulerAngles.x;
