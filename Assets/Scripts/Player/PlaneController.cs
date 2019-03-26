@@ -49,7 +49,7 @@ namespace POTM
         private bool right = false,
             left = false;
 
-        private float planeYaw = 0;
+        [HideInInspector]public float planeYaw = 0;
 
         private float lerpLength;
         private float rollStartAngle;

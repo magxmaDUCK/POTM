@@ -74,10 +74,10 @@ namespace POTM
             //Change camera distance + reset height
             transform.position = (player.transform.position + -player.transform.forward * (minDist + additionalDist) + player.transform.up * cameraHeight) + CameraShake();
 
-            transform.rotation = Quaternion.Euler(new Vector3(cameraAngle + playerRot.x + (player.pitch * pitchOffsetAngle), (player.yaw*yawOffsetAngle) + playerRot.y, playerRot.z ));
+            transform.rotation = Quaternion.Euler(new Vector3(cameraAngle + playerRot.x + (player.pitch * pitchOffsetAngle), (player.planeYaw*yawOffsetAngle) + playerRot.y, playerRot.z ));
 
             transform.RotateAround(player.transform.position, player.transform.right, player.pitch * pitchOffsetAngle);
-            transform.RotateAround(player.transform.position, Vector3.up, player.yaw * yawOffsetAngle);
+            transform.RotateAround(player.transform.position, Vector3.up, player.planeYaw * yawOffsetAngle);
 
             //Set FOV according to speed
             cam.fieldOfView = minFOV + additionalFOV;
