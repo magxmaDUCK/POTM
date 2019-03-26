@@ -15,8 +15,14 @@ namespace POTM
         public float dipSpeed;
         [Tooltip("Angle at which the plane stays at a constant speed")]
         public float balanceAngle;
+        [Tooltip("The offset from the balanced angle so that the plane doesn't aim for it's average speed, from 0 - 1")]
+        public float balanceDeadZone;
+        [Tooltip("The average speed the plane will aim for at balanced angles")]
+        public float cruisingSpeed;
         [Tooltip("How fast the plane accelerates (gravity strength)")]
         public float accelRatio;
+        [Tooltip("How fast the plane slows down to go to cruising speed")]
+        public float decelRatio;
         [Tooltip("Max angle when turning. has to be lower than 90")]
         public float maxTurningAngle;
 
@@ -155,13 +161,40 @@ namespace POTM
         {
             //Get plane's angle to set it's acceleration
             pitchAngle = transform.rotation.eulerAngles.x;
-            if (pitchAngle > 200) pitchAngle -= 360;
+            if (pitchAngle > 200) pitchAngle -= 360f;
             //Normalize
+            pitchAngle += balanceAngle;
             pitchAngle /= 90;
 
+            if (pitchAngle > 1.0f) pitchAngle = 1.0f;
+            else if (pitchAngle < -1.0f) pitchAngle = -1.0f;
+
+            float speedVariation;
             //Calculate its acceleration
-            float speedVariation = pitchAngle * accelRatio * Time.deltaTime;
-            if (pitchAngle < 0) speedVariation *= 0.8f;
+            if (pitchAngle < (balanceAngle - balanceDeadZone)/90f || pitchAngle > (balanceAngle + balanceDeadZone)/90f)
+            {
+                //Not in cruising speed pos
+                speedVariation = pitchAngle * accelRatio * Time.deltaTime;
+                if (pitchAngle < balanceAngle) speedVariation += -2f * Time.deltaTime;
+            }
+            else
+            {
+                //Aim towards cruising speed
+                if(currentSpeed > cruisingSpeed - 0.1f && currentSpeed < cruisingSpeed + 0.1f)
+                {
+                    currentSpeed = cruisingSpeed;
+                    speedVariation = 0;
+                }
+                else if(currentSpeed > cruisingSpeed)
+                {
+                    speedVariation = - decelRatio * Time.deltaTime;
+                }
+                else
+                {
+                    speedVariation = decelRatio * Time.deltaTime;
+                }
+            }
+
             currentSpeed += speedVariation;
 
             //Speed limits
