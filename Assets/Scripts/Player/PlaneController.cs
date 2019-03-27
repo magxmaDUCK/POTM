@@ -138,7 +138,7 @@ namespace POTM
             {
                 //Not in cruising speed pos
                 speedVariation = pitchAngle * accelRatio * Time.deltaTime;
-                if (pitchAngle < balanceAngle) speedVariation += -2f * Time.deltaTime;
+                if (pitchAngle < balanceAngle) speedVariation += -2f * pitch * Time.deltaTime;
             }
             else
             {
