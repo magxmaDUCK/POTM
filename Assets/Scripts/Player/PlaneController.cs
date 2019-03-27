@@ -40,7 +40,7 @@ namespace POTM
         [HideInInspector]public float currentSpeed;
         private CameraController cam;
         private MeshRenderer planeMesh;
-        private SphereCollider triggerZone;
+        private CapsuleCollider planeCollider;
 
         [HideInInspector] public float yaw;
         [HideInInspector] public float pitch;
@@ -74,8 +74,8 @@ namespace POTM
             {
                 maxTurningAngle = 89;
             }
-
-            triggerZone = GetComponent<SphereCollider>();
+            
+            planeCollider = GetComponent<CapsuleCollider>();
         }
 
         // Update is called once per frame
@@ -179,17 +179,6 @@ namespace POTM
         public void resetRoll()
         {
             planeMesh.transform.rotation = Quaternion.Euler(planeMesh.transform.rotation.eulerAngles.x, planeMesh.transform.rotation.eulerAngles.y, 0);
-        }
-
-        //Add a big trigger collider around the plane, for light detection and pickups.
-        private void OnTriggerEnter(Collider other)
-        {
-            LightCollectible light = other.gameObject.GetComponent<LightCollectible>();
-            if(light != null)
-            {
-                score++;
-                light.turnOff();
-            }
         }
 
         private void Turning1()
@@ -297,6 +286,11 @@ namespace POTM
             {
                 cruisingSpeed = maxSpeed;
             }
+        }
+
+        private void OnTriggerEnter(Collider collision)
+        {
+            transform.position += new Vector3(0, 100, 0);
         }
     }
 }
