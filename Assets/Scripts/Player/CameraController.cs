@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 namespace POTM
 {
@@ -21,13 +22,20 @@ namespace POTM
         public float cameraHeight;
 
         [Tooltip("Max and min FOV. Fov will be calculated by your speed / acceleration / environment")]
+        [HideInInspector]
         public float maxFOV, minFOV;
         [Tooltip("Max offset angle of the camera for up and down")]
         public float pitchOffsetAngle;
         [Tooltip("The max angle of the camera while turning")]
         public float yawOffsetAngle;
 
+        [Tooltip("Where the camera is looking at")]
+        public GameObject target;
+
         public Text display;
+
+        [Tooltip("Use target camera type")]
+        public bool target_cam = false;
 
         private Camera cam;
         private bool isTurningRight = false, isTurningLeft = false;
@@ -37,6 +45,11 @@ namespace POTM
 
         private float perlinX = 1f;
         private float perlinY = 1f;
+
+        private float camYaw = 0;
+        private float camPitch = 0;
+        //Make a lerp like behavior with the two variables above
+
 
         // Start is called before the first frame update
         void Start()
@@ -61,10 +74,10 @@ namespace POTM
             //Change camera distance + reset height
             transform.position = (player.transform.position + -player.transform.forward * (minDist + additionalDist) + player.transform.up * cameraHeight) + CameraShake();
 
-            transform.rotation = Quaternion.Euler(new Vector3(cameraAngle + playerRot.x + (player.pitch * pitchOffsetAngle), (player.yaw*yawOffsetAngle) + playerRot.y, playerRot.z ));
+            transform.rotation = Quaternion.Euler(new Vector3(cameraAngle + playerRot.x + (player.pitch * pitchOffsetAngle), (player.planeYaw*yawOffsetAngle) + playerRot.y, playerRot.z ));
 
             transform.RotateAround(player.transform.position, player.transform.right, player.pitch * pitchOffsetAngle);
-            transform.RotateAround(player.transform.position, Vector3.up, player.yaw * yawOffsetAngle);
+            transform.RotateAround(player.transform.position, Vector3.up, player.planeYaw * yawOffsetAngle);
 
             //Set FOV according to speed
             cam.fieldOfView = minFOV + additionalFOV;
