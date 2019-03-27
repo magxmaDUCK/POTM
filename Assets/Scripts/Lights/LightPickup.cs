@@ -2,27 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightPickup : MonoBehaviour
+namespace POTM
 {
-
-    private bool on = true;
-
-    private int scoreValue = 1;
-
-
-
-    public void TurnOff()
+    public class LightPickup : MonoBehaviour
     {
-        on = false;
-    }
+        private bool on = true;
 
-    public int getScoreValue()
-    {
-        return scoreValue;
-    }
+        private int scoreValue = 1;
 
-    public bool IsOn()
-    {
-        return on;
+        public void TurnOff()
+        {
+            on = false;
+        }
+
+        public int getScoreValue()
+        {
+            return scoreValue;
+        }
+
+        public bool IsOn()
+        {
+            return on;
+        }
     }
 }

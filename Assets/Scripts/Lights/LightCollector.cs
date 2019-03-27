@@ -16,12 +16,6 @@ namespace POTM
             triggerZone = GetComponent<SphereCollider>();
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }    
-
         //Add a big trigger collider around the plane, for light detection and pickups.
         private void OnTriggerEnter(Collider other)
         {
