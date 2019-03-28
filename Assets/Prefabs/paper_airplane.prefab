@@ -158,19 +158,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800f07c516b8e3c489681e784e6cb90b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 5
-  maxSpeed: 25
+  minSpeed: 8
+  maxSpeed: 35
   turnSpeed: 2
   dipSpeed: 1
   balanceAngle: -4
   balanceDeadZone: 0
-  cruisingSpeed: 5
+  cruisingSpeed: 8
   accelRatio: 5
   decelRatio: 0
   maxTurningAngle: 45
   display: {fileID: 0}
-  newControls: 0
-  yawTurningSpeed: 0
+  newControls: 1
+  yawTurningSpeed: 3
   currentSpeed: 0
   yaw: 0
   pitch: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: d34a2f206c516de48bd056fd8cca5765,
+    WwiseObjectReference: {fileID: 11400000, guid: b469781938925fd40897095d8eed6df6,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -289,7 +289,7 @@ Camera:
   m_SensorSize: {x: 70.41, y: 52.63}
   m_LensShift: {x: 0, y: 0}
   m_GateFitMode: 2
-  m_FocalLength: 50
+  m_FocalLength: 25
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -298,7 +298,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 55.515667
+  field of view: 92.93588
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -330,12 +330,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1784855988}
   baseDistanceFromPlayer: 5
-  maxDist: 1
+  maxDist: 0.8
   minDist: 0.4
   cameraAngle: -4
   cameraHeight: 0.2
-  maxFOV: 110
-  minFOV: 50
+  maxFOV: 92.93588
+  minFOV: 41.20535
   pitchOffsetAngle: 10
   yawOffsetAngle: 10
   target: {fileID: 0}
