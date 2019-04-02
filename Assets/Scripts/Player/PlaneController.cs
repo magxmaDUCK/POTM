@@ -50,6 +50,7 @@ namespace POTM
             left = false;
 
         [HideInInspector]public float planeYaw = 0;
+        [HideInInspector]public float planePitch = 0;
 
         private float lerpLength;
         private float rollStartAngle;
@@ -165,7 +166,7 @@ namespace POTM
             planeRB.velocity = transform.forward * currentSpeed;
 
             //Change camera to look where you are turning
-            //Set le RTPC de vitesse Wwise
+            //Set le RTPC de vitesse Wwiseqq
 
             AkSoundEngine.SetRTPCValue("Wind_Speed", (currentSpeed - minSpeed)/speedDiff);
         }
@@ -290,6 +291,12 @@ namespace POTM
         private void OnTriggerEnter(Collider collision)
         {
             transform.position += new Vector3(0, 100, 0);
+            transform.rotation = Quaternion.identity;
+            planeRB.velocity = transform.forward * currentSpeed;
+            planeRB.angularVelocity = Vector3.zero;
+            planeYaw = 0;
+            planePitch = 0;
+            cam.ResetCamera();
         }
     }
 }

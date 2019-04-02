@@ -32,7 +32,10 @@ namespace POTM
         [Tooltip("Where the camera is looking at")]
         public GameObject target;
 
+        [Tooltip("If rotation shake, max degrees of the rotation. Else, max movement in units (meters)")]
         public float shakeStrength;
+        [Tooltip("Speed of the camera shake")]
+        public float shakeSpeed;
         public bool rotationShake = true;
 
         public Text display;
@@ -41,7 +44,8 @@ namespace POTM
         public bool target_cam = false;
 
         private Camera cam;
-        private bool isTurningRight = false, isTurningLeft = false;
+        private bool isTurningRight = false;
+        private bool isTurningLeft = false;
         private float speedDiff;
         private float distDiff;
         private float diffFov;
@@ -58,9 +62,7 @@ namespace POTM
         void Start()
         {
             cam = GetComponent<Camera>();
-            transform.position = player.transform.position + (-player.transform.forward * baseDistanceFromPlayer);
-            transform.position += player.transform.up * cameraHeight;
-            transform.Rotate(new Vector3(cameraAngle, 0, 0));
+            ResetCamera();
 
             speedDiff = player.maxSpeed - player.minSpeed;
             distDiff = maxDist - minDist;
@@ -75,11 +77,18 @@ namespace POTM
             Vector3 playerRot = player.transform.rotation.eulerAngles;
 
             //Change camera distance + reset height
-            transform.position = (player.transform.position + -player.transform.forward * (minDist + additionalDist) + player.transform.up * cameraHeight)
+            transform.position = 
+                (player.transform.position + -player.transform.forward 
+                * (minDist + additionalDist) + player.transform.up * cameraHeight)
                 + (rotationShake?Vector3.zero:CameraShake());
 
-            transform.rotation = Quaternion.Euler(new Vector3(cameraAngle + playerRot.x + (player.pitch * pitchOffsetAngle), (player.planeYaw*yawOffsetAngle)
-                + playerRot.y, playerRot.z ) + (rotationShake?CameraShake():Vector3.zero));
+            transform.rotation = Quaternion.Euler(
+                new Vector3(
+                    cameraAngle + playerRot.x + (player.pitch * pitchOffsetAngle),
+                    player.planeYaw*yawOffsetAngle + playerRot.y,
+                    playerRot.z 
+                ) 
+                + (rotationShake?CameraShake():Vector3.zero));
 
             transform.RotateAround(player.transform.position, player.transform.right, player.pitch * pitchOffsetAngle);
             transform.RotateAround(player.transform.position, Vector3.up, player.planeYaw * yawOffsetAngle);
@@ -92,7 +101,9 @@ namespace POTM
 
         public void ResetRotation()
         {
-            transform.rotation = Quaternion.Euler(new Vector3(player.transform.rotation.eulerAngles.x + cameraAngle, player.transform.rotation.eulerAngles.y, 0));
+            transform.rotation = Quaternion.Euler(
+                new Vector3(player.transform.rotation.eulerAngles.x + cameraAngle, player.transform.rotation.eulerAngles.y, 0)
+                );
         }
 
         public void UpdateDisplay()
@@ -102,9 +113,16 @@ namespace POTM
 
         public Vector3 CameraShake()
         {
-            float perlinValueX = Mathf.PerlinNoise(Time.time * perlinX, Time.time * perlinX) - 0.5f;
-            float perlinValueY = Mathf.PerlinNoise(Time.time * perlinY + 1.0f, Time.time * perlinY + 1.0f) - 0.5f;
+            float perlinValueX = Mathf.PerlinNoise(Time.time * shakeSpeed * perlinX, Time.time * shakeSpeed * perlinX) - 0.5f;
+            float perlinValueY = Mathf.PerlinNoise(Time.time * shakeSpeed * perlinY + 1.0f, Time.time * shakeSpeed * perlinY + 1.0f) - 0.5f;
             return new Vector3(perlinValueX * shakeStrength, perlinValueY * shakeStrength, 0);
+        }
+
+        public void ResetCamera()
+        {
+            transform.position = player.transform.position + (-player.transform.forward * baseDistanceFromPlayer);
+            transform.position += player.transform.up * cameraHeight;
+            transform.Rotate(new Vector3(cameraAngle, 0, 0));
         }
     }
 }

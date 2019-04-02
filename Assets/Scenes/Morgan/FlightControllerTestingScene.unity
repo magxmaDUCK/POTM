@@ -564,7 +564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1784855988, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
       propertyPath: yawTurningSpeed
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1784855988, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
       propertyPath: accelRatio
@@ -590,6 +590,10 @@ PrefabInstance:
       propertyPath: target_cam
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2026526099, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
+      propertyPath: shakeSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 978739197, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
       propertyPath: data.WwiseObjectReference
       value: 
@@ -601,30 +605,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1784855990, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5840667600132909586, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
---- !u!1 &1428325244 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2204791809016672155, guid: e35f936b8a4e3d64b8bd98fbba8808c5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1428325243}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &1428325245
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428325244}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1441819442
 GameObject:
   m_ObjectHideFlags: 0
