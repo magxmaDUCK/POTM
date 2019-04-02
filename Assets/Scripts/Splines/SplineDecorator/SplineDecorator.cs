@@ -28,7 +28,7 @@ public class SplineDecorator : MonoBehaviour
 
             Vector3 pos = path.GetPoint(i * step);
 
-            Instantiate(items[index], pos, Quaternion.identity);
+            Instantiate(items[index], pos, Quaternion.identity, transform);
         }
     }
 }
