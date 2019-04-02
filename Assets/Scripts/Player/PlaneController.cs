@@ -54,10 +54,7 @@ namespace POTM
         private float lerpLength;
         private float rollStartAngle;
 
-
-        private const float MinSpeed = 5;
-        private const float MaxSpeed = 25;
-
+        private float speedDiff;
 
         //score is the number of stars
         private int score = 0;
@@ -76,6 +73,7 @@ namespace POTM
             }
             
             planeCollider = GetComponent<CapsuleCollider>();
+            speedDiff = maxSpeed - minSpeed;
         }
 
         // Update is called once per frame
@@ -168,7 +166,8 @@ namespace POTM
 
             //Change camera to look where you are turning
             //Set le RTPC de vitesse Wwise
-            AkSoundEngine.SetRTPCValue("Wind_Speed", currentSpeed);
+
+            AkSoundEngine.SetRTPCValue("Wind_Speed", (currentSpeed - minSpeed)/speedDiff);
         }
 
         public void updateDisplay()
