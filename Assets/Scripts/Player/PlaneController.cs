@@ -36,8 +36,8 @@ namespace POTM
         
         public float yawTurningSpeed;
 
-        private Rigidbody planeRB;
         [HideInInspector]public float currentSpeed;
+        private Rigidbody planeRB;
         private CameraController cam;
         private MeshRenderer planeMesh;
         private CapsuleCollider planeCollider;
@@ -46,8 +46,8 @@ namespace POTM
         [HideInInspector] public float pitch;
 
         private float pitchAngle;
-        private bool right = false,
-            left = false;
+        private bool right = false;
+        private bool left = false;
 
         [HideInInspector]public float planeYaw = 0;
         [HideInInspector]public float planePitch = 0;

@@ -11,6 +11,9 @@ public class SplineDecorator : MonoBehaviour
 
     public GameObject[] items;
 
+    [Tooltip("Apply curves rotation to the objects instantiated")]
+    public bool curveRotation = false;
+
     public bool distanceBased = false;
 
     private void Awake()
@@ -28,7 +31,13 @@ public class SplineDecorator : MonoBehaviour
 
             Vector3 pos = path.GetPoint(i * step);
 
-            Instantiate(items[index], pos, Quaternion.identity, transform);
+            GameObject Go = Instantiate(items[index], pos, Quaternion.identity, transform);
+
+            //Turns object to go in the direction of the bezier curve
+            if (curveRotation)
+            {
+                Go.transform.forward = path.GetDirection(i * step);
+            }
         }
     }
 }

@@ -452,10 +452,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 744518696}
-  frequency: 25
+  frequency: 100
   items:
   - {fileID: 1380784276}
   - {fileID: 1592516334}
+  curveRotation: 1
   distanceBased: 1
 --- !u!1 &1380784276
 GameObject:
@@ -559,6 +560,7 @@ GameObject:
   - component: {fileID: 1489894049}
   - component: {fileID: 1489894048}
   - component: {fileID: 1489894050}
+  - component: {fileID: 1489894051}
   m_Layer: 0
   m_Name: Spline
   m_TagString: Untagged
@@ -622,6 +624,24 @@ MonoBehaviour:
   lookForwards: 1
   mode: 2
   backAndForthAlwaysForward: 0
+--- !u!114 &1489894051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489894047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73b28797e791654ca1f495a3f55a8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: {fileID: 1489894048}
+  frequency: 100
+  items:
+  - {fileID: 1380784276}
+  curveRotation: 0
+  distanceBased: 0
 --- !u!1 &1592516334
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,8 +22,7 @@ namespace POTM
         public float cameraHeight;
 
         [Tooltip("Max and min FOV. Fov will be calculated by your speed / acceleration / environment")]
-        [HideInInspector]
-        public float maxFOV, minFOV;
+        [HideInInspector] public float maxFOV, minFOV;
         [Tooltip("Max offset angle of the camera for up and down")]
         public float pitchOffsetAngle;
         [Tooltip("The max angle of the camera while turning")]
@@ -44,19 +43,12 @@ namespace POTM
         public bool target_cam = false;
 
         private Camera cam;
-        private bool isTurningRight = false;
-        private bool isTurningLeft = false;
         private float speedDiff;
         private float distDiff;
         private float diffFov;
 
         private float perlinX = 1f;
         private float perlinY = 1f;
-
-        private float camYaw = 0;
-        private float camPitch = 0;
-        //Make a lerp like behavior with the two variables above
-
 
         // Start is called before the first frame update
         void Start()
