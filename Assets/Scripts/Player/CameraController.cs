@@ -32,6 +32,9 @@ namespace POTM
         [Tooltip("Where the camera is looking at")]
         public GameObject target;
 
+        public float shakeStrength;
+        public bool rotationShake = true;
+
         public Text display;
 
         [Tooltip("Use target camera type")]
@@ -72,9 +75,11 @@ namespace POTM
             Vector3 playerRot = player.transform.rotation.eulerAngles;
 
             //Change camera distance + reset height
-            transform.position = (player.transform.position + -player.transform.forward * (minDist + additionalDist) + player.transform.up * cameraHeight) + CameraShake();
+            transform.position = (player.transform.position + -player.transform.forward * (minDist + additionalDist) + player.transform.up * cameraHeight)
+                + (rotationShake?Vector3.zero:CameraShake());
 
-            transform.rotation = Quaternion.Euler(new Vector3(cameraAngle + playerRot.x + (player.pitch * pitchOffsetAngle), (player.planeYaw*yawOffsetAngle) + playerRot.y, playerRot.z ));
+            transform.rotation = Quaternion.Euler(new Vector3(cameraAngle + playerRot.x + (player.pitch * pitchOffsetAngle), (player.planeYaw*yawOffsetAngle)
+                + playerRot.y, playerRot.z ) + (rotationShake?CameraShake():Vector3.zero));
 
             transform.RotateAround(player.transform.position, player.transform.right, player.pitch * pitchOffsetAngle);
             transform.RotateAround(player.transform.position, Vector3.up, player.planeYaw * yawOffsetAngle);
@@ -97,8 +102,9 @@ namespace POTM
 
         public Vector3 CameraShake()
         {
-            float perlinValue = Mathf.PerlinNoise(Time.time * perlinX, Time.time * perlinY) - 0.5f;
-            return new Vector3(perlinValue * 0.01f, perlinValue * 0.01f, 0);
+            float perlinValueX = Mathf.PerlinNoise(Time.time * perlinX, Time.time * perlinX) - 0.5f;
+            float perlinValueY = Mathf.PerlinNoise(Time.time * perlinY + 1.0f, Time.time * perlinY + 1.0f) - 0.5f;
+            return new Vector3(perlinValueX * shakeStrength, perlinValueY * shakeStrength, 0);
         }
     }
 }

@@ -552,7 +552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1784855988, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
       propertyPath: cruisingSpeed
-      value: 7
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1784855988, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
       propertyPath: decelRatio
@@ -566,6 +566,10 @@ PrefabInstance:
       propertyPath: yawTurningSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1784855988, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
+      propertyPath: accelRatio
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2026526099, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
       propertyPath: display
       value: 
@@ -573,6 +577,18 @@ PrefabInstance:
     - target: {fileID: 2026526099, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
       propertyPath: pitchOffsetAngle
       value: 2.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026526099, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
+      propertyPath: shakeStrength
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026526099, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
+      propertyPath: rotationShake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026526099, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
+      propertyPath: target_cam
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 978739197, guid: e35f936b8a4e3d64b8bd98fbba8808c5, type: 3}
       propertyPath: data.WwiseObjectReference
