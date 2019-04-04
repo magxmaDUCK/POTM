@@ -37,4 +37,9 @@ public static class Bezier
             6f * oneMinusT * t * (point2 - point1) +
             3f * t * t * (point3 - point2);
     }
+
+    public static Vector3 GetSecondDerivative(Vector3 point0, Vector3 point1, Vector3 point2, Vector3 point3, float t)
+    {
+        return (6*t*(point1 + 3*(point2 - point3) - point0) + 6 * (point0 - 2*point2 + point3));
+    }
 }

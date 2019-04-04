@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ToMesh : MonoBehaviour
+public class MeshGenerator : MonoBehaviour
 {
     public BezierSpline path;
 
@@ -46,6 +46,25 @@ public class ToMesh : MonoBehaviour
             {
                 //Tube
             }
+        }
+    }
+
+    //Used for debugging, to delete !
+    private void Update()
+    {
+        Vector3 pos, dir, tan;
+        float t;
+
+        for(int i = 0; i <= 10; i++)
+        {
+            t = (float)i / (float)10;
+            pos = path.GetPoint(t);
+            dir = path.GetDirection(t);
+            tan = path.GetNormal(t);
+
+            //Debug.DrawLine(pos, pos + dir);
+            //Debug.DrawLine(pos, pos + tan);
+
         }
     }
 }

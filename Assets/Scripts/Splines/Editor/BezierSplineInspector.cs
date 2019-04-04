@@ -46,6 +46,7 @@ public class BezierSplineInspector : Editor
             point0 = point3;
         }
         ShowDirections();
+        ShowNormals();
     }
 
     public override void OnInspectorGUI()
@@ -104,6 +105,19 @@ public class BezierSplineInspector : Editor
         {
             point = spline.GetPoint(i / (float)steps);
             Handles.DrawLine(point, point + spline.GetDirection(i / (float)steps) * directionScale);
+        }
+    }
+
+    private void ShowNormals()
+    {
+        Handles.color = Color.red;
+        Vector3 point = spline.GetPoint(0f);
+        Handles.DrawLine(point, point + spline.GetNormal(0f) * directionScale);
+        int steps = stepsPerCurve * spline.CurveCount;
+        for (int i = 1; i <= steps; i++)
+        {
+            point = spline.GetPoint(i / (float)steps);
+            Handles.DrawLine(point, point + spline.GetNormal(i / (float)steps) * directionScale);
         }
     }
 
