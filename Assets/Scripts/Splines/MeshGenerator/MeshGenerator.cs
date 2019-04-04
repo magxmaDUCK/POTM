@@ -6,6 +6,7 @@ public class ToMesh : MonoBehaviour
 {
     public BezierSpline path;
 
+    [Range(1,100)]
     public int subDivisions;
 
     public Mesh mesh;
@@ -14,8 +15,9 @@ public class ToMesh : MonoBehaviour
     {
         //multiply by 3 because 3 points at each subdiv;
         Vector3[] vertices = new Vector3[subDivisions * 3];
+        int[] triangles = new int[(2 + 6 * subDivisions) * 3];
 
-        for(int i = 0; i < subDivisions; i++)
+        for(int i = 0; i <= subDivisions; i++)
         {
             mesh = new Mesh();
             float t = (float)i / (float)subDivisions;
@@ -28,6 +30,22 @@ public class ToMesh : MonoBehaviour
             vertices[i + 2] = new Vector3(.5f, -.5f, 0) + splinePointPos;
 
             mesh.vertices = vertices;
+
+
+            if(i == 0)
+            {
+                triangles[i] = i;
+                triangles[i+1] = i+1;
+                triangles[i+2] = i+2;
+            }
+            else if(i == subDivisions)
+            {
+                //Tube and end
+            }
+            else
+            {
+                //Tube
+            }
         }
     }
 }
