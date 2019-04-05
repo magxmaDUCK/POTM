@@ -81,9 +81,15 @@ namespace POTM
         void FixedUpdate()
         {
             //Get controls
-            yaw = Input.GetAxis("Horizontal");
+            float yawP1 = Input.GetAxis("Horizontal");
+            float yawP2 = Input.GetAxis("Horizontal2");
+
+            float pitchP1 = Input.GetAxis("Vertical");
+            float pitchP2 = Input.GetAxis("Vertical2");
+
+            yaw = (yawP1 + yawP2) / 2;
             AkSoundEngine.SetRTPCValue("Wind_Yaw", yaw);
-            pitch = Input.GetAxis("Vertical");
+            pitch = (pitchP1 + pitchP2) / 2;
             AkSoundEngine.SetRTPCValue("Wind_Pitch", pitch);
 
             if (!newControls)
