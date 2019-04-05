@@ -165,8 +165,8 @@ public class BezierSpline : MonoBehaviour
         }
 
         Vector3 binormal = Vector3.Cross(dir, accel).normalized;
-        //Vector3 normal = Vector3.Cross(dir, binormal).normalized;
-        Vector3 normal = accel.normalized;
+        Vector3 normal = Vector3.Cross(dir, binormal).normalized;
+        //Vector3 normal = accel.normalized;
 
         return normal;
     }
