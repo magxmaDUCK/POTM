@@ -40,7 +40,7 @@ public class MeshGenerator : MonoBehaviour
             }
             else if(i == subDivisions)
             {
-                //Tube and end
+                //Tube and end face
             }
             else
             {
