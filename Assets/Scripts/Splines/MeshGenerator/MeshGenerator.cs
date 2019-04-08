@@ -16,10 +16,10 @@ public class MeshGenerator : MonoBehaviour
         //multiply by 3 because 3 points at each subdiv;
         Vector3[] vertices = new Vector3[subDivisions * 3];
         int[] triangles = new int[(2 + 6 * subDivisions) * 3];
+        mesh = new Mesh();
 
         for(int i = 0; i <= subDivisions; i++)
         {
-            mesh = new Mesh();
             float t = (float)i / (float)subDivisions;
             Vector3 splinePointPos = path.GetPoint(t);
             Vector3 splinePointDir = path.GetDirection(t);
@@ -40,11 +40,11 @@ public class MeshGenerator : MonoBehaviour
             }
             else if(i == subDivisions)
             {
-                //Tube and end face
+                //Tube and end face (same as lwoer + upper)
             }
             else
             {
-                //Tube
+                //Tube (make with precedent points)
             }
         }
     }

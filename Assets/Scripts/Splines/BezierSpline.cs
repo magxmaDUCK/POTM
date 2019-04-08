@@ -146,9 +146,7 @@ public class BezierSpline : MonoBehaviour
 
     public Vector3 GetNormal(float t)
     {
-        Vector3 pos = GetPoint(t);
         Vector3 dir = GetDirection(t);
-        Vector3 accel = GetAcceleration(t);
 
         int i;
         if (t >= 1f)
@@ -164,11 +162,17 @@ public class BezierSpline : MonoBehaviour
             i *= 3;
         }
 
-        Vector3 binormal = Vector3.Cross(dir, accel).normalized;
+        Vector3 binormal = Vector3.Cross(Vector3.up, dir).normalized;
         Vector3 normal = Vector3.Cross(dir, binormal).normalized;
-        //Vector3 normal = accel.normalized;
 
         return normal;
+    }
+
+    public Quaternion GetOrientation(float t)
+    {
+        Vector3 dir = GetDirection(t);
+        Vector3 normal = GetNormal(t);
+        return Quaternion.LookRotation(dir, normal);
     }
 
     public void AddCurve()
