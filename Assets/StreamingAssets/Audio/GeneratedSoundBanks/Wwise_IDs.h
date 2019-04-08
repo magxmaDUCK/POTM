@@ -14,8 +14,9 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_AMBOCEAN = 1570489620U;
-        static const AkUniqueID PLAY_SS_WIND = 39205609U;
+        static const AkUniqueID PLAY_DOPPLERTEST = 3986559298U;
         static const AkUniqueID PLAY_WATERFALL = 467174588U;
+        static const AkUniqueID PLAY_WIND = 1020223172U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
