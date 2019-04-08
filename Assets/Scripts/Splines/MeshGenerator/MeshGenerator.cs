@@ -29,9 +29,6 @@ public class MeshGenerator : MonoBehaviour
             vertices[i + 1] = new Vector3(-.5f, -.5f, 0) + splinePointPos;
             vertices[i + 2] = new Vector3(.5f, -.5f, 0) + splinePointPos;
 
-            mesh.vertices = vertices;
-
-
             if(i == 0)
             {
                 triangles[i] = i;
@@ -47,6 +44,9 @@ public class MeshGenerator : MonoBehaviour
                 //Tube (make with precedent points)
             }
         }
+
+        mesh.vertices = vertices;
+        mesh.triangles = triangles;
     }
 
     //Used for debugging, to delete !

@@ -8,6 +8,9 @@ namespace Doppler
     {
         public static List<DopplerListener> listeners;
 
+        //Speed of sound in air at 15°C
+        private float celerity = 340f;
+
         public Vector3 position
         {
             get
@@ -24,11 +27,17 @@ namespace Doppler
 
         private void Update()
         {
-            foreach(DopplerListener listener in listeners)
+            float dist;
+            float speed;
+            float ccv;
+            foreach (DopplerListener listener in listeners)
             {
-                Vector3 moved = position - listener.GetPrevPosition() + listener.GetPosition();
-                float dist = moved.magnitude;
-                float speed = dist / Time.deltaTime;
+                dist = (position - listener.GetPosition()).magnitude - (position - listener.GetPrevPosition()).magnitude;
+                speed = (-dist) / Time.deltaTime;
+
+                ccv = celerity / (celerity - speed);
+
+                //Debug.Log(ccv + " : " + dist);
 
                 //Set rtpc for player that contains current listener;
             }

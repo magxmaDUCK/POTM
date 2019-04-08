@@ -7,25 +7,17 @@ namespace Doppler
     public class DopplerListener : MonoBehaviour
     {
         private Vector3 prevPosition;
-
         private Vector3 position;
 
-        //Speed of sound in air in m.s-1
-        private float celerity = 340f;
-
         private float moveDist;
-
         private float speed;
-
-        private void Awake()
-        {
-            DopplerEmitter.AddListener(this);
-        }
 
         private void Start()
         {
             prevPosition = transform.position;
             position = prevPosition;
+
+            DopplerEmitter.AddListener(this);
         }
 
         private void Update()
