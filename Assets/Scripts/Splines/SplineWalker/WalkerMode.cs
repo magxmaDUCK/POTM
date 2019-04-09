@@ -1,6 +1,9 @@
-﻿public enum WalkerMode
+﻿namespace Spline
 {
-    Once,
-    Loop,
-    BackAndForth
+    public enum WalkerMode
+    {
+        Once,
+        Loop,
+        BackAndForth
+    }
 }

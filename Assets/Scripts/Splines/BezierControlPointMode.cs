@@ -1,6 +1,9 @@
-﻿public enum BezierControlPointMode
+﻿namespace Spline
 {
-    Free,
-    Aligned,
-    Mirrored
+    public enum BezierControlPointMode
+    {
+        Free,
+        Aligned,
+        Mirrored
+    }
 }
