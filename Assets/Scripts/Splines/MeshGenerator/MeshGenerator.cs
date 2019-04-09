@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Spline
 {
+    [AddComponentMenu("Spline/Spline Mesh Generator")]
     [RequireComponent(typeof(BezierSpline))]
     public class MeshGenerator : MonoBehaviour
     {

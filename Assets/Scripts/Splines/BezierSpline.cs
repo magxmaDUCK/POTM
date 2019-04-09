@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace Spline
 {
+    [AddComponentMenu("Spline/Bezier Spline")]
     public class BezierSpline : MonoBehaviour
     {
         [SerializeField]

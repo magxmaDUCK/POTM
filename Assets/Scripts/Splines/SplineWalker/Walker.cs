@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Spline
 {
+    [AddComponentMenu("Spline/Spline Walker")]
     public class Walker : MonoBehaviour
     {
         public BezierSpline path;

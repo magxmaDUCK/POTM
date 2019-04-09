@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Spline
 {
+    [AddComponentMenu("Spline/Spline Decorator")]
     [RequireComponent(typeof(BezierSpline))]
     public class SplineDecorator : MonoBehaviour
     {
