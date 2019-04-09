@@ -36,6 +36,8 @@ namespace POTM
         
         public float yawTurningSpeed;
 
+        public bool multiplayer = false;
+
         [HideInInspector]public float currentSpeed;
         private Rigidbody planeRB;
         private CameraController cam;
@@ -87,9 +89,18 @@ namespace POTM
             float pitchP1 = Input.GetAxis("Vertical");
             float pitchP2 = Input.GetAxis("Vertical2");
 
-            yaw = (yawP1 + yawP2) / 2;
+            if(multiplayer)
+            {
+                yaw = (yawP1 + yawP2) / 2;
+                pitch = (pitchP1 + pitchP2) / 2;
+            }
+            else
+            {
+                yaw = yawP1;
+                pitch = pitchP1;
+            }
+
             AkSoundEngine.SetRTPCValue("Wind_Yaw", yaw);
-            pitch = (pitchP1 + pitchP2) / 2;
             AkSoundEngine.SetRTPCValue("Wind_Pitch", pitch);
 
             if (!newControls)
