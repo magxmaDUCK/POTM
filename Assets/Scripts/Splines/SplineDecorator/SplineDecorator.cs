@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class SplineDecorator : MonoBehaviour
 {
-
     public BezierSpline path;
 
     public int frequency;
+
+    public Vector3 offset = Vector3.zero;
 
     public GameObject[] items;
 
@@ -31,7 +32,7 @@ public class SplineDecorator : MonoBehaviour
 
             Vector3 pos = path.GetPoint(i * step);
 
-            GameObject Go = Instantiate(items[index], pos, Quaternion.identity, transform);
+            GameObject Go = Instantiate(items[index], pos + offset, Quaternion.identity, transform);
 
             //Turns object to go in the direction of the bezier curve
             if (curveRotation)

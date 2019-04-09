@@ -9,11 +9,9 @@ public class MeshGenerator : MonoBehaviour
     public Material mat;
 
     public float meshWidth;
-
     
+    [Min(2)]
     public int subDivisions;
-
-    //public Mesh mesh;
 
     private void Awake()
     {
