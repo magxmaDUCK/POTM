@@ -79,10 +79,10 @@ namespace POTM
                 
 
             //Set camera height value so that it fits in the center of the screen;
-            Vector3 onScreenPlanePos = cam.WorldToScreenPoint(player.transform.position);
-            float screenHeightPos = cam.pixelHeight / 3;
-            onScreenPlanePos.y = screenHeightPos;
-            player.transform.position = cam.ScreenToWorldPoint(onScreenPlanePos);
+            //Vector3 onScreenPlanePos = cam.WorldToScreenPoint(player.transform.position);
+            //float screenHeightPos = cam.pixelHeight / 3;
+            //onScreenPlanePos.y = screenHeightPos;
+            //transform.position = cam.ScreenToWorldPoint(onScreenPlanePos);
 
             //Move camera so that its aligned on the 1st or 2nd third of the screen;
 

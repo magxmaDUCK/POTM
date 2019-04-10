@@ -49,7 +49,7 @@ namespace Spline
                 {
                     localDir = path.GetNormal(i * step);
 
-                    go = Instantiate(items[index], pos + (heightOffset * localDir) , Quaternion.identity, transform);
+                    go = Instantiate(items[index], pos + (heightOffset * localDir) , items[index].transform.rotation, transform);
                 }
                 else
                 {
