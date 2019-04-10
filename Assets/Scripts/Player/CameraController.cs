@@ -87,13 +87,15 @@ namespace POTM
             //Move camera so that its aligned on the 1st or 2nd third of the screen;
 
             //Turn and move camera to side
-            transform.rotation = Quaternion.Euler(
+            /*
+               transform.rotation = Quaternion.Euler(
                 new Vector3(
                     cameraAngle + playerRot.x + (player.pitch * pitchOffsetAngle),
                     player.planeYaw*yawOffsetAngle + playerRot.y,
                     playerRot.z 
                 ) 
                 + (rotationShake?CameraShake():Vector3.zero));
+            */
 
             //Set FOV according to speed
             cam.fieldOfView = minFOV + additionalFOV;
