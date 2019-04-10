@@ -28,6 +28,7 @@ namespace POTM
         [Tooltip("The max angle of the camera while turning")]
         public float yawOffsetAngle;
 
+        //Empty game object in front of plane to know where it is going;
         [Tooltip("Where the camera is looking at")]
         public GameObject target;
 
@@ -65,6 +66,7 @@ namespace POTM
         void FixedUpdate()
         {
             float additionalDist = (player.currentSpeed * distDiff) / speedDiff;
+            float additionalHeight = (player.currentSpeed * (cameraHeight-0.01f)) / speedDiff;
             float additionalFOV = (player.currentSpeed * diffFov) / speedDiff;
             Vector3 playerRot = player.transform.rotation.eulerAngles;
 
@@ -72,8 +74,17 @@ namespace POTM
             transform.position = 
                 (player.transform.position 
                 + -player.transform.forward * (minDist + additionalDist) 
-                + player.transform.up * cameraHeight)
+                + player.transform.up * (0.01f + additionalHeight))
                 + (rotationShake?Vector3.zero:CameraShake());
+                
+
+            //Set camera height value so that it fits in the center of the screen;
+            Vector3 onScreenPlanePos = cam.WorldToScreenPoint(player.transform.position);
+            float screenHeightPos = cam.pixelHeight / 3;
+            onScreenPlanePos.y = screenHeightPos;
+            player.transform.position = cam.ScreenToWorldPoint(onScreenPlanePos);
+
+            //Move camera so that its aligned on the 1st or 2nd third of the screen;
 
             //Turn and move camera to side
             transform.rotation = Quaternion.Euler(
@@ -83,9 +94,6 @@ namespace POTM
                     playerRot.z 
                 ) 
                 + (rotationShake?CameraShake():Vector3.zero));
-
-            //transform.RotateAround(player.transform.position, player.transform.right, player.pitch * pitchOffsetAngle);
-            //transform.RotateAround(player.transform.position, Vector3.up, player.planeYaw * yawOffsetAngle);
 
             //Set FOV according to speed
             cam.fieldOfView = minFOV + additionalFOV;
