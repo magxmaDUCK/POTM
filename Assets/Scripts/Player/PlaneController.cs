@@ -307,13 +307,16 @@ namespace POTM
 
         private void OnTriggerEnter(Collider collision)
         {
-            transform.position += new Vector3(0, 100, 0);
-            transform.rotation = Quaternion.identity;
-            planeRB.velocity = transform.forward * currentSpeed;
-            planeRB.angularVelocity = Vector3.zero;
-            planeYaw = 0;
-            planePitch = 0;
-            cam.ResetCamera();
+            if(collision.gameObject.tag != "collector")
+            {
+                transform.position += new Vector3(0, 100, 0);
+                transform.rotation = Quaternion.identity;
+                planeRB.velocity = transform.forward * currentSpeed;
+                planeRB.angularVelocity = Vector3.zero;
+                planeYaw = 0;
+                planePitch = 0;
+                cam.ResetCamera();
+            }
         }
     }
 }

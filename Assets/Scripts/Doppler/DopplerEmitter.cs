@@ -37,7 +37,7 @@ namespace Doppler
 
                 ccv = celerity / (celerity - speed);
 
-                Debug.Log(ccv + " : " + dist);
+                //Debug.Log(ccv + " : " + dist);
 
                 AkSoundEngine.SetRTPCValue("Doppler", ccv);
             }
