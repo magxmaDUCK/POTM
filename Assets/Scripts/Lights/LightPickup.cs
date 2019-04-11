@@ -10,7 +10,19 @@ namespace POTM
 
         private int scoreValue = 1;
 
-        public void TurnOff()
+        public LightPickup()
+        {
+            on = true;
+            scoreValue = 1;
+        }
+
+        public LightPickup(bool onoff, int score)
+        {
+            on = onoff;
+            scoreValue = score;
+        }
+
+        virtual public void TurnOff()
         {
             on = false;
         }
