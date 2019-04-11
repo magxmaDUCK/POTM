@@ -53,7 +53,7 @@ namespace Spline
                 }
                 else
                 {
-                    go = Instantiate(items[index], pos + new Vector3(0,heightOffset,0), Quaternion.identity, transform);
+                    go = Instantiate(items[index], pos + new Vector3(0,heightOffset,0), items[index].transform.rotation, transform);
                 }
 
                 //Turns object to go in the direction of the bezier curve

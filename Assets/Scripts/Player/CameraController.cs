@@ -22,7 +22,7 @@ namespace POTM
         public float cameraHeight;
 
         [Tooltip("Max and min FOV. Fov will be calculated by your speed / acceleration / environment")]
-        [HideInInspector] public float maxFOV, minFOV;
+        public float maxFOV, minFOV;
         [Tooltip("Max offset angle of the camera for up and down")]
         public float pitchOffsetAngle;
         [Tooltip("The max angle of the camera while turning")]
