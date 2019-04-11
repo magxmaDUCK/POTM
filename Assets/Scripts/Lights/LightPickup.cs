@@ -26,13 +26,15 @@ namespace POTM
 
         void Update()
         {
-            if (!on && lightoff)
+            if (!on && !lightoff)
             {
                 Debug.Log("hi");
                 Renderer renderer = GetComponent<Renderer>();
                 Material mat = renderer.material;
 
-                float t = Mathf.Clamp01(1 - Time.time - startTime);
+                float t = Mathf.Max(0, 1 - (Time.time - startTime));
+
+                Debug.Log(t);
 
                 //float emission = Mathf.PingPong(Time.time, 1.0f);
             
