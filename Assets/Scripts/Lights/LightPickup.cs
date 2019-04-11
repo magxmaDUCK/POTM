@@ -13,6 +13,8 @@ namespace POTM
 
         public float turnOffDuration = 1.0f;
 
+        private Color offColor = Color.yellow;
+
         public LightPickup()
         {
             on = true;
@@ -24,21 +26,21 @@ namespace POTM
             scoreValue = score;
         }
 
+        private Renderer rend;
+
         void Update()
         {
             if (!on && !lightoff)
             {
-                Debug.Log("hi");
-                Renderer renderer = GetComponent<Renderer>();
-                Material mat = renderer.material;
+                Renderer rend = GetComponent<Renderer>();
+                offColor = rend.material.GetColor("_Color");
+                Material mat = rend.material;
 
                 float t = Mathf.Max(0, 1 - (Time.time - startTime));
 
                 Debug.Log(t);
-
-                //float emission = Mathf.PingPong(Time.time, 1.0f);
             
-                Color baseColor = Color.yellow; //Replace this with whatever you want for your base color at emission level '1'
+                Color baseColor = offColor; //Replace this with whatever you want for your base color at emission level '1'
 
                 Color finalColor = baseColor * Mathf.LinearToGammaSpace(t);
 
