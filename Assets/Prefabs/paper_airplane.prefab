@@ -159,18 +159,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minSpeed: 8
-  maxSpeed: 35
+  maxSpeed: 25
   turnSpeed: 2
   dipSpeed: 1
   balanceAngle: -4
   balanceDeadZone: 0
-  cruisingSpeed: 8
+  cruisingSpeed: 10
   accelRatio: 5
   decelRatio: 0
   maxTurningAngle: 45
   display: {fileID: 0}
   newControls: 1
   yawTurningSpeed: 3
+  multiplayer: 0
   currentSpeed: 0
   yaw: 0
   pitch: 0
