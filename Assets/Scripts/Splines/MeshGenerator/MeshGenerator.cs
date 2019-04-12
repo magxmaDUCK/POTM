@@ -20,6 +20,11 @@ namespace Spline
 
         private void Awake()
         {
+            DrawMesh();
+        }
+
+        public void DrawMesh()
+        {
             path = GetComponent<BezierSpline>();
 
             GameObject go = new GameObject("Wire Mesh");
@@ -39,7 +44,7 @@ namespace Spline
 
             meshFilter.sharedMesh = mesh;
         }
-    
+
         Vector3[] WireVertices()
         {
             Vector3[] vertices = new Vector3[subDivisions * 4];

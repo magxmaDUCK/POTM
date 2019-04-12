@@ -22,7 +22,7 @@ namespace POTM
         public float cameraHeight;
 
         [Tooltip("Max and min FOV. Fov will be calculated by your speed / acceleration / environment")]
-        [HideInInspector] public float maxFOV, minFOV;
+        public float maxFOV, minFOV;
         [Tooltip("Max offset angle of the camera for up and down")]
         public float pitchOffsetAngle;
         [Tooltip("The max angle of the camera while turning")]
@@ -124,9 +124,12 @@ namespace POTM
 
         public void ResetCamera()
         {
-            transform.position = player.transform.position + (-player.transform.forward * baseDistanceFromPlayer);
-            transform.position += player.transform.up * cameraHeight;
-            transform.Rotate(new Vector3(cameraAngle, 0, 0));
+            float additionalDist = (player.currentSpeed * distDiff) / speedDiff;
+            float additionalHeight = (player.currentSpeed * (cameraHeight - 0.01f)) / speedDiff;
+            transform.position = (player.transform.position
+                + -player.transform.forward * (minDist + additionalDist)
+                + player.transform.up * (0.01f + additionalHeight));
+            //transform.Rotate(new Vector3(cameraAngle, 0, 0));
         }
     }
 }

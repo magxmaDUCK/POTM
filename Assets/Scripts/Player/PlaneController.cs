@@ -29,16 +29,19 @@ namespace POTM
         [Range(0, 90)]
         public float maxTurningAngle;
 
+        [Range(0,1)]
+        public float joystickDiffTolerence = 0.4f;
+
         [Tooltip("UI for info")]
         public Text display;
 
         public bool newControls = false;
-        
+
         public float yawTurningSpeed;
 
         public bool multiplayer = false;
 
-        [HideInInspector]public float currentSpeed;
+        [HideInInspector] public float currentSpeed;
         private Rigidbody planeRB;
         private CameraController cam;
         private MeshRenderer planeMesh;
@@ -51,16 +54,13 @@ namespace POTM
         private bool right = false;
         private bool left = false;
 
-        [HideInInspector]public float planeYaw = 0;
-        [HideInInspector]public float planePitch = 0;
+        [HideInInspector] public float planeYaw = 0;
+        [HideInInspector] public float planePitch = 0;
 
         private float lerpLength;
         private float rollStartAngle;
 
         private float speedDiff;
-
-        //score is the number of stars
-        private int score = 0;
 
         // Start is called before the first frame update
         void Start()
@@ -70,11 +70,11 @@ namespace POTM
             planeMesh = GetComponentInChildren<MeshRenderer>();
             currentSpeed = (maxSpeed + minSpeed) / 2;
             planeRB.velocity = transform.forward * maxSpeed;
-            if(maxTurningAngle >= 90)
+            if (maxTurningAngle >= 90)
             {
                 maxTurningAngle = 89;
             }
-            
+
             planeCollider = GetComponent<CapsuleCollider>();
             speedDiff = maxSpeed - minSpeed;
         }
@@ -91,8 +91,32 @@ namespace POTM
 
             if(multiplayer)
             {
+
+                float yawDiff = yawP2 - yawP1;
+                float pitchDiff = pitchP2 - pitchP1;
+                float yawResult = Mathf.Min(Mathf.Abs(yawDiff), joystickDiffTolerence);
+                float pitchResult = Mathf.Min(Mathf.Abs(pitchDiff), joystickDiffTolerence);
+
+                yawP1 *= (1 - yawResult); 
+                yawP2 *= (1 - yawResult); 
+                pitchP1 *= (1 - pitchResult); 
+                pitchP2 *= (1 - pitchResult); 
+
                 yaw = (yawP1 + yawP2) / 2;
                 pitch = (pitchP1 + pitchP2) / 2;
+                /*
+                //Too precise ! Need to tone down
+                if (CloseTo(yawP1, 0.6f, yawP2) && CloseTo(pitchP1, 0.6f, pitchP2))
+                {
+                    yaw = (yawP1 + yawP2) / 2;
+                    pitch = (pitchP1 + pitchP2) / 2;
+                }
+                else
+                {
+                    yaw = (yawP1 + yawP2) / 6;
+                    pitch = (pitchP1 + pitchP2) / 6;
+                }
+                */
             }
             else
             {
@@ -190,7 +214,7 @@ namespace POTM
 
         public void updateDisplay()
         {
-            display.text = "PLANE\nSpeed : " + currentSpeed + "\nAngle : " + pitchAngle + "\n Roll angle : " + rollStartAngle ;
+            display.text = "PLANE\nSpeed : " + currentSpeed + "\nAngle : " + pitchAngle + "\n Roll angle : " + rollStartAngle;
         }
 
         public void resetRoll()
@@ -307,13 +331,26 @@ namespace POTM
 
         private void OnTriggerEnter(Collider collision)
         {
-            transform.position += new Vector3(0, 100, 0);
-            transform.rotation = Quaternion.identity;
-            planeRB.velocity = transform.forward * currentSpeed;
-            planeRB.angularVelocity = Vector3.zero;
-            planeYaw = 0;
-            planePitch = 0;
-            cam.ResetCamera();
+            if(collision.gameObject.tag != "collector")
+            {
+                transform.position += new Vector3(0, 100, 0);
+                transform.rotation = Quaternion.identity;
+                planeRB.velocity = transform.forward * cruisingSpeed;
+                planeRB.angularVelocity = Vector3.zero;
+                planeYaw = 0;
+                planePitch = 0;
+                cam.ResetCamera();
+            }
+        }
+
+        private bool SameSign(float a, float b)
+        {
+            return (a < 0f && b < 0f) || (a >= 0f && b >=0f);
+        }
+
+        private bool CloseTo(float value, float offset, float closeTo)
+        {
+            return value < (closeTo + offset) && value > (closeTo - offset);  
         }
     }
 }

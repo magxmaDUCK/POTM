@@ -9,6 +9,7 @@ namespace POTM
 
         private int score;
         private SphereCollider triggerZone;
+        public Transform player;
 
         // Start is called before the first frame update
         void Start()
@@ -16,12 +17,19 @@ namespace POTM
             triggerZone = GetComponent<SphereCollider>();
         }
 
-        //Add a big trigger collider around the plane, for light detection and pickups.
-        private void OnTriggerEnter(Collider other)
+        private void Update()
         {
-            LightPickup light = other.gameObject.GetComponent<LightPickup>();
+            transform.position = player.position;
+        }
+
+        //Add a big trigger collider around the plane, for light detection and pickups.
+        private void OnTriggerEnter(Collider collision)
+        {
+            Debug.Log("hello");
+            LightPickup light = collision.gameObject.GetComponent<LightPickup>();
             if(light != null && light.IsOn())
             {
+                Debug.Log("ll");
                 score += light.getScoreValue();
                 light.TurnOff();
             }
