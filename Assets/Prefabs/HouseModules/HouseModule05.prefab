@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6875565272835801280
 Transform:
@@ -39,6 +39,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6875565272835801280}
     m_Modifications:
+    - target: {fileID: 4801553833146981237, guid: 63e1273b70ba75e4bbe7c7a5aa90854e,
+        type: 3}
+      propertyPath: m_Name
+      value: WindowModule01
+      objectReference: {fileID: 0}
     - target: {fileID: 4801553833146943317, guid: 63e1273b70ba75e4bbe7c7a5aa90854e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -104,11 +109,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4801553833146981237, guid: 63e1273b70ba75e4bbe7c7a5aa90854e,
-        type: 3}
-      propertyPath: m_Name
-      value: WindowModule01
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63e1273b70ba75e4bbe7c7a5aa90854e, type: 3}
 --- !u!4 &4079762448305149721 stripped
@@ -124,6 +124,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6875565272835801280}
     m_Modifications:
+    - target: {fileID: 2551458271103189153, guid: 92ad4232d5629034ba6db8fc4a780622,
+        type: 3}
+      propertyPath: m_Name
+      value: HouseModule02
+      objectReference: {fileID: 0}
     - target: {fileID: 2551458271102835841, guid: 92ad4232d5629034ba6db8fc4a780622,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -188,11 +193,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2551458271103189153, guid: 92ad4232d5629034ba6db8fc4a780622,
-        type: 3}
-      propertyPath: m_Name
-      value: HouseModule02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92ad4232d5629034ba6db8fc4a780622, type: 3}
