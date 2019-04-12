@@ -113,6 +113,90 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &14185333
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6716516835695648474, guid: 17da2ca5f8f1eac469237b5d386efae0,
+        type: 3}
+      propertyPath: m_Name
+      value: Ark02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716516835695936250, guid: 17da2ca5f8f1eac469237b5d386efae0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716516835695936250, guid: 17da2ca5f8f1eac469237b5d386efae0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716516835695936250, guid: 17da2ca5f8f1eac469237b5d386efae0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716516835695936250, guid: 17da2ca5f8f1eac469237b5d386efae0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716516835695936250, guid: 17da2ca5f8f1eac469237b5d386efae0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716516835695936250, guid: 17da2ca5f8f1eac469237b5d386efae0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716516835695936250, guid: 17da2ca5f8f1eac469237b5d386efae0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716516835695936250, guid: 17da2ca5f8f1eac469237b5d386efae0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716516835695936250, guid: 17da2ca5f8f1eac469237b5d386efae0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716516835695936250, guid: 17da2ca5f8f1eac469237b5d386efae0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716516835695936250, guid: 17da2ca5f8f1eac469237b5d386efae0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716516835695936250, guid: 17da2ca5f8f1eac469237b5d386efae0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5841947
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716516835695936250, guid: 17da2ca5f8f1eac469237b5d386efae0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5841947
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716516835695936250, guid: 17da2ca5f8f1eac469237b5d386efae0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.5841947
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 17da2ca5f8f1eac469237b5d386efae0, type: 3}
 --- !u!1001 &309177915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120,11 +204,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5079985319490365406, guid: bf3424a0ee100de40ab141ec0331646c,
-        type: 3}
-      propertyPath: m_Name
-      value: HouseModule03 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 5079985319490337790, guid: bf3424a0ee100de40ab141ec0331646c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -179,6 +258,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5079985319490365406, guid: bf3424a0ee100de40ab141ec0331646c,
+        type: 3}
+      propertyPath: m_Name
+      value: HouseModule03 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf3424a0ee100de40ab141ec0331646c, type: 3}
@@ -300,11 +384,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2551458271103189153, guid: 92ad4232d5629034ba6db8fc4a780622,
-        type: 3}
-      propertyPath: m_Name
-      value: HouseModule02 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 2551458271102835841, guid: 92ad4232d5629034ba6db8fc4a780622,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -374,6 +453,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.7466
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551458271103189153, guid: 92ad4232d5629034ba6db8fc4a780622,
+        type: 3}
+      propertyPath: m_Name
+      value: HouseModule02 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92ad4232d5629034ba6db8fc4a780622, type: 3}
@@ -666,11 +750,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2551458271103189153, guid: 92ad4232d5629034ba6db8fc4a780622,
-        type: 3}
-      propertyPath: m_Name
-      value: HouseModule02 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 2551458271102835841, guid: 92ad4232d5629034ba6db8fc4a780622,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -740,6 +819,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.51939
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551458271103189153, guid: 92ad4232d5629034ba6db8fc4a780622,
+        type: 3}
+      propertyPath: m_Name
+      value: HouseModule02 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92ad4232d5629034ba6db8fc4a780622, type: 3}
