@@ -63,7 +63,7 @@ namespace POTM
         private float speedDiff;
 
         // Start is called before the first frame update
-        void Start()
+        private void Awake()
         {
             planeRB = GetComponent<Rigidbody>();
             cam = GetComponentInChildren<CameraController>();
@@ -77,6 +77,11 @@ namespace POTM
 
             planeCollider = GetComponent<CapsuleCollider>();
             speedDiff = maxSpeed - minSpeed;
+        }
+
+        void Start()
+        {
+           
         }
 
         // Update is called once per frame

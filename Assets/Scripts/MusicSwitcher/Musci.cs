@@ -13,7 +13,7 @@ public class Musci : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        AkSoundEngine.SetState("MusicState", "Air");
     }
 
     // Update is called once per frame
@@ -23,15 +23,18 @@ public class Musci : MonoBehaviour
 
         if(dist <= dist1)
         {
-            //music1
+            AkSoundEngine.SetState("MusicState", "Close");
+            //Debug.Log("close");
         }
         else if(dist <= dist2)
         {
-            //music2
+            AkSoundEngine.SetState("MusicState", "Air");
+           //Debug.Log("air");
         }
         else
         {
-            //music3
+            AkSoundEngine.SetState("MusicState", "Far");
+            //Debug.Log("far");
         }
     }
 }

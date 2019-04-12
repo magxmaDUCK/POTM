@@ -55,11 +55,11 @@ namespace POTM
         void Start()
         {
             cam = GetComponent<Camera>();
-            ResetCamera();
-
             speedDiff = player.maxSpeed - player.minSpeed;
             distDiff = maxDist - minDist;
             diffFov = maxFOV - minFOV;
+
+            ResetCamera();
         }
 
         // Update is called once per frame
