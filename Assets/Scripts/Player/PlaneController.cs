@@ -62,9 +62,6 @@ namespace POTM
 
         private float speedDiff;
 
-        //score is the number of stars
-        private int score = 0;
-
         // Start is called before the first frame update
         void Start()
         {
@@ -217,7 +214,7 @@ namespace POTM
 
         public void updateDisplay()
         {
-            display.text = "PLANE\nSpeed : " + currentSpeed + "\nAngle : " + pitchAngle + "\n Roll angle : " + rollStartAngle ;
+            display.text = "PLANE\nSpeed : " + currentSpeed + "\nAngle : " + pitchAngle + "\n Roll angle : " + rollStartAngle;
         }
 
         public void resetRoll()
