@@ -62,11 +62,8 @@ namespace POTM
 
         private float speedDiff;
 
-        //score is the number of stars
-        private int score = 0;
-
         // Start is called before the first frame update
-        void Start()
+        private void Awake()
         {
             planeRB = GetComponent<Rigidbody>();
             cam = GetComponentInChildren<CameraController>();
@@ -80,6 +77,11 @@ namespace POTM
 
             planeCollider = GetComponent<CapsuleCollider>();
             speedDiff = maxSpeed - minSpeed;
+        }
+
+        void Start()
+        {
+           
         }
 
         // Update is called once per frame
@@ -217,7 +219,7 @@ namespace POTM
 
         public void updateDisplay()
         {
-            display.text = "PLANE\nSpeed : " + currentSpeed + "\nAngle : " + pitchAngle + "\n Roll angle : " + rollStartAngle ;
+            display.text = "PLANE\nSpeed : " + currentSpeed + "\nAngle : " + pitchAngle + "\n Roll angle : " + rollStartAngle;
         }
 
         public void resetRoll()

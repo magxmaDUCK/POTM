@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: f3bb76a65116464ab8677079403d8853
     GuidInternal: 
-    m_lastTime: -8586478196999837030
+    m_lastTime: -8586465236115275925
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 02522841b21ceb4ab50a02e82da18aec
     GuidInternal: 
-    m_lastTime: -8586478196973577239
+    m_lastTime: -8586465223920728051
     List:
     - name: PotM
       guid: f2b8e3691563cc4a8113e087753feb8e
@@ -53,29 +53,23 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 643a38164064c9459658ade970c81302
     GuidInternal: 
-    m_lastTime: -8586478196999946734
+    m_lastTime: -8586465236115485361
+    List: []
+  - PhysicalPath: Events\PotM.wwu
+    ParentPhysicalPath: 
+    guid: e0aabc591baf36408043515028f544aa
+    GuidInternal: 
+    m_lastTime: -8586465220966267103
     List:
-    - name: Play_AmbOcean
-      guid: 28803dc1dcaf504c82bccf878637ca0c
-      id: 1570489620
+    - name: Play_Init
+      guid: 5799c74ec246cc4a9a20f76464224546
+      id: 426840996
       PathAndIcons:
-      - ElementName: Default Work Unit
+      - ElementName: PotM
         ObjectType: 12
-      - ElementName: Play_AmbOcean
+      - ElementName: Play_Init
         ObjectType: 3
-      Path: Default Work Unit\Play_AmbOcean
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Play_SS_Wind
-      guid: bc9ecdc6f1cfe6409b86829797a4cfb0
-      id: 39205609
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Play_SS_Wind
-        ObjectType: 3
-      Path: Default Work Unit\Play_SS_Wind
+      Path: PotM\Play_Init
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -83,20 +77,26 @@ MonoBehaviour:
       guid: b85a7cf2e214774d9d5b725ec8962705
       id: 467174588
       PathAndIcons:
-      - ElementName: Default Work Unit
+      - ElementName: PotM
         ObjectType: 12
       - ElementName: Play_Waterfall
         ObjectType: 3
-      Path: Default Work Unit\Play_Waterfall
+      Path: PotM\Play_Waterfall
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-  - PhysicalPath: Events\PotM.wwu
-    ParentPhysicalPath: 
-    guid: e0aabc591baf36408043515028f544aa
-    GuidInternal: 
-    m_lastTime: -8586478196999936765
-    List: []
+    - name: Trigger_PickupLight
+      guid: 8020cd0198796947bb744dab48e03300
+      id: 1274858102
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Trigger_PickupLight
+        ObjectType: 3
+      Path: PotM\Trigger_PickupLight
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -104,35 +104,11 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8586478196999936765
     List: []
-  - PhysicalPath: Game Parameters\Factory Motion.wwu
-    ParentPhysicalPath: 
-    guid: 225213d7dbd1d042adc0930743567776
-    GuidInternal: 
-    m_lastTime: -8586478196999916816
-    List:
-    - name: Playback_Rate
-      guid: e37e38283ac11643b9c3db5c521624af
-      id: 1524500807
-      PathAndIcons:
-      - ElementName: Factory Motion
-        ObjectType: 12
-      - ElementName: Playback_Rate
-        ObjectType: 13
-      Path: Factory Motion\Playback_Rate
-    - name: RPM
-      guid: 05aa129177f5fd449f4e4424158129e6
-      id: 796049864
-      PathAndIcons:
-      - ElementName: Factory Motion
-        ObjectType: 12
-      - ElementName: RPM
-        ObjectType: 13
-      Path: Factory Motion\RPM
   - PhysicalPath: Game Parameters\PotM.wwu
     ParentPhysicalPath: 
     guid: fd9bdaf483f2634ba661fa0c42ecb746
     GuidInternal: 
-    m_lastTime: -8586478196999886894
+    m_lastTime: -8586465236115405580
     List:
     - name: Doppler
       guid: 321943c3f5cde34ca697c971f0a054a1
@@ -195,6 +171,49 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8586478196973517403
     List: []
+  - PhysicalPath: States\PotM.wwu
+    ParentPhysicalPath: 
+    guid: 09ba98002194974789c4ed30b053403c
+    GuidInternal: 
+    m_lastTime: -8586465236113241445
+    List:
+    - name: MusicState
+      guid: 900b314867164e4a8eba1a5c3179a3ee
+      id: 1021618141
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: MusicState
+        ObjectType: 9
+      Path: PotM\MusicState
+      values:
+      - name: Air
+        guid: 3b431dea065f654b9261cf2e0a72276a
+        id: 1050421051
+        PathAndIcons:
+        - ElementName: Air
+          ObjectType: 8
+      - name: Close
+        guid: c4cbfd6f9f0b884e90b0eb2fcfe8bee7
+        id: 1451272583
+        PathAndIcons:
+        - ElementName: Close
+          ObjectType: 8
+      - name: Far
+        guid: 06944ec4e81b694a9967474e170f91ba
+        id: 1183803292
+        PathAndIcons:
+        - ElementName: Far
+          ObjectType: 8
+      - name: None
+        guid: 129d0010d8c5584ab78c65c7fffbd176
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -207,11 +226,25 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: dc5b375c941f76418aff0957bc08dad9
     GuidInternal: 
-    m_lastTime: -8586478196973487483
-    List: []
+    m_lastTime: -8586465236113241445
+    List:
+    - name: PickupLight
+      guid: d90f9a9798566642ac45cef802e5775c
+      id: 2491260467
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PickupLight
+        ObjectType: 14
+      Path: Default Work Unit\PickupLight
   ExpandedItems:
   - /PotMWwise
   - /PotMWwise/Events
-  - /PotMWwise/Events/Default Work Unit
+  - /PotMWwise/Events/PotM
+  - /PotMWwise/SoundBanks
+  - /PotMWwise/SoundBanks/PotM
+  - /PotMWwise/States
+  - /PotMWwise/States/PotM
+  - /PotMWwise/States/PotM/MusicState
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
