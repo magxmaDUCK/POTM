@@ -338,7 +338,7 @@ namespace POTM
             {
                 transform.position += new Vector3(0, 100, 0);
                 transform.rotation = Quaternion.identity;
-                planeRB.velocity = transform.forward * currentSpeed;
+                planeRB.velocity = transform.forward * cruisingSpeed;
                 planeRB.angularVelocity = Vector3.zero;
                 planeYaw = 0;
                 planePitch = 0;
