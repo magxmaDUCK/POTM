@@ -124,9 +124,12 @@ namespace POTM
 
         public void ResetCamera()
         {
-            transform.position = player.transform.position + (-player.transform.forward * baseDistanceFromPlayer);
-            transform.position += player.transform.up * cameraHeight;
-            transform.Rotate(new Vector3(cameraAngle, 0, 0));
+            float additionalDist = (player.currentSpeed * distDiff) / speedDiff;
+            float additionalHeight = (player.currentSpeed * (cameraHeight - 0.01f)) / speedDiff;
+            transform.position = (player.transform.position
+                + -player.transform.forward * (minDist + additionalDist)
+                + player.transform.up * (0.01f + additionalHeight));
+            //transform.Rotate(new Vector3(cameraAngle, 0, 0));
         }
     }
 }
