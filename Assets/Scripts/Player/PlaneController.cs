@@ -62,9 +62,6 @@ namespace POTM
 
         private float speedDiff;
 
-        //score is the number of stars
-        private int score = 0;
-
         // Start is called before the first frame update
         void Start()
         {
@@ -217,7 +214,7 @@ namespace POTM
 
         public void updateDisplay()
         {
-            display.text = "PLANE\nSpeed : " + currentSpeed + "\nAngle : " + pitchAngle + "\n Roll angle : " + rollStartAngle ;
+            display.text = "PLANE\nSpeed : " + currentSpeed + "\nAngle : " + pitchAngle + "\n Roll angle : " + rollStartAngle;
         }
 
         public void resetRoll()
@@ -338,7 +335,7 @@ namespace POTM
             {
                 transform.position += new Vector3(0, 100, 0);
                 transform.rotation = Quaternion.identity;
-                planeRB.velocity = transform.forward * currentSpeed;
+                planeRB.velocity = transform.forward * cruisingSpeed;
                 planeRB.angularVelocity = Vector3.zero;
                 planeYaw = 0;
                 planePitch = 0;
