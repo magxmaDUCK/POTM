@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: f3bb76a65116464ab8677079403d8853
     GuidInternal: 
-    m_lastTime: -8586465236115275925
+    m_lastTime: -8586462576488741721
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 02522841b21ceb4ab50a02e82da18aec
     GuidInternal: 
-    m_lastTime: -8586465223920728051
+    m_lastTime: -8586462581999501084
     List:
     - name: PotM
       guid: f2b8e3691563cc4a8113e087753feb8e
@@ -53,13 +53,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 643a38164064c9459658ade970c81302
     GuidInternal: 
-    m_lastTime: -8586465236115485361
+    m_lastTime: -8586462582321997396
     List: []
   - PhysicalPath: Events\PotM.wwu
     ParentPhysicalPath: 
     guid: e0aabc591baf36408043515028f544aa
     GuidInternal: 
-    m_lastTime: -8586465220966267103
+    m_lastTime: -8586462582321917608
     List:
     - name: Play_Init
       guid: 5799c74ec246cc4a9a20f76464224546
@@ -70,6 +70,18 @@ MonoBehaviour:
       - ElementName: Play_Init
         ObjectType: 3
       Path: PotM\Play_Init
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Light_Pickup
+      guid: a76698a5dab0704e9a80a168145f05c6
+      id: 2293153013
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_Light_Pickup
+        ObjectType: 3
+      Path: PotM\Play_Light_Pickup
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_INIT = 426840996U;
+        static const AkUniqueID PLAY_LIGHT_PICKUP = 2293153013U;
         static const AkUniqueID PLAY_WATERFALL = 467174588U;
         static const AkUniqueID TRIGGER_PICKUPLIGHT = 1274858102U;
     } // namespace EVENTS
