@@ -53,7 +53,7 @@ namespace POTM
 
         virtual public void TurnOff()
         {
-           AkSoundEngine.PostEvent("Trigger_PickupLight", gameObject);
+           AkSoundEngine.PostEvent("Play_Light_Pickup", gameObject);
             on = false;
             startTime = Time.time;
         }
