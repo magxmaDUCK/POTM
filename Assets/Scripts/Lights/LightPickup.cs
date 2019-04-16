@@ -37,14 +37,17 @@ namespace POTM
                 Material mat = rend.material;
 
                 float t = Mathf.Max(0, 1 - (Time.time - startTime));
-
-                Debug.Log(t);
             
                 Color baseColor = offColor; //Replace this with whatever you want for your base color at emission level '1'
 
                 Color finalColor = baseColor * Mathf.LinearToGammaSpace(t);
 
                 mat.SetColor("_EmissionColor", finalColor);
+            }
+
+            if(!on && lightoff)
+            {
+                Destroy(this);
             }
         }
 

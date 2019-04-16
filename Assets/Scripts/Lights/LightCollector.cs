@@ -25,7 +25,7 @@ namespace POTM
         //Add a big trigger collider around the plane, for light detection and pickups.
         private void OnTriggerEnter(Collider collision)
         {
-            Debug.Log("hello");
+            //Debug.Log("hello");
             LightPickup light = collision.gameObject.GetComponent<LightPickup>();
             if(light != null && light.IsOn())
             {

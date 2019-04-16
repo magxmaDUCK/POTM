@@ -310,6 +310,7 @@ GameObject:
   - component: {fileID: 7636752031324795020}
   - component: {fileID: 7636752031324795023}
   - component: {fileID: 7636752030506246233}
+  - component: {fileID: 7376264981555390389}
   m_Layer: 0
   m_Name: paper_airplane
   m_TagString: Untagged
@@ -386,10 +387,12 @@ MonoBehaviour:
   accelRatio: 1.8
   decelRatio: 2.5
   maxTurningAngle: 45
+  joystickDiffTolerence: 0.4
   display: {fileID: 0}
   newControls: 1
   yawTurningSpeed: 3
   multiplayer: 1
+  seesaw: 0
   currentSpeed: 0
   yaw: 0
   pitch: 0
@@ -415,8 +418,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: b469781938925fd40897095d8eed6df6,
-      type: 2}
+    WwiseObjectReference: {fileID: 0}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -459,6 +461,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1dede2a02997af4bab14c1e3bcd43e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7376264981555390389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7636752030520808130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6724be2676d97f24683dafa754d35610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potP1: 0
+  potP2: 0
+  dist: 0
+  potMax: 890
+  potMin: 10
+  distMax: 17
+  distMin: 5
 --- !u!1 &7636752031393245831
 GameObject:
   m_ObjectHideFlags: 0
