@@ -41,11 +41,14 @@ namespace POTM
 
         public bool multiplayer = false;
 
+        public bool seesaw = false;
+
         [HideInInspector] public float currentSpeed;
         private Rigidbody planeRB;
         private CameraController cam;
         private MeshRenderer planeMesh;
         private CapsuleCollider planeCollider;
+        private ArduinoReader AR;
 
         [HideInInspector] public float yaw;
         [HideInInspector] public float pitch;
@@ -61,6 +64,11 @@ namespace POTM
         private float rollStartAngle;
 
         private float speedDiff;
+
+        private float yawP1;
+        private float yawP2;
+        private float pitchP1;
+        private float pitchP2;
 
         // Start is called before the first frame update
         private void Awake()
@@ -81,52 +89,66 @@ namespace POTM
 
         void Start()
         {
-           
+            AR = GetComponent<ArduinoReader>();
         }
 
         // Update is called once per frame
         void FixedUpdate()
         {
             //Get controls
-            float yawP1 = Input.GetAxis("Horizontal");
-            float yawP2 = Input.GetAxis("Horizontal2");
-
-            float pitchP1 = Input.GetAxis("Vertical");
-            float pitchP2 = Input.GetAxis("Vertical2");
-
-            if(multiplayer)
+            if (seesaw)
             {
+                yawP1 = ((float)AR.dist * 2.0f) / (AR.distMax - AR.distMin) - 2.0f;
+                pitchP1 = ((float)AR.potP1 * 2.0f) / (AR.potMax - AR.potMin) - 1.0f;
+                pitchP2 = ((float)AR.potP2 * 2.0f) / (AR.potMax - AR.potMin) - 1.0f;
 
-                float yawDiff = yawP2 - yawP1;
-                float pitchDiff = pitchP2 - pitchP1;
-                float yawResult = Mathf.Min(Mathf.Abs(yawDiff), joystickDiffTolerence);
-                float pitchResult = Mathf.Min(Mathf.Abs(pitchDiff), joystickDiffTolerence);
-
-                yawP1 *= (1 - yawResult); 
-                yawP2 *= (1 - yawResult); 
-                pitchP1 *= (1 - pitchResult); 
-                pitchP2 *= (1 - pitchResult); 
-
-                yaw = (yawP1 + yawP2) / 2;
-                pitch = (pitchP1 + pitchP2) / 2;
-                /*
-                //Too precise ! Need to tone down
-                if (CloseTo(yawP1, 0.6f, yawP2) && CloseTo(pitchP1, 0.6f, pitchP2))
-                {
-                    yaw = (yawP1 + yawP2) / 2;
-                    pitch = (pitchP1 + pitchP2) / 2;
-                }
-                else
-                {
-                    yaw = (yawP1 + yawP2) / 6;
-                    pitch = (pitchP1 + pitchP2) / 6;
-                }
-                */
+                //Debug.Log("d : " + yawP1 + " x : " + pitchP1 + " y : " + pitchP2);
+                yaw = yawP1;
+                pitch = (pitchP1 / 2.0f) + (pitchP2 / 2.0f);
+                
             }
             else
             {
-                yaw = yawP1;
-                pitch = pitchP1;
+                yawP1 = Input.GetAxis("Horizontal");
+                yawP2 = Input.GetAxis("Horizontal2");
+
+                pitchP1 = Input.GetAxis("Vertical");
+                pitchP2 = Input.GetAxis("Vertical2");
+
+                if (multiplayer)
+                {
+
+                    float yawDiff = yawP2 - yawP1;
+                    float pitchDiff = pitchP2 - pitchP1;
+                    float yawResult = Mathf.Min(Mathf.Abs(yawDiff), joystickDiffTolerence);
+                    float pitchResult = Mathf.Min(Mathf.Abs(pitchDiff), joystickDiffTolerence);
+
+                    yawP1 *= (1 - yawResult);
+                    yawP2 *= (1 - yawResult);
+                    pitchP1 *= (1 - pitchResult);
+                    pitchP2 *= (1 - pitchResult);
+
+                    yaw = (yawP1 + yawP2) / 2;
+                    pitch = (pitchP1 + pitchP2) / 2;
+                    /*
+                    //Too precise ! Need to tone down
+                    if (CloseTo(yawP1, 0.6f, yawP2) && CloseTo(pitchP1, 0.6f, pitchP2))
+                    {
+                        yaw = (yawP1 + yawP2) / 2;
+                        pitch = (pitchP1 + pitchP2) / 2;
+                    }
+                    else
+                    {
+                        yaw = (yawP1 + yawP2) / 6;
+                        pitch = (pitchP1 + pitchP2) / 6;
+                    }
+                    */
+                }
+                else
+                {
+                    yaw = yawP1;
+                    pitch = pitchP1;
+                }
             }
 
             AkSoundEngine.SetRTPCValue("Wind_Yaw", yaw);
