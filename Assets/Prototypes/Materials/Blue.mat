@@ -19,6 +19,22 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BottomBumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BottomEmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BottomMainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BottomMetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -55,11 +71,34 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TopBumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TopEmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TopMainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TopMetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _BottomBumpScale: 1
+    - _BottomEmissionScaleUI: 0
+    - _BottomGlossiness: 0.5
+    - _BottomMetallic: 0
+    - _BottomMultiplier: 0
+    - _BottomUsingMetallicGlossMap: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _EmissionScaleUI: 0
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
@@ -67,11 +106,29 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Scale: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _TexPower: 5.1
+    - _TopBumpScale: 1
+    - _TopEmissionScaleUI: 0
+    - _TopGlossiness: 0
+    - _TopMetallic: 0
+    - _TopMultiplier: 0
+    - _TopUsingMetallicGlossMap: 0
+    - _TriplanarSpace: 0
     - _UVSec: 0
+    - _UsingMetallicGlossMap: 0
+    - _VertexColorStrength: 1
     - _ZWrite: 1
     m_Colors:
+    - _BottomColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BottomEmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _BottomEmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.3247597, g: 0.56830835, b: 0.7735849, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
+    - _TopColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TopEmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _TopEmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
