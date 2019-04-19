@@ -185,6 +185,11 @@ namespace POTM
                 updateDisplay();
         }
 
+        public void AutoEvasion()
+        {
+
+        }
+
         //Changes the speed depending on it's pitch angle
         //Has to be called in FixedUpdate ONLY ! affected by FPS;
         public void updateSpeed()
