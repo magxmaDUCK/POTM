@@ -42,6 +42,7 @@ namespace POTM
 
                 Color finalColor = baseColor * Mathf.LinearToGammaSpace(t);
 
+                //Modify for HDRP
                 mat.SetColor("_EmissionColor", finalColor);
             }
 
