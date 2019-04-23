@@ -70,6 +70,8 @@ namespace POTM
         private float pitchP1;
         private float pitchP2;
 
+        private FlightAutoPilot autoPilot;
+
         // Start is called before the first frame update
         private void Awake()
         {
@@ -85,6 +87,7 @@ namespace POTM
 
             planeCollider = GetComponent<CapsuleCollider>();
             speedDiff = maxSpeed - minSpeed;
+            autoPilot = GetComponent<FlightAutoPilot>();
         }
 
         void Start()

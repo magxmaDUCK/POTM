@@ -26,24 +26,25 @@ namespace POTM
             scoreValue = score;
         }
 
-        private Renderer rend;
+        
+
+
+        private void Awake()
+        {
+            
+        }
 
         void Update()
         {
             if (!on && !lightoff)
             {
-                Renderer rend = GetComponent<Renderer>();
-                offColor = rend.material.GetColor("_Color");
-                Material mat = rend.material;
-
+                
                 float t = Mathf.Max(0, 1 - (Time.time - startTime));
             
                 Color baseColor = offColor; //Replace this with whatever you want for your base color at emission level '1'
 
                 Color finalColor = baseColor * Mathf.LinearToGammaSpace(t);
-
-                //Modify for HDRP
-                mat.SetColor("_EmissionColor", finalColor);
+                
             }
 
             if(!on && lightoff)
