@@ -48990,43 +48990,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2533491370695898745, guid: c229940319a44094282b53ab73d93a48,
-        type: 3}
-      propertyPath: antialiasingMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2533491370695898745, guid: c229940319a44094282b53ab73d93a48,
-        type: 3}
-      propertyPath: m_ShowToolkit
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2533491370695898745, guid: c229940319a44094282b53ab73d93a48,
-        type: 3}
-      propertyPath: m_ShowCustomSorter
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980695866935271350, guid: c229940319a44094282b53ab73d93a48,
-        type: 3}
-      propertyPath: weight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: sharedProfile
-      value: 
-      objectReference: {fileID: 11400000, guid: 86e4db028f940c74bad383caaeee4ef4,
-        type: 2}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: volumeLayer.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 7636752030463727323, guid: c229940319a44094282b53ab73d93a48,
         type: 3}
       propertyPath: m_Name
@@ -49092,31 +49055,11 @@ PrefabInstance:
       propertyPath: display
       value: 
       objectReference: {fileID: 1359150756}
-    - target: {fileID: 7636752030520808133, guid: c229940319a44094282b53ab73d93a48,
-        type: 3}
-      propertyPath: multiplayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7636752030520808133, guid: c229940319a44094282b53ab73d93a48,
-        type: 3}
-      propertyPath: seesaw
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7636752030274910946, guid: c229940319a44094282b53ab73d93a48,
         type: 3}
       propertyPath: display
       value: 
       objectReference: {fileID: 1359150756}
-    - target: {fileID: 7636752030274910944, guid: c229940319a44094282b53ab73d93a48,
-        type: 3}
-      propertyPath: m_HDR
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7636752030274910944, guid: c229940319a44094282b53ab73d93a48,
-        type: 3}
-      propertyPath: m_AllowMSAA
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c229940319a44094282b53ab73d93a48, type: 3}
 --- !u!1001 &7526319798257922585
