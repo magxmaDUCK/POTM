@@ -157,6 +157,10 @@ namespace POTM
             AkSoundEngine.SetRTPCValue("Wind_Yaw", yaw);
             AkSoundEngine.SetRTPCValue("Wind_Pitch", pitch);
 
+            yaw += autoPilot.controlsOverride.x;
+            pitch += autoPilot.controlsOverride.y;
+            currentSpeed *= autoPilot.speedOverride;
+
             if (!newControls)
             {
                 Turning1();

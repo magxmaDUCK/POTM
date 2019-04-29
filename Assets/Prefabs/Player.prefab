@@ -380,6 +380,7 @@ GameObject:
   - component: {fileID: 7636752031324795023}
   - component: {fileID: 7636752030506246233}
   - component: {fileID: 7376264981555390389}
+  - component: {fileID: 8475864379891284322}
   m_Layer: 0
   m_Name: paper_airplane
   m_TagString: Untagged
@@ -545,6 +546,18 @@ MonoBehaviour:
   potP1: 0
   potP2: 0
   dist: 0
+--- !u!114 &8475864379891284322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7636752030520808130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69bdfa404228df04c889d668ea2cfc08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7636752031393245831
 GameObject:
   m_ObjectHideFlags: 0
