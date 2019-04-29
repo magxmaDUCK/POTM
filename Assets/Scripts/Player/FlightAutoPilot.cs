@@ -59,6 +59,7 @@ namespace POTM
             {
                 if (hitIndex[i])
                 {
+                    //Adjust maxDist to speed
                     float distRatio = Mathf.Min(rayHits[i].distance / maxDist, 1);
                     if(distRatio < 1)
                     {
@@ -78,34 +79,35 @@ namespace POTM
                                 controlsOverride.x += distRatio * 1.3f;
                                 break;
                             case 0:
-                                if(distRatio > 0.5f)
+                                if(distRatio > 0.8f)
                                 {
-                                    speedOverride = 0.9f;
+                                    //PULLS UP AND SIDEWAYS, NOT ALWAYS BEST
+                                    speedOverride = 1- 2*Time.deltaTime;
 
                                     if (!hitIndex[1])
                                     {
-                                        controlsOverride.y -= 10f;
+                                        controlsOverride.y -= 20f;
                                     }
                                     else if (!hitIndex[2])
                                     {
-                                        controlsOverride.y += 10f;
+                                        controlsOverride.y += 20f;
                                     }
                                     else
                                     {
-                                        controlsOverride.y -= 5f;
+                                        //controlsOverride.y -= 10f;
                                     }
 
                                     if (!hitIndex[3])
                                     {
-                                        controlsOverride.x += 10f;
+                                        controlsOverride.x += 20f;
                                     }
                                     else if (!hitIndex[4])
                                     {
-                                        controlsOverride.x -= 10f;
+                                        controlsOverride.x -= 20f;
                                     }
                                     else
                                     {
-                                        controlsOverride.x += 5f;
+                                        controlsOverride.x += 10f;
                                     }
                                 }
                                 break;
