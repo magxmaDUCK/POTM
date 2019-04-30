@@ -10,7 +10,10 @@ namespace POTM
         private RaycastHit[] rayHits;
         private const int NB_RAYS = 5;
         private bool[] hitIndex;
-        private int maxDist = 5;
+        private float dist = 2;
+        private float maxDist = 5;
+
+        private PlaneController pc;
 
         [System.NonSerialized]public float speedOverride = 1f;
         [System.NonSerialized]public Vector2 controlsOverride = new Vector2();
@@ -33,12 +36,15 @@ namespace POTM
             rays[3] = new Ray(transform.position, (0.8f*transform.forward + 0.2f*transform.right));
             //Right
             rays[4] = new Ray(transform.position, (0.8f*transform.forward - 0.2f*transform.right));
+
+            pc = GetComponent<PlaneController>();
     
         }
 
         // Update is called once per frame
         void FixedUpdate()
         {
+            maxDist = dist * pc.currentSpeed;
             controlsOverride.Set(0, 0);
             speedOverride = 1f;
 
@@ -107,7 +113,7 @@ namespace POTM
                                     }
                                     else
                                     {
-                                        controlsOverride.x += 10f;
+                                        controlsOverride.x += 20f;
                                     }
                                 }
                                 break;
@@ -119,7 +125,7 @@ namespace POTM
             //Draw rays
             foreach (Ray r in rays)
             {
-                Debug.DrawRay(r.origin, r.direction, Color.green);
+                Debug.DrawRay(r.origin, r.direction * maxDist, Color.green);
             }
         }
     }
