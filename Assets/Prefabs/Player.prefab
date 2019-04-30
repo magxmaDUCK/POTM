@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 7636752030274910947}
   - component: {fileID: 7636752030274910944}
   - component: {fileID: 7636752030274910946}
+  - component: {fileID: 8841459945919039040}
   - component: {fileID: 7636752031194759060}
   - component: {fileID: 7636752031194759061}
   - component: {fileID: 3065006628819511262}
@@ -152,6 +153,22 @@ MonoBehaviour:
   rotationShake: 1
   display: {fileID: 0}
   target_cam: 0
+--- !u!114 &8841459945919039040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7636752030274910974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db1662d496c62474e968e822b7bac730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vignetteIntensityMax: 0.6
+  vignetteIntensitySpeed: 0.1
+  timeScaleMin: 0.1
+  timeScaleSpeed: 0.1
 --- !u!114 &7636752031194759060
 MonoBehaviour:
   m_ObjectHideFlags: 0
