@@ -13,7 +13,7 @@ namespace POTM
 
         public float turnOffDuration = 1.0f;
 
-        private Color offColor = Color.yellow;
+        private float offIntensity = 0;
 
         public LightPickup()
         {
@@ -26,12 +26,13 @@ namespace POTM
             scoreValue = score;
         }
 
-        
+        private Light light;
 
 
-        private void Awake()
+
+        private void Start()
         {
-            
+            light = GetComponentInChildren<Light>();
         }
 
         void Update()
@@ -41,9 +42,11 @@ namespace POTM
                 
                 float t = Mathf.Max(0, 1 - (Time.time - startTime));
             
-                Color baseColor = offColor; //Replace this with whatever you want for your base color at emission level '1'
+                float baseIntensity = offIntensity; //Replace this with whatever you want for your base color at emission level '1'
 
-                Color finalColor = baseColor * Mathf.LinearToGammaSpace(t);
+                float finalIntensity = baseIntensity * Mathf.LinearToGammaSpace(t);
+
+                light.intensity = finalIntensity;
                 
             }
 

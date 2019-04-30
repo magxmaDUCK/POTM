@@ -10,7 +10,10 @@ namespace POTM
         private RaycastHit[] rayHits;
         private const int NB_RAYS = 5;
         private bool[] hitIndex;
-        private int maxDist = 5;
+        private float dist = 1f;
+        private float maxDist = 5;
+
+        private PlaneController pc;
 
         [System.NonSerialized]public float speedOverride = 1f;
         [System.NonSerialized]public Vector2 controlsOverride = new Vector2();
@@ -26,29 +29,32 @@ namespace POTM
             //Forward
             rays[0] = new Ray(transform.position, transform.forward);
             //up
-            rays[1] = new Ray(transform.position, (0.8f*transform.forward + 0.2f*transform.up));
+            rays[1] = new Ray(transform.position, (0.9f*transform.forward + 0.1f*transform.up));
             //Down
-            rays[2] = new Ray(transform.position, (0.8f*transform.forward - 0.2f*transform.up));
+            rays[2] = new Ray(transform.position, (0.9f*transform.forward - 0.1f*transform.up));
             //Left
-            rays[3] = new Ray(transform.position, (0.8f*transform.forward + 0.2f*transform.right));
+            rays[3] = new Ray(transform.position, (0.9f*transform.forward + 0.1f*transform.right));
             //Right
-            rays[4] = new Ray(transform.position, (0.8f*transform.forward - 0.2f*transform.right));
+            rays[4] = new Ray(transform.position, (0.9f*transform.forward - 0.1f*transform.right));
+
+            pc = GetComponent<PlaneController>();
     
         }
 
         // Update is called once per frame
         void FixedUpdate()
         {
+            maxDist = dist * pc.currentSpeed;
             controlsOverride.Set(0, 0);
             speedOverride = 1f;
 
             rays[0].origin = rays[1].origin = rays[2].origin = rays[3].origin = rays[4].origin = transform.position;
 
             rays[0].direction = transform.forward;
-            rays[1].direction = (0.7f*transform.forward + 0.3f*transform.up);
-            rays[2].direction = (0.7f*transform.forward - 0.3f*transform.up);
-            rays[3].direction = (0.7f*transform.forward + 0.3f*transform.right);
-            rays[4].direction = (0.7f*transform.forward - 0.3f*transform.right);
+            rays[1].direction = (0.9f*transform.forward + 0.1f*transform.up);
+            rays[2].direction = (0.9f*transform.forward - 0.1f*transform.up);
+            rays[3].direction = (0.9f*transform.forward + 0.1f*transform.right);
+            rays[4].direction = (0.9f*transform.forward - 0.1f*transform.right);
 
             for(int i = 0; i < NB_RAYS; i++)
             {
@@ -79,36 +85,51 @@ namespace POTM
                                 controlsOverride.x += distRatio * 1.3f;
                                 break;
                             case 0:
+
+                                float lrDist = rayHits[1].distance - rayHits[2].distance;
+                                float udDist = rayHits[3].distance - rayHits[4].distance;
+
                                 if(distRatio > 0.8f)
                                 {
                                     //PULLS UP AND SIDEWAYS, NOT ALWAYS BEST
-                                    speedOverride = 1- 2*Time.deltaTime;
+                                    speedOverride = 1- 5*Time.deltaTime;
+
+                                    //Check distance to contact
+
+
+                                    //Compare distances between R and L and U and D
+
 
                                     if (!hitIndex[1])
                                     {
-                                        controlsOverride.y -= 20f;
+                                        controlsOverride.y -= 20f * distRatio;
                                     }
                                     else if (!hitIndex[2])
                                     {
-                                        controlsOverride.y += 20f;
+                                        controlsOverride.y += 20f * distRatio;
                                     }
-                                    else
+                                    else if (!hitIndex[3])
                                     {
-                                        //controlsOverride.y -= 10f;
-                                    }
-
-                                    if (!hitIndex[3])
-                                    {
-                                        controlsOverride.x += 20f;
+                                        controlsOverride.x += 20f * distRatio;
                                     }
                                     else if (!hitIndex[4])
                                     {
-                                        controlsOverride.x -= 20f;
+                                        controlsOverride.x -= 20f * distRatio;
+                                    }
+                                    else if (lrDist > udDist)
+                                    {
+                                        controlsOverride.y += Mathf.Sign(lrDist) * 20f * distRatio;
                                     }
                                     else
                                     {
-                                        controlsOverride.x += 10f;
+                                        controlsOverride.x += -Mathf.Sign(udDist) * 20f * distRatio;
                                     }
+                                }
+                                else
+                                {
+                                    //Add code for turning even when far
+                                    controlsOverride.x += Mathf.Sign(udDist) * 1.3f * distRatio;
+                                    controlsOverride.y += -Mathf.Sign(lrDist) * 1.3f * distRatio;
                                 }
                                 break;
                         }
@@ -119,7 +140,7 @@ namespace POTM
             //Draw rays
             foreach (Ray r in rays)
             {
-                Debug.DrawRay(r.origin, r.direction, Color.green);
+                Debug.DrawRay(r.origin, r.direction * maxDist, Color.green);
             }
         }
     }

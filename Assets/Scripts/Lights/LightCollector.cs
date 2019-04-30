@@ -29,7 +29,7 @@ namespace POTM
             LightPickup light = collision.gameObject.GetComponent<LightPickup>();
             if(light != null && light.IsOn())
             {
-                Debug.Log("ll");
+                //Debug.Log("ll");
                 score += light.getScoreValue();
                 light.TurnOff();
             }

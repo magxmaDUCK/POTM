@@ -104,7 +104,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 92.93588
   orthographic: 0
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800f07c516b8e3c489681e784e6cb90b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 8
+  minSpeed: 4
   maxSpeed: 20
   turnSpeed: 2
   dipSpeed: 1
@@ -462,7 +462,7 @@ MonoBehaviour:
   newControls: 1
   yawTurningSpeed: 3
   multiplayer: 1
-  seesaw: 0
+  seesaw: 1
   currentSpeed: 0
   yaw: 0
   pitch: 0
