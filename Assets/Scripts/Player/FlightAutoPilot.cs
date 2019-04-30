@@ -85,12 +85,20 @@ namespace POTM
                                 controlsOverride.x += distRatio * 1.3f;
                                 break;
                             case 0:
+
+                                float lrDist = rayHits[1].distance - rayHits[2].distance;
+                                float udDist = rayHits[3].distance - rayHits[4].distance;
+
                                 if(distRatio > 0.8f)
                                 {
                                     //PULLS UP AND SIDEWAYS, NOT ALWAYS BEST
                                     speedOverride = 1- 5*Time.deltaTime;
 
                                     //Check distance to contact
+
+
+                                    //Compare distances between R and L and U and D
+
 
                                     if (!hitIndex[1])
                                     {
@@ -100,12 +108,7 @@ namespace POTM
                                     {
                                         controlsOverride.y += 20f * distRatio;
                                     }
-                                    else
-                                    {
-                                        controlsOverride.y -= 20f * distRatio;
-                                    }
-
-                                    if (!hitIndex[3])
+                                    else if (!hitIndex[3])
                                     {
                                         controlsOverride.x += 20f * distRatio;
                                     }
@@ -113,10 +116,20 @@ namespace POTM
                                     {
                                         controlsOverride.x -= 20f * distRatio;
                                     }
+                                    else if (lrDist > udDist)
+                                    {
+                                        controlsOverride.y += Mathf.Sign(lrDist) * 20f * distRatio;
+                                    }
                                     else
                                     {
-                                        controlsOverride.x += 20f * distRatio;
+                                        controlsOverride.x += -Mathf.Sign(udDist) * 20f * distRatio;
                                     }
+                                }
+                                else
+                                {
+                                    //Add code for turning even when far
+                                    controlsOverride.x += Mathf.Sign(udDist) * 1.3f * distRatio;
+                                    controlsOverride.y += -Mathf.Sign(lrDist) * 1.3f * distRatio;
                                 }
                                 break;
                         }
