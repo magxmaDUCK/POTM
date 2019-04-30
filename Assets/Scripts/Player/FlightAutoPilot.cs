@@ -10,7 +10,7 @@ namespace POTM
         private RaycastHit[] rayHits;
         private const int NB_RAYS = 5;
         private bool[] hitIndex;
-        private float dist = 2;
+        private float dist = 1f;
         private float maxDist = 5;
 
         private PlaneController pc;
@@ -29,13 +29,13 @@ namespace POTM
             //Forward
             rays[0] = new Ray(transform.position, transform.forward);
             //up
-            rays[1] = new Ray(transform.position, (0.8f*transform.forward + 0.2f*transform.up));
+            rays[1] = new Ray(transform.position, (0.9f*transform.forward + 0.1f*transform.up));
             //Down
-            rays[2] = new Ray(transform.position, (0.8f*transform.forward - 0.2f*transform.up));
+            rays[2] = new Ray(transform.position, (0.9f*transform.forward - 0.1f*transform.up));
             //Left
-            rays[3] = new Ray(transform.position, (0.8f*transform.forward + 0.2f*transform.right));
+            rays[3] = new Ray(transform.position, (0.9f*transform.forward + 0.1f*transform.right));
             //Right
-            rays[4] = new Ray(transform.position, (0.8f*transform.forward - 0.2f*transform.right));
+            rays[4] = new Ray(transform.position, (0.9f*transform.forward - 0.1f*transform.right));
 
             pc = GetComponent<PlaneController>();
     
@@ -51,10 +51,10 @@ namespace POTM
             rays[0].origin = rays[1].origin = rays[2].origin = rays[3].origin = rays[4].origin = transform.position;
 
             rays[0].direction = transform.forward;
-            rays[1].direction = (0.7f*transform.forward + 0.3f*transform.up);
-            rays[2].direction = (0.7f*transform.forward - 0.3f*transform.up);
-            rays[3].direction = (0.7f*transform.forward + 0.3f*transform.right);
-            rays[4].direction = (0.7f*transform.forward - 0.3f*transform.right);
+            rays[1].direction = (0.9f*transform.forward + 0.1f*transform.up);
+            rays[2].direction = (0.9f*transform.forward - 0.1f*transform.up);
+            rays[3].direction = (0.9f*transform.forward + 0.1f*transform.right);
+            rays[4].direction = (0.9f*transform.forward - 0.1f*transform.right);
 
             for(int i = 0; i < NB_RAYS; i++)
             {
@@ -88,32 +88,34 @@ namespace POTM
                                 if(distRatio > 0.8f)
                                 {
                                     //PULLS UP AND SIDEWAYS, NOT ALWAYS BEST
-                                    speedOverride = 1- 2*Time.deltaTime;
+                                    speedOverride = 1- 5*Time.deltaTime;
+
+                                    //Check distance to contact
 
                                     if (!hitIndex[1])
                                     {
-                                        controlsOverride.y -= 20f;
+                                        controlsOverride.y -= 20f * distRatio;
                                     }
                                     else if (!hitIndex[2])
                                     {
-                                        controlsOverride.y += 20f;
+                                        controlsOverride.y += 20f * distRatio;
                                     }
                                     else
                                     {
-                                        //controlsOverride.y -= 10f;
+                                        controlsOverride.y -= 20f * distRatio;
                                     }
 
                                     if (!hitIndex[3])
                                     {
-                                        controlsOverride.x += 20f;
+                                        controlsOverride.x += 20f * distRatio;
                                     }
                                     else if (!hitIndex[4])
                                     {
-                                        controlsOverride.x -= 20f;
+                                        controlsOverride.x -= 20f * distRatio;
                                     }
                                     else
                                     {
-                                        controlsOverride.x += 20f;
+                                        controlsOverride.x += 20f * distRatio;
                                     }
                                 }
                                 break;
