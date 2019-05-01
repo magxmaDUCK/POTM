@@ -38,12 +38,12 @@ public class MenuPause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("space") && pressPause == false)
+        if(Input.GetButtonDown("Start") && pressPause == false)
         {
             pressPause = true;
         }
 
-        else if(Input.GetKeyDown("space") && pressPause == true)
+        else if(Input.GetButtonDown("Start") && pressPause == true)
         {
             pressPause = false;
         }
