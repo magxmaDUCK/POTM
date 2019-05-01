@@ -56,7 +56,6 @@ GameObject:
   - component: {fileID: 7636752030274910947}
   - component: {fileID: 7636752030274910944}
   - component: {fileID: 7636752030274910946}
-  - component: {fileID: 8841459945919039040}
   - component: {fileID: 7636752031194759060}
   - component: {fileID: 7636752031194759061}
   - component: {fileID: 3065006628819511262}
@@ -139,8 +138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7636752030520808133}
   baseDistanceFromPlayer: 5
-  maxDist: 0.4
-  minDist: 0.2
+  maxDist: 0.38
+  minDist: 0.27
   cameraAngle: -4
   cameraHeight: 0.1
   maxFOV: 73.87587
@@ -153,22 +152,6 @@ MonoBehaviour:
   rotationShake: 1
   display: {fileID: 0}
   target_cam: 0
---- !u!114 &8841459945919039040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7636752030274910974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db1662d496c62474e968e822b7bac730, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vignetteIntensityMax: 0.6
-  vignetteIntensitySpeed: 0.1
-  timeScaleMin: 0.1
-  timeScaleSpeed: 0.1
 --- !u!114 &7636752031194759060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,6 +376,7 @@ GameObject:
   - component: {fileID: 7636752030520808134}
   - component: {fileID: 7636752030520808135}
   - component: {fileID: 7636752030520808133}
+  - component: {fileID: 5533788791213513175}
   - component: {fileID: 7636752031324795020}
   - component: {fileID: 7636752031324795023}
   - component: {fileID: 7636752030506246233}
@@ -464,27 +448,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800f07c516b8e3c489681e784e6cb90b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 4
-  maxSpeed: 20
+  minSpeed: 7
+  maxSpeed: 25
   turnSpeed: 2
   dipSpeed: 1
   balanceAngle: -1
   balanceDeadZone: 5
-  cruisingSpeed: 11
-  accelRatio: 1.8
-  decelRatio: 2.5
+  cruisingSpeed: 8
+  accelRatio: 1.6
+  decelRatio: 3
   maxTurningAngle: 45
   joystickDiffTolerence: 0.4
   display: {fileID: 0}
   newControls: 1
   yawTurningSpeed: 3
   multiplayer: 1
-  seesaw: 1
+  seesaw: 0
   currentSpeed: 0
   yaw: 0
   pitch: 0
   planeYaw: 0
   planePitch: 0
+--- !u!114 &5533788791213513175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7636752030520808130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db1662d496c62474e968e822b7bac730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vignetteIntensityAdded: 0.05
+  vignetteIntensitySpeed: 0.4
+  depthOfFieldApertureSpeed: 5
+  timeScaleMin: 0.05
+  timeScaleSpeed: 2
+  MenuPauseCanvas: {fileID: 0}
 --- !u!114 &7636752031324795020
 MonoBehaviour:
   m_ObjectHideFlags: 0
