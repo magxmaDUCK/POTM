@@ -167,8 +167,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vignetteIntensityMax: 0.6
   vignetteIntensitySpeed: 0.1
-  timeScaleMin: 0.1
-  timeScaleSpeed: 0.1
+  timeScaleMin: 0.04
+  timeScaleSpeed: 0.5
 --- !u!114 &7636752031194759060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,7 +479,7 @@ MonoBehaviour:
   newControls: 1
   yawTurningSpeed: 3
   multiplayer: 1
-  seesaw: 1
+  seesaw: 0
   currentSpeed: 0
   yaw: 0
   pitch: 0

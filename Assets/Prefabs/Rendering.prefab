@@ -75,8 +75,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3.57
+  m_Color: {r: 0.7311321, g: 0.79245746, b: 1, a: 1}
+  m_Intensity: 2.41
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -95,11 +95,11 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 6.64
-  m_ColorTemperature: 7626
+  m_BounceIntensity: 6
+  m_ColorTemperature: 7063
   m_UseColorTemperature: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -126,8 +126,8 @@ MonoBehaviour:
   lightDimmer: 1
   m_VolumetricDimmer: 1
   lightUnit: 2
-  sunDiskSize: 1
-  sunHaloSize: 0.1
+  sunDiskSize: 42.2
+  sunHaloSize: 1
   fadeDistance: 10000
   affectDiffuse: 1
   affectSpecular: 1
@@ -138,13 +138,13 @@ MonoBehaviour:
   shapeHeight: 0.5
   aspectRatio: 1
   shapeRadius: 0
-  maxSmoothness: 1
+  maxSmoothness: 0.351
   applyRangeAttenuation: 1
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 3.57
+  displayLightIntensity: 2.41
   displayAreaLightEmissiveMesh: 0
   lightLayers: 1
   shadowNearPlane: 0.1
