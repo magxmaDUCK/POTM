@@ -138,8 +138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7636752030520808133}
   baseDistanceFromPlayer: 5
-  maxDist: 0.4
-  minDist: 0.2
+  maxDist: 0.38
+  minDist: 0.27
   cameraAngle: -4
   cameraHeight: 0.1
   maxFOV: 73.87587
@@ -448,15 +448,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800f07c516b8e3c489681e784e6cb90b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 4
-  maxSpeed: 20
+  minSpeed: 7
+  maxSpeed: 25
   turnSpeed: 2
   dipSpeed: 1
   balanceAngle: -1
   balanceDeadZone: 5
-  cruisingSpeed: 11
-  accelRatio: 1.8
-  decelRatio: 2.5
+  cruisingSpeed: 8
+  accelRatio: 1.6
+  decelRatio: 3
   maxTurningAngle: 45
   joystickDiffTolerence: 0.4
   display: {fileID: 0}
