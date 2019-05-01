@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6189243897862543371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 108.57414, y: 1.6690788, z: 12.191128}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7526319798154958886}
@@ -59,7 +59,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7526319798154958884}
   m_LocalRotation: {x: 0.43099543, y: -0.37212548, z: 0.03217392, w: 0.8214198}
-  m_LocalPosition: {x: -109.27414, y: 29.13092, z: -8.791128}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2737870700123722621}
@@ -76,7 +76,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.7311321, g: 0.79245746, b: 1, a: 1}
-  m_Intensity: 2.41
+  m_Intensity: 2.65
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -99,7 +99,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 6
-  m_ColorTemperature: 7063
+  m_ColorTemperature: 6549
   m_UseColorTemperature: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 2.41
+  displayLightIntensity: 2.65
   displayAreaLightEmissiveMesh: 0
   lightLayers: 1
   shadowNearPlane: 0.1
@@ -223,7 +223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7526319798237647703}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -108.57414, y: -1.6690788, z: -12.191128}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2737870700123722621}
