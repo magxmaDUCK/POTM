@@ -6,8 +6,6 @@ using UnityEngine.Rendering.PostProcessing;
 public class MenuPause : MonoBehaviour
 {
     public float vignetteIntensityAdded = 0.2f;
-    public float vignetteIntensitySpeed = 2f;
-    public float depthOfFieldApertureSpeed = 2f;
     public float timeScaleMin = 0.1f;
     public float timeScaleSpeed = 0.1f;
     public GameObject MenuPauseCanvas;
@@ -32,6 +30,7 @@ public class MenuPause : MonoBehaviour
         vignetteIntensityInit = vignetteLayer.intensity.value;
 
         depthOfFieldApertureInit = depthOfFieldLayer.aperture.value;
+        depthOfFieldLayer.active = false;
 
         MenuPauseCanvas.SetActive(false);
     }
@@ -44,19 +43,27 @@ public class MenuPause : MonoBehaviour
             pressPause = true;
         }
 
-        else if(Input.GetKeyDown("space") && pressPause == true && Time.timeScale < 1)
+        else if(Input.GetKeyDown("space") && pressPause == true)
         {
             pressPause = false;
         }
 
-        if(pressPause == true)
+        if(pressPause == true && timeLerp < 1)
         {
             Pause();
         }
 
         if(pressPause == false)
         {
-            PauseQuit();
+            if(timeLerp > 0)
+            {
+                PauseQuit();
+            }
+            
+            else if(timeLerp <= 0)
+            {
+                depthOfFieldLayer.active = false;
+            }
         }
     }
 
@@ -68,15 +75,10 @@ public class MenuPause : MonoBehaviour
         Time.timeScale = Mathf.Lerp(timeScaleInit, timeScaleMin, timeLerp);
         Time.fixedDeltaTime = 0.02f * Time.timeScale;
 
-        if(vignetteLayer.intensity.value < vignetteIntensityAdded)
-        {
-            vignetteLayer.intensity.value += vignetteIntensitySpeed * Time.deltaTime;
-        }
+        vignetteLayer.intensity.value = Mathf.Lerp(vignetteIntensityInit, vignetteIntensityAdded, timeLerp);
 
-        if(depthOfFieldLayer.aperture.value > 0.1f)
-        {
-            depthOfFieldLayer.aperture.value -= depthOfFieldApertureSpeed * Time.deltaTime;
-        }
+        depthOfFieldLayer.active = true;
+        depthOfFieldLayer.aperture.value = Mathf.Lerp(depthOfFieldApertureInit, 0.05f, timeLerp);
 
         MenuPauseCanvas.SetActive(true);
     }
@@ -89,15 +91,9 @@ public class MenuPause : MonoBehaviour
         Time.timeScale = Mathf.Lerp(timeScaleInit, timeScaleMin, timeLerp);
         Time.fixedDeltaTime = 0.02f * Time.timeScale;
 
-        if(vignetteLayer.intensity.value > vignetteIntensityInit)
-        {
-            vignetteLayer.intensity.value -= vignetteIntensitySpeed * Time.deltaTime * 0.5f;
-        }
+        vignetteLayer.intensity.value = Mathf.Lerp(vignetteIntensityInit, vignetteIntensityAdded, timeLerp);
 
-        if(depthOfFieldLayer.aperture.value < depthOfFieldApertureInit)
-        {
-            depthOfFieldLayer.aperture.value += depthOfFieldApertureSpeed * Time.deltaTime * 0.5f;
-        }
+        depthOfFieldLayer.aperture.value = Mathf.Lerp(depthOfFieldApertureInit, 0.05f, timeLerp);
 
         MenuPauseCanvas.SetActive(false);
     }
