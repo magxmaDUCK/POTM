@@ -204,20 +204,22 @@ namespace POTM
             //Get plane's angle to set it's acceleration
             pitchAngle = transform.rotation.eulerAngles.x;
             if (pitchAngle > 200) pitchAngle -= 360f;
+
             //Normalize
-            pitchAngle += balanceAngle;
+            //pitchAngle += balanceAngle;
             pitchAngle /= 90;
 
             if (pitchAngle > 1.0f) pitchAngle = 1.0f;
             else if (pitchAngle < -1.0f) pitchAngle = -1.0f;
 
             float speedVariation;
+
             //Calculate its acceleration
-            if (pitchAngle < (balanceAngle - balanceDeadZone)/90f || pitchAngle > (balanceAngle + balanceDeadZone)/90f)
+            if (pitchAngle < ((balanceAngle - balanceDeadZone)/90f) || pitchAngle > ((balanceAngle + balanceDeadZone)/90f))
             {
                 //Not in cruising speed pos
                 speedVariation = pitchAngle * accelRatio * Time.deltaTime;
-                if (pitchAngle < balanceAngle) speedVariation += -2f * pitch * Time.deltaTime;
+                if (pitchAngle < ((balanceAngle - balanceDeadZone)/90f)) speedVariation += -2f * accelRatio * Mathf.Abs(pitchAngle) * Time.deltaTime;
             }
             else
             {
