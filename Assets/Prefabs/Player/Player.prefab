@@ -97,7 +97,7 @@ Camera:
   m_SensorSize: {x: 70.41, y: 52.63}
   m_LensShift: {x: 0, y: 0}
   m_GateFitMode: 2
-  m_FocalLength: 25
+  m_FocalLength: 70
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -106,7 +106,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 1000
-  field of view: 92.93588
+  field of view: 41.20535
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -138,8 +138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7636752030520808133}
   baseDistanceFromPlayer: 5
-  maxDist: 0.38
-  minDist: 0.27
+  maxDist: 0.34
+  minDist: 0.3
   cameraAngle: -4
   cameraHeight: 0.1
   maxFOV: 73.87587
@@ -449,13 +449,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minSpeed: 7
-  maxSpeed: 25
+  maxSpeed: 30
   turnSpeed: 2
   dipSpeed: 1
-  balanceAngle: -1
-  balanceDeadZone: 5
+  balanceAngle: 0
+  balanceDeadZone: 15
   cruisingSpeed: 8
-  accelRatio: 1.6
+  accelRatio: 1.4
   decelRatio: 3
   maxTurningAngle: 45
   joystickDiffTolerence: 0.4
