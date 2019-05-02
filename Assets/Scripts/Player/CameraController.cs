@@ -137,5 +137,7 @@ namespace POTM
                 + player.transform.up * (0.01f + additionalHeight));
             //transform.Rotate(new Vector3(cameraAngle, 0, 0));
         }
+
+        
     }
 }
