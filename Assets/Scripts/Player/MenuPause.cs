@@ -69,6 +69,8 @@ public class MenuPause : MonoBehaviour
 
     public void Pause()
     {
+        AkSoundEngine.SetRTPCValue("Pause_Game", 0);
+
         timeLerp = Mathf.Clamp01(timeLerp);
         timeLerp += timeScaleSpeed * Time.unscaledDeltaTime;
 
@@ -85,6 +87,8 @@ public class MenuPause : MonoBehaviour
 
     public void PauseQuit()
     {
+        AkSoundEngine.SetRTPCValue("Pause_Game", 1);
+
         timeLerp = Mathf.Clamp01(timeLerp);
         timeLerp -= timeScaleSpeed * Time.unscaledDeltaTime * 0.5f;
 

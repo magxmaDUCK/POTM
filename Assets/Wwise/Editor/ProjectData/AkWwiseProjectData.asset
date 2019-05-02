@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: f3bb76a65116464ab8677079403d8853
     GuidInternal: 
-    m_lastTime: -8586459153589710169
+    m_lastTime: -8586447892864003008
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
@@ -53,7 +53,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 643a38164064c9459658ade970c81302
     GuidInternal: 
-    m_lastTime: -8586465236115485361
+    m_lastTime: -8586462582321997396
     List: []
   - PhysicalPath: Events\PotM.wwu
     ParentPhysicalPath: 
@@ -120,7 +120,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: fd9bdaf483f2634ba661fa0c42ecb746
     GuidInternal: 
-    m_lastTime: -8586465236115405580
+    m_lastTime: -8586447894088086752
     List:
     - name: Doppler
       guid: 321943c3f5cde34ca697c971f0a054a1
@@ -131,6 +131,15 @@ MonoBehaviour:
       - ElementName: Doppler
         ObjectType: 13
       Path: PotM\Doppler
+    - name: Pause_Game
+      guid: 522e08d567f4d14d84870f6bb4357d69
+      id: 528278262
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Pause_Game
+        ObjectType: 13
+      Path: PotM\Pause_Game
     - name: RTPC_Distance
       guid: 9c24fbf5aacb6445b088650098ec3d0b
       id: 262290038
@@ -187,7 +196,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 09ba98002194974789c4ed30b053403c
     GuidInternal: 
-    m_lastTime: -8586465236113241445
+    m_lastTime: -8586447897448116349
     List:
     - name: MusicState
       guid: 900b314867164e4a8eba1a5c3179a3ee
@@ -251,5 +260,7 @@ MonoBehaviour:
       Path: Default Work Unit\PickupLight
   ExpandedItems:
   - /PotMWwise
+  - /PotMWwise/Events
+  - /PotMWwise/Events/PotM
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

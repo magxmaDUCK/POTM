@@ -38,6 +38,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID DOPPLER = 4247512087U;
+        static const AkUniqueID PAUSE_GAME = 528278262U;
         static const AkUniqueID RTPC_DISTANCE = 262290038U;
         static const AkUniqueID WIND_MOVE = 1191899237U;
         static const AkUniqueID WIND_PITCH = 2818241024U;
