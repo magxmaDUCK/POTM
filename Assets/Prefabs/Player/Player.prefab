@@ -147,9 +147,9 @@ MonoBehaviour:
   pitchOffsetAngle: 0
   yawOffsetAngle: 10
   target: {fileID: 7636752030520808130}
-  shakeStrength: 3
-  shakeSpeed: 0.5
-  rotationShake: 1
+  shakeStrength: 0.005
+  shakeSpeed: 3
+  rotationShake: 0
   display: {fileID: 0}
   target_cam: 0
 --- !u!114 &7636752031194759060
@@ -448,12 +448,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800f07c516b8e3c489681e784e6cb90b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 7
+  minSpeed: 6
   maxSpeed: 30
   turnSpeed: 2
   dipSpeed: 1
-  balanceAngle: 0
-  balanceDeadZone: 15
+  balanceAngle: -3
+  balanceDeadZone: 17
   cruisingSpeed: 8
   accelRatio: 1.4
   decelRatio: 3
