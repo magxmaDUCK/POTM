@@ -117,15 +117,21 @@ namespace POTM
 
         public Vector3 CameraShake()
         {
-            float perlinValueX = Mathf.PerlinNoise(Time.time * shakeSpeed * perlinX, Time.time * shakeSpeed * perlinX) - 0.5f;
-            float perlinValueY = Mathf.PerlinNoise(Time.time * shakeSpeed * perlinY + 1.0f, Time.time * shakeSpeed * perlinY + 1.0f) - 0.5f;
-            return new Vector3(perlinValueX * shakeStrength, perlinValueY * shakeStrength, 0);
+            float speedN = (player.currentSpeed - player.minSpeed)/speedDiff;
+
+            float shakeSp = speedN * shakeSpeed;
+            float shakeSt = speedN * shakeStrength;
+
+            float perlinValueX = Mathf.PerlinNoise(Time.time * shakeSp * perlinX, Time.time * shakeSp * perlinX) - 0.5f;
+            float perlinValueY = Mathf.PerlinNoise(Time.time * shakeSp * perlinY + 1.0f, Time.time * shakeSp * perlinY + 1.0f) - 0.5f;
+
+            return new Vector3(perlinValueX * shakeSt, perlinValueY * shakeSt, 0);
         }
 
         public void ResetCamera()
         {
-            float additionalDist = (player.currentSpeed * distDiff) / speedDiff;
-            float additionalHeight = (player.currentSpeed * (cameraHeight - 0.01f)) / speedDiff;
+            float additionalDist = ((player.currentSpeed - player.minSpeed) * distDiff) / speedDiff;
+            float additionalHeight = ((player.currentSpeed - player.minSpeed) * (cameraHeight - 0.01f)) / speedDiff;
             transform.position = (player.transform.position
                 + -player.transform.forward * (minDist + additionalDist)
                 + player.transform.up * (0.01f + additionalHeight));
