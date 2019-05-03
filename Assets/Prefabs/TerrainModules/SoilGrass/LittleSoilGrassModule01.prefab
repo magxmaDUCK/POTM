@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7344710184803833180}
   - component: {fileID: 7344710184802538876}
   - component: {fileID: 7344710184801408956}
+  - component: {fileID: 5444009256742570745}
   m_Layer: 0
   m_Name: LittleSoilGrassModule01
   m_TagString: Untagged
@@ -77,3 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5444009256742570745
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7344710184803666300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.224269, y: 5.47348, z: 5.267753}
+  m_Center: {x: 0.030841708, y: -0.023607492, z: 2.6338763}

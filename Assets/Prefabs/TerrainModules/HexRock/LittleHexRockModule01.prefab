@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2655585887251177143}
   - component: {fileID: 2655585887249882775}
   - component: {fileID: 2655585887248751703}
+  - component: {fileID: 7566753176242187536}
   m_Layer: 0
   m_Name: LittleHexRockModule01
   m_TagString: Untagged
@@ -77,3 +78,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7566753176242187536
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2655585887250940567}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 84773c26eaed0a441bdba169e2031534, type: 3}
