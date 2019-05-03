@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 5526506615670782216}
   - component: {fileID: 5526506615671782344}
   - component: {fileID: 4720077098120192676}
-  - component: {fileID: 1740638994505411618}
+  - component: {fileID: 6091674896184242165}
   m_Layer: 0
   m_Name: TinselLight01
   m_TagString: Untagged
@@ -194,7 +194,7 @@ Transform:
   m_GameObject: {fileID: 5526506615669581064}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 7306706305501085888}
   m_Father: {fileID: 0}
@@ -225,7 +225,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cf8a1ceecc5049d45a202b071a5f772e, type: 2}
+  - {fileID: 2100000, guid: 300d97dd7db9cb645abc023e3c2cb795, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnOffDuration: 1
---- !u!135 &1740638994505411618
+--- !u!135 &6091674896184242165
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
