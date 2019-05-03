@@ -455,7 +455,8 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 8793373f5aae2674287194d2808eee82,
+      type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -776,7 +777,7 @@ GameObject:
   - component: {fileID: 1441819445}
   - component: {fileID: 1441819444}
   - component: {fileID: 1441819443}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -922,7 +923,7 @@ Canvas:
   m_GameObject: {fileID: 1472858041}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 770234090}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1336,6 +1337,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7636752030274910944, guid: c229940319a44094282b53ab73d93a48,
+        type: 3}
+      propertyPath: m_HDR
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7636752030274910944, guid: c229940319a44094282b53ab73d93a48,
+        type: 3}
+      propertyPath: m_AllowMSAA
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7636752030463727320, guid: c229940319a44094282b53ab73d93a48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1420,16 +1431,6 @@ PrefabInstance:
         type: 3}
       propertyPath: shakeStrength
       value: 0.058
-      objectReference: {fileID: 0}
-    - target: {fileID: 7636752030274910944, guid: c229940319a44094282b53ab73d93a48,
-        type: 3}
-      propertyPath: m_HDR
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7636752030274910944, guid: c229940319a44094282b53ab73d93a48,
-        type: 3}
-      propertyPath: m_AllowMSAA
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2533491370695898745, guid: c229940319a44094282b53ab73d93a48,
         type: 3}

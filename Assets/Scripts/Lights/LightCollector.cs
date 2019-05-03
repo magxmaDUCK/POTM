@@ -33,8 +33,28 @@ namespace POTM
                 score += light.getScoreValue();
                 light.TurnOff();
             }
+
+            //check layer 
+            //if wooshable, start woosh
+
+            if(collision.gameObject.layer == LayerMask.NameToLayer("Wooshable"))
+            {
+                AkSoundEngine.PostEvent("Play_In_Woosh", this.gameObject);
+                //Debug.Log("Wooooooshing");
+            }
         }
-    
+
+        private void OnTriggerExit(Collider other)
+        {
+            //if wooshable exit sound;
+            if (other.gameObject.layer == LayerMask.NameToLayer("Wooshable"))
+            {
+                //stop woosh sound
+                AkSoundEngine.PostEvent("Play_Out_Woosh", this.gameObject);
+                //Debug.Log("Wooooooshing'nt");
+            }
+        }
+
         public int GetScore()
         {
             return score;
