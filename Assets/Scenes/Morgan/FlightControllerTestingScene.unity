@@ -922,7 +922,7 @@ Canvas:
   m_GameObject: {fileID: 1472858041}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 770234090}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1336,6 +1336,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7636752030274910944, guid: c229940319a44094282b53ab73d93a48,
+        type: 3}
+      propertyPath: m_HDR
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7636752030274910944, guid: c229940319a44094282b53ab73d93a48,
+        type: 3}
+      propertyPath: m_AllowMSAA
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7636752030463727320, guid: c229940319a44094282b53ab73d93a48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1420,16 +1430,6 @@ PrefabInstance:
         type: 3}
       propertyPath: shakeStrength
       value: 0.058
-      objectReference: {fileID: 0}
-    - target: {fileID: 7636752030274910944, guid: c229940319a44094282b53ab73d93a48,
-        type: 3}
-      propertyPath: m_HDR
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7636752030274910944, guid: c229940319a44094282b53ab73d93a48,
-        type: 3}
-      propertyPath: m_AllowMSAA
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2533491370695898745, guid: c229940319a44094282b53ab73d93a48,
         type: 3}
