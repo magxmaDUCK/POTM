@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.012047773, g: 0.01795021, b: 0.07480345, a: 1}
+  m_IndirectSpecularColor: {r: 0.012049851, g: 0.017952567, b: 0.07480619, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -36712,6 +36712,56 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4720077098120192676, guid: 60339d9e0ca24734f9d3aad21912b778,
+        type: 3}
+      propertyPath: lCol.Array.size
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720077098120192676, guid: 60339d9e0ca24734f9d3aad21912b778,
+        type: 3}
+      propertyPath: lCol.Array.data[0].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720077098120192676, guid: 60339d9e0ca24734f9d3aad21912b778,
+        type: 3}
+      propertyPath: lCol.Array.data[0].g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720077098120192676, guid: 60339d9e0ca24734f9d3aad21912b778,
+        type: 3}
+      propertyPath: lCol.Array.data[0].b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720077098120192676, guid: 60339d9e0ca24734f9d3aad21912b778,
+        type: 3}
+      propertyPath: lCol.Array.data[2].r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720077098120192676, guid: 60339d9e0ca24734f9d3aad21912b778,
+        type: 3}
+      propertyPath: lCol.Array.data[2].g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720077098120192676, guid: 60339d9e0ca24734f9d3aad21912b778,
+        type: 3}
+      propertyPath: lCol.Array.data[2].b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720077098120192676, guid: 60339d9e0ca24734f9d3aad21912b778,
+        type: 3}
+      propertyPath: lCol.Array.data[1].r
+      value: 0.6509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720077098120192676, guid: 60339d9e0ca24734f9d3aad21912b778,
+        type: 3}
+      propertyPath: lCol.Array.data[1].g
+      value: 0.21186365
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720077098120192676, guid: 60339d9e0ca24734f9d3aad21912b778,
+        type: 3}
+      propertyPath: lCol.Array.data[1].b
+      value: 0.21186365
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60339d9e0ca24734f9d3aad21912b778, type: 3}
 --- !u!4 &1437856353 stripped
@@ -49108,7 +49158,7 @@ PrefabInstance:
     - target: {fileID: 7636752030520808133, guid: c229940319a44094282b53ab73d93a48,
         type: 3}
       propertyPath: seesaw
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7636752030274910946, guid: c229940319a44094282b53ab73d93a48,
         type: 3}
@@ -49137,12 +49187,17 @@ PrefabInstance:
     - target: {fileID: 7526319798154958887, guid: 798a569551d535a4ab9bd68e0e25a9e4,
         type: 3}
       propertyPath: m_Intensity
-      value: 0.001
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7526319798154958887, guid: 798a569551d535a4ab9bd68e0e25a9e4,
         type: 3}
       propertyPath: m_ColorTemperature
       value: 7418
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526319798154958887, guid: 798a569551d535a4ab9bd68e0e25a9e4,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2737870700123722621, guid: 798a569551d535a4ab9bd68e0e25a9e4,
         type: 3}
@@ -49202,7 +49257,7 @@ PrefabInstance:
     - target: {fileID: 7526319798154958936, guid: 798a569551d535a4ab9bd68e0e25a9e4,
         type: 3}
       propertyPath: displayLightIntensity
-      value: 0.001
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798a569551d535a4ab9bd68e0e25a9e4, type: 3}
