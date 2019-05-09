@@ -8,12 +8,12 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Soil
-  m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
-  m_ShaderKeywords: _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE
+  m_Shader: {fileID: 4800000, guid: d73812c58ff476146a28b92e6dccba92, type: 3}
+  m_ShaderKeywords: _NORMALMAP _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap:
     MotionVector: User
   disabledShaderPasses:
@@ -25,13 +25,45 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_377BCDEF:
+        m_Texture: {fileID: 2800000, guid: 42432a5b452b4344a887c2ac2360798a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_516675EF:
+        m_Texture: {fileID: 2800000, guid: 7288a0b0399c4bd4990fff36a2d593ef, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_656049CF:
+        m_Texture: {fileID: 2800000, guid: 7288a0b0399c4bd4990fff36a2d593ef, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_842E1BB0:
+        m_Texture: {fileID: 2800000, guid: 42432a5b452b4344a887c2ac2360798a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseAO:
+        m_Texture: {fileID: 2800000, guid: 665d1e449f2cab04a93f60634ebb696d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseAlbedo:
+        m_Texture: {fileID: 2800000, guid: 7288a0b0399c4bd4990fff36a2d593ef, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
         m_Texture: {fileID: 2800000, guid: 7288a0b0399c4bd4990fff36a2d593ef, type: 3}
         m_Scale: {x: 5, y: 5}
+        m_Offset: {x: 0, y: 0}
+    - _BaseNormal:
+        m_Texture: {fileID: 2800000, guid: 42432a5b452b4344a887c2ac2360798a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Base_Albedo:
+        m_Texture: {fileID: 2800000, guid: 7288a0b0399c4bd4990fff36a2d593ef, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
         m_Texture: {fileID: 0}
@@ -97,6 +129,26 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _RedAO:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RedAlbedo:
+        m_Texture: {fileID: 2800000, guid: 351ff095837d19a478a4b7ac6ca07bbd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RedHeight:
+        m_Texture: {fileID: 2800000, guid: 351ff095837d19a478a4b7ac6ca07bbd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RedNormal:
+        m_Texture: {fileID: 2800000, guid: c09a0feac188bd84eaf4c357ecefaabe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Red_Albedo:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SideAlbedo:
         m_Texture: {fileID: 2800000, guid: 7288a0b0399c4bd4990fff36a2d593ef, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -125,6 +177,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_730E9149_Out:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_B1BA146D_Out:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ThicknessMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -146,6 +206,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_6BB18F60: 0.3
+    - Vector1_E692554C: 0
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -156,6 +218,9 @@ Material:
     - _AlphaCutoffPrepass: 0.5
     - _AlphaCutoffShadow: 0.5
     - _Anisotropy: 0
+    - _BaseNormalStrength: 1
+    - _BaseTile: 1
+    - _BlendAmount: 0.31
     - _BlendMode: 0
     - _CoatMask: 0
     - _CullMode: 2
@@ -222,6 +287,8 @@ Material:
     - _PPDPrimitiveWidth: 1
     - _PreRefractionPass: 0
     - _ReceivesSSR: 1
+    - _RedNormalStrength: 1
+    - _RedTile: 1
     - _RefractionModel: 0
     - _SSRefractionProjectionModel: 0
     - _ShiverDirectionality: 0.5
