@@ -28,11 +28,14 @@ namespace POTM
 
         private Light light;
 
+        private Material mat;
+
 
 
         private void Start()
         {
             light = GetComponentInChildren<Light>();
+            mat = GetComponent<Renderer>().material;
         }
 
         void Update()
@@ -47,7 +50,10 @@ namespace POTM
                 float finalIntensity = baseIntensity * Mathf.LinearToGammaSpace(t);
 
                 light.intensity = finalIntensity;
-                
+
+                mat.SetFloat("_DisolveLerp", t);
+                Color c = mat.GetColor("_EmissionColor");
+                mat.SetColor("_EmissionColor", c * t);
             }
 
             if(!on && lightoff)
