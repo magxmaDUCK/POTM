@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8294274519976990919}
   - component: {fileID: 8294274519979858151}
   - component: {fileID: 8294274519978760743}
-  - component: {fileID: 4121377276171488778}
+  - component: {fileID: 6884113962456158291}
   m_Layer: 0
   m_Name: MediumRockModule02
   m_TagString: Untagged
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4121377276171488778
-BoxCollider:
+--- !u!64 &6884113962456158291
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,6 +88,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10.502148, y: 5.804324, z: 9.443834}
-  m_Center: {x: -0.48743555, y: 0.5966184, z: 0.4542906}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: a9ed29077c1fe45479cca52173985e92, type: 3}
