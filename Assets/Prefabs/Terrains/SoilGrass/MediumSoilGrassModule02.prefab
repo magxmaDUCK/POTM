@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 7146027150447154672}
   - component: {fileID: 7146027150444287440}
   - component: {fileID: 7146027150445254416}
-  - component: {fileID: 7567609364747515599}
+  - component: {fileID: 2985996202981084017}
   m_Layer: 0
   m_Name: MediumSoilGrassModule02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7146027150447154672
 Transform:
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7567609364747515599
-MeshCollider:
+--- !u!65 &2985996202981084017
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,7 +88,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 6bf2b74081998b842a31bc19533516ee, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 10.318125, y: 10.273314, z: 4.6071954}
+  m_Center: {x: -0.058926582, y: -0.0566559, z: 2.3035967}

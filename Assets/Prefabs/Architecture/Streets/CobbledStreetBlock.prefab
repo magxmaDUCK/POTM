@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 773546161777687992}
   - component: {fileID: 773546161776917912}
   - component: {fileID: 773546161775918936}
+  - component: {fileID: 8786310298559286092}
   m_Layer: 0
   m_Name: CobbledStreetBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &773546161777687992
 Transform:
@@ -77,3 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8786310298559286092
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773546161778172312}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.54, y: 2.540001, z: 1.2700008}
+  m_Center: {x: 0, y: -0.00000011920932, z: 0.6350141}

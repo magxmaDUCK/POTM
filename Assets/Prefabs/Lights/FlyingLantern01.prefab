@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3671493587652148359}
   - component: {fileID: 3671493587651345575}
   - component: {fileID: 3671493587650248295}
+  - component: {fileID: 4496457624945453478}
   m_Layer: 0
   m_Name: FlyingLantern01
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4496457624945453478
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3671493587652501671}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.57149994, y: 0.57150006, z: 0.818466}
+  m_Center: {x: 0, y: -0.00000011920932, z: 0.40925732}

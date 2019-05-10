@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 7344710184803833180}
   - component: {fileID: 7344710184802538876}
   - component: {fileID: 7344710184801408956}
-  - component: {fileID: 5444009256742570745}
+  - component: {fileID: 7357938754090656813}
   m_Layer: 0
   m_Name: LittleSoilGrassModule01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7344710184803833180
 Transform:
@@ -78,7 +78,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5444009256742570745
+--- !u!65 &7357938754090656813
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,5 +89,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.224269, y: 5.47348, z: 5.267753}
-  m_Center: {x: 0.030841708, y: -0.023607492, z: 2.6338763}
+  m_Size: {x: 5.569366, y: 5.47348, z: 5.4564204}
+  m_Center: {x: 0.040991306, y: -0.023607498, z: 2.7282102}

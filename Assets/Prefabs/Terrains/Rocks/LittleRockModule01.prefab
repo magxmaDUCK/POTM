@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 7720329535435417892}
   - component: {fileID: 7720329535436220676}
   - component: {fileID: 7720329535437188036}
-  - component: {fileID: 1239071919306410957}
+  - component: {fileID: 498839133590631712}
   m_Layer: 0
   m_Name: LittleRockModule01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7720329535435417892
 Transform:
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 884cce2b38defaa4e8f9db5c6e313d2f, type: 2}
+  - {fileID: 2100000, guid: 95de72c279091134dada582a34ca7b22, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1239071919306410957
-MeshCollider:
+--- !u!65 &498839133590631712
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,7 +88,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: d5009a7bda25a3542b0fa4fcc821dd11, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.6693306, y: 1.8275826, z: 1.7294198}
+  m_Center: {x: -0.088384, y: -0.0385525, z: 0.053942483}

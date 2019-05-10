@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 802611679124568955}
   - component: {fileID: 802611679127468891}
   - component: {fileID: 802611679126469019}
+  - component: {fileID: 6932069303397973679}
   m_Layer: 0
   m_Name: PatioBlock
   m_TagString: Untagged
@@ -77,3 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6932069303397973679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802611679124465499}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.81, y: 3.810001, z: 0.12700066}
+  m_Center: {x: 0, y: 0, z: 0.06350002}
