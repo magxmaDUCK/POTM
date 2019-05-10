@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7574321790007524309}
   - component: {fileID: 7574321790006230005}
   - component: {fileID: 7574321790005229877}
+  - component: {fileID: 5715190247951928888}
   m_Layer: 0
   m_Name: BigSandBeachModule02
   m_TagString: Untagged
@@ -77,3 +78,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5715190247951928888
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7574321790007224309}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 89e3f0f9dce998842af97100aa6d7250, type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7169233364945609835}
   - component: {fileID: 7169233364942218315}
   - component: {fileID: 7169233364943316619}
+  - component: {fileID: 1614279685873273792}
   m_Layer: 0
   m_Name: EnormousRockModule01
   m_TagString: Untagged
@@ -77,3 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1614279685873273792
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169233364945320011}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.209328, y: 31.43934, z: 36.87167}
+  m_Center: {x: 1.0775456, y: -0.36897382, z: 0.24265486}

@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 6053236274916838279}
   - component: {fileID: 6053236274915511207}
   - component: {fileID: 6053236274914412903}
+  - component: {fileID: 4041568718951292131}
+  - component: {fileID: 9008734226776134068}
+  - component: {fileID: 7372522443716347280}
   m_Layer: 0
   m_Name: PatioAngle
   m_TagString: Untagged
@@ -77,3 +80,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4041568718951292131
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6053236274916677543}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5879908, y: 3.5906882, z: 0.13840513}
+  m_Center: {x: 0.11100459, y: -0.109656334, z: 0.069201864}
+--- !u!65 &9008734226776134068
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6053236274916677543}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.81, y: 0.22002047, z: 0.54062337}
+  m_Center: {x: 0, y: 1.7949907, z: 0.27031103}
+--- !u!65 &7372522443716347280
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6053236274916677543}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.21941853, y: 3.810001, z: 0.54062337}
+  m_Center: {x: -1.7952907, y: 2.886379e-16, z: 0.27031103}

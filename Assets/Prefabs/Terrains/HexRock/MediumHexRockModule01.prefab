@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9001350838876999379}
   - component: {fileID: 9001350838875705075}
   - component: {fileID: 9001350838874573875}
-  - component: {fileID: 3981412287604076711}
+  - component: {fileID: 6276769283101788891}
   m_Layer: 0
   m_Name: MediumHexRockModule01
   m_TagString: Untagged
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3981412287604076711
-MeshCollider:
+--- !u!65 &6276769283101788891
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,7 +88,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 8b5361e216c6d2044bfd077067cbbad7, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 5.08, y: 4.3994136, z: 19.857018}
+  m_Center: {x: 0, y: -0.0000014305118, z: 9.928267}

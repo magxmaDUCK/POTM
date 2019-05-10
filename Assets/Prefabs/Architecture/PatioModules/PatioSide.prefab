@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 19447068812434092}
   - component: {fileID: 19447068809009804}
   - component: {fileID: 19447068810139724}
+  - component: {fileID: 1289746356800240561}
+  - component: {fileID: 3132661596776272890}
   m_Layer: 0
   m_Name: PatioSide
   m_TagString: Untagged
@@ -77,3 +79,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1289746356800240561
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19447068812330636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5894094, y: 3.810001, z: 0.12901135}
+  m_Center: {x: -0.110295236, y: 2.8495988e-17, z: 0.06450521}
+--- !u!65 &3132661596776272890
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19447068812330636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.22221994, y: 3.810001, z: 0.54134}
+  m_Center: {x: 1.79389, y: 2.9373324e-16, z: 0.27066958}
