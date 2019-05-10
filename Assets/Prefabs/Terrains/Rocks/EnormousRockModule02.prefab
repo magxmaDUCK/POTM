@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7029078279853051195}
   - component: {fileID: 7029078279855951131}
   - component: {fileID: 7029078279854952411}
-  - component: {fileID: 7434581998345931594}
+  - component: {fileID: 4715421643256988024}
   m_Layer: 0
   m_Name: EnormousRockModule02
   m_TagString: Untagged
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7434581998345931594
-BoxCollider:
+--- !u!64 &4715421643256988024
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,6 +88,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 43.948006, y: 34.411137, z: 41.114864}
-  m_Center: {x: 0.97912884, y: -1.0930827, z: -0.7073013}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 0a673add10603604292b483d4609f584, type: 3}
