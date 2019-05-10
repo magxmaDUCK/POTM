@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2226843317054981484}
   - component: {fileID: 2226843317058372940}
   - component: {fileID: 2226843317057275788}
-  - component: {fileID: 844744094174090476}
+  - component: {fileID: 1934864687527654428}
   m_Layer: 0
   m_Name: LittleRockModule02
   m_TagString: Untagged
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &844744094174090476
-MeshCollider:
+--- !u!65 &1934864687527654428
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,7 +88,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 5b96aa974c5712e45b01825b0e4ff128, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.0097371, y: 1.3814098, z: 2.4590087}
+  m_Center: {x: 0.012472197, y: 0.107642345, z: -0.2356279}
