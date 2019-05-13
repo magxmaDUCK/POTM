@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.VFX;
 
 namespace POTM
 {
@@ -12,6 +13,8 @@ namespace POTM
         private float startTime = 0f;
 
         public float turnOffDuration = 1.0f;
+
+        public GameObject PickUpFX;
 
         private float offIntensity = 0;
 
@@ -54,6 +57,10 @@ namespace POTM
                 mat.SetFloat("_DisolveLerp", t);
                 Color c = mat.GetColor("_EmissionColor");
                 mat.SetColor("_EmissionColor", c * t);
+
+                //GameObject go = Instantiate(PickUpFX, transform);
+                //VisualEffect f = GetComponent<VisualEffect>();
+                //f.SetVector3("", Player);
             }
 
             if(!on && lightoff)
