@@ -63,6 +63,9 @@ namespace POTM
         
             for(int i = 0; i < NB_RAYS; i++)
             {
+                //***//
+                //MAX MOVE CALLED 4 TIMES
+
                 if (hitIndex[i])
                 {
                     //Adjust maxDist to speed
@@ -86,8 +89,8 @@ namespace POTM
                                 break;
                             case 0:
 
-                                float lrDist = rayHits[1].distance - rayHits[2].distance;
-                                float udDist = rayHits[3].distance - rayHits[4].distance;
+                                float lrDist = Mathf.Abs(rayHits[1].distance - rayHits[2].distance);
+                                float udDist = Mathf.Abs(rayHits[3].distance - rayHits[4].distance);
 
                                 if(distRatio > 0.8f)
                                 {
@@ -116,9 +119,13 @@ namespace POTM
                                     {
                                         controlsOverride.x -= 20f * distRatio;
                                     }
-                                    else if (lrDist > udDist)
+                                    else if (lrDist > udDist && pc.transform.forward != -Vector3.up && pc.transform.forward != Vector3.up)
                                     {
                                         controlsOverride.y += Mathf.Sign(lrDist) * 20f * distRatio;
+                                    }
+                                    else if(pc.transform.forward == -Vector3.up)
+                                    {
+                                        controlsOverride.x -= -Mathf.Sign(udDist) * 20f * distRatio;
                                     }
                                     else
                                     {

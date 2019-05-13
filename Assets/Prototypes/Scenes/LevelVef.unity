@@ -2993,6 +2993,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TinselLight01 (213)
       objectReference: {fileID: 0}
+    - target: {fileID: 8321906330626496140, guid: 60339d9e0ca24734f9d3aad21912b778,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 1.0679296
+      objectReference: {fileID: 0}
     - target: {fileID: 5526506615669487912, guid: 60339d9e0ca24734f9d3aad21912b778,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3047,11 +3052,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8321906330626496140, guid: 60339d9e0ca24734f9d3aad21912b778,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 1.0679296
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60339d9e0ca24734f9d3aad21912b778, type: 3}
@@ -49158,7 +49158,7 @@ PrefabInstance:
     - target: {fileID: 7636752030520808133, guid: c229940319a44094282b53ab73d93a48,
         type: 3}
       propertyPath: seesaw
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7636752030274910946, guid: c229940319a44094282b53ab73d93a48,
         type: 3}
