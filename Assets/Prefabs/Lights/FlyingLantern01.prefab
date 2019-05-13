@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3671493587650248295}
   - component: {fileID: 4496457624945453478}
   - component: {fileID: 9043102966421218715}
+  - component: {fileID: 2615320448148884068}
   m_Layer: 0
   m_Name: FlyingLantern01
   m_TagString: Untagged
@@ -108,6 +109,19 @@ MonoBehaviour:
   turnOffDuration: 1
   PickUpFX: {fileID: 6212084690361845568, guid: b1c14b6c1e8c06f4dbcd7472628dc9a1,
     type: 3}
+--- !u!114 &2615320448148884068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3671493587652501671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f74ee60f1a9ae5d459906e6003020c43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors: {fileID: 11400000, guid: 6f7ba9364173aed40a261dc9972945e9, type: 2}
 --- !u!1 &3964171397793003938
 GameObject:
   m_ObjectHideFlags: 0

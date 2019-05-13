@@ -55,8 +55,13 @@ namespace POTM
                 light.intensity = finalIntensity;
 
                 mat.SetFloat("_DisolveLerp", t);
-                Color c = mat.GetColor("_EmissionColor");
-                mat.SetColor("_EmissionColor", c * t);
+                //Color c = mat.GetColor("_EmissionColor");
+                //mat.SetColor("_EmissionColor", c * t);
+
+                if (t == 0)
+                {
+                    lightoff = true;
+                }
 
                 //GameObject go = Instantiate(PickUpFX, transform);
                 //VisualEffect f = GetComponent<VisualEffect>();
@@ -65,7 +70,11 @@ namespace POTM
 
             if(!on && lightoff)
             {
-                Destroy(this);
+               if(mat.name == "OrbLanternLight01 (Instance)" || mat.name == "OrbLanternLight02 (Instance)" || mat.name == "OrbLanternLight03 (Instance)")
+               {
+                    Destroy(gameObject);
+               }
+               Destroy(this);
             }
         }
 

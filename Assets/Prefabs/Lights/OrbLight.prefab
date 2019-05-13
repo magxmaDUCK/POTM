@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 8418686913536934566}
   - component: {fileID: 7340703411458092425}
   - component: {fileID: 994416452919961636}
+  - component: {fileID: 5683581205352026960}
   m_Layer: 0
   m_Name: OrbLight
   m_TagString: Untagged
@@ -271,3 +272,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnOffDuration: 1
+  PickUpFX: {fileID: 0}
+--- !u!114 &5683581205352026960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8418686913539202150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f74ee60f1a9ae5d459906e6003020c43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors: {fileID: 11400000, guid: 6f7ba9364173aed40a261dc9972945e9, type: 2}
