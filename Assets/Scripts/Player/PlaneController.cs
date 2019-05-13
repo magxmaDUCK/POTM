@@ -154,8 +154,8 @@ namespace POTM
                 }
             }
 
-            AkSoundEngine.SetRTPCValue("Wind_Yaw", yaw);
-            AkSoundEngine.SetRTPCValue("Wind_Pitch", pitch);
+            AkSoundEngine.SetRTPCValue("Wind_Yaw", planeYaw);
+            AkSoundEngine.SetRTPCValue("Wind_Pitch", planePitch);
 
             yaw += autoPilot.controlsOverride.x;
             pitch += autoPilot.controlsOverride.y;
@@ -267,11 +267,11 @@ namespace POTM
         {
             if (Mathf.Abs(yaw) > Mathf.Abs(pitch))
             {
-                AkSoundEngine.SetRTPCValue("Wind_Move", yaw);
+                AkSoundEngine.SetRTPCValue("Wind_Move", planeYaw);
             }
             else
             {
-                AkSoundEngine.SetRTPCValue("Wind_Move", pitch);
+                AkSoundEngine.SetRTPCValue("Wind_Move", planePitch);
             }
 
             //Move bcack to horizontal, turn, and go back
