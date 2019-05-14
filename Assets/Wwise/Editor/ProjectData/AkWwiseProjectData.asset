@@ -24,8 +24,21 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: f3bb76a65116464ab8677079403d8853
     GuidInternal: 
-    m_lastTime: -8586447892864003008
-    List: []
+    m_lastTime: -8586437569450408565
+    List:
+    - name: ArchReverb
+      guid: 1d4f44988028474abf17e7edf0eb42d0
+      id: 1868844497
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: AURO 3D
+        ObjectType: 2
+      - ElementName: ArchReverb
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\AURO 3D\ArchReverb
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -37,7 +50,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 02522841b21ceb4ab50a02e82da18aec
     GuidInternal: 
-    m_lastTime: -8586459153558809375
+    m_lastTime: -8586437726834835290
     List:
     - name: PotM
       guid: f2b8e3691563cc4a8113e087753feb8e
@@ -53,14 +66,26 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 643a38164064c9459658ade970c81302
     GuidInternal: 
-    m_lastTime: -8586462582321997396
+    m_lastTime: -8586437726863972285
     List: []
   - PhysicalPath: Events\PotM.wwu
     ParentPhysicalPath: 
     guid: e0aabc591baf36408043515028f544aa
     GuidInternal: 
-    m_lastTime: -8586459153589809897
+    m_lastTime: -8586437582629843571
     List:
+    - name: Play_In_Woosh
+      guid: 471b514a95689b4ca46d20617ff6465a
+      id: 3654176658
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_In_Woosh
+        ObjectType: 3
+      Path: PotM\Play_In_Woosh
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Init
       guid: 5799c74ec246cc4a9a20f76464224546
       id: 426840996
@@ -73,15 +98,63 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Play_Light_Pickup
-      guid: a76698a5dab0704e9a80a168145f05c6
-      id: 2293153013
+    - name: Play_Melodie_01
+      guid: 38a9b6b397af0349970209d2d52dbe50
+      id: 3867730695
       PathAndIcons:
       - ElementName: PotM
         ObjectType: 12
-      - ElementName: Play_Light_Pickup
+      - ElementName: Play_Melodie_01
         ObjectType: 3
-      Path: PotM\Play_Light_Pickup
+      Path: PotM\Play_Melodie_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Melodie_02
+      guid: 01f62a128302ff449b892e5a2a3e7e34
+      id: 3867730692
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_Melodie_02
+        ObjectType: 3
+      Path: PotM\Play_Melodie_02
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Melodie_03
+      guid: 6d7f47b0e11a164b845554ca96614640
+      id: 3867730693
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_Melodie_03
+        ObjectType: 3
+      Path: PotM\Play_Melodie_03
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Melodie_04
+      guid: de5ce262028c034ca2adf6d3a89f39f7
+      id: 3867730690
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_Melodie_04
+        ObjectType: 3
+      Path: PotM\Play_Melodie_04
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Out_Woosh
+      guid: 738992f18a7841428ca8143eaa4a79b0
+      id: 4029469807
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_Out_Woosh
+        ObjectType: 3
+      Path: PotM\Play_Out_Woosh
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -114,13 +187,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 7d40309300f314479d2a616807670608
     GuidInternal: 
-    m_lastTime: -8586459153589799935
+    m_lastTime: -8586437629676941289
     List: []
   - PhysicalPath: Game Parameters\PotM.wwu
     ParentPhysicalPath: 
     guid: fd9bdaf483f2634ba661fa0c42ecb746
     GuidInternal: 
-    m_lastTime: -8586447894088086752
+    m_lastTime: -8586437569683323681
     List:
     - name: Doppler
       guid: 321943c3f5cde34ca697c971f0a054a1
@@ -131,6 +204,15 @@ MonoBehaviour:
       - ElementName: Doppler
         ObjectType: 13
       Path: PotM\Doppler
+    - name: LightNumbers
+      guid: a9314b336e876c46a1d718ad8515667c
+      id: 2670876599
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: LightNumbers
+        ObjectType: 13
+      Path: PotM\LightNumbers
     - name: Pause_Game
       guid: 522e08d567f4d14d84870f6bb4357d69
       id: 528278262
@@ -149,6 +231,15 @@ MonoBehaviour:
       - ElementName: RTPC_Distance
         ObjectType: 13
       Path: PotM\RTPC_Distance
+    - name: SideChain_Light
+      guid: b429f84826639d4994a58795fae0dc5d
+      id: 3476959006
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: SideChain_Light
+        ObjectType: 13
+      Path: PotM\SideChain_Light
     - name: Wind_Move
       guid: 9cdc7c7aa6fc6c4d8773008235d3d6f0
       id: 1191899237
@@ -185,6 +276,15 @@ MonoBehaviour:
       - ElementName: Wind_Yaw
         ObjectType: 13
       Path: PotM\Wind_Yaw
+    - name: WooshPanning
+      guid: 9d3f2840f7300943aa383ea78462e8f3
+      id: 2717581126
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: WooshPanning
+        ObjectType: 13
+      Path: PotM\WooshPanning
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -196,8 +296,45 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 09ba98002194974789c4ed30b053403c
     GuidInternal: 
-    m_lastTime: -8586447897448116349
+    m_lastTime: -8586447331385656720
     List:
+    - name: Fly_State
+      guid: f8e70fba7881b64d8a5ae94f1210f3bc
+      id: 4043522470
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Fly_State
+        ObjectType: 9
+      Path: PotM\Fly_State
+      values:
+      - name: Air
+        guid: 131718df5aaf3e4d88c322f9d620cac2
+        id: 1050421051
+        PathAndIcons:
+        - ElementName: Air
+          ObjectType: 8
+      - name: Arch
+        guid: 24bea0378b2a33418ab3eb67eea68f5c
+        id: 3652584297
+        PathAndIcons:
+        - ElementName: Arch
+          ObjectType: 8
+      - name: None
+        guid: a0a55cc658a72043b4855d2fb1adba7e
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Underground
+        guid: 0469b33cf5efa74d83cad23dc0488d1e
+        id: 1543687740
+        PathAndIcons:
+        - ElementName: Underground
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: MusicState
       guid: 900b314867164e4a8eba1a5c3179a3ee
       id: 1021618141
@@ -242,6 +379,43 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8586459153558719617
     List: []
+  - PhysicalPath: Switches\PotM.wwu
+    ParentPhysicalPath: 
+    guid: afab9d03bd31b240bc24790f761c48f0
+    GuidInternal: 
+    m_lastTime: -8586437629676731601
+    List:
+    - name: MelodieSelecter
+      guid: 995538d91b0b5f4f8d14ebd226665bd6
+      id: 3532158187
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: MelodieSelecter
+        ObjectType: 11
+      Path: PotM\MelodieSelecter
+      values:
+      - name: Melodie_01
+        guid: a2a528614e3cf24da2fc02c1d0758ca0
+        id: 1161931464
+        PathAndIcons:
+        - ElementName: Melodie_01
+          ObjectType: 10
+      - name: Melodie_02
+        guid: 592c6438cec0054b99727b4dab8b625b
+        id: 1161931467
+        PathAndIcons:
+        - ElementName: Melodie_02
+          ObjectType: 10
+      - name: Melodie_03
+        guid: 2b1520559053e74e9a3d2bbd97e3915d
+        id: 1161931466
+        PathAndIcons:
+        - ElementName: Melodie_03
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
