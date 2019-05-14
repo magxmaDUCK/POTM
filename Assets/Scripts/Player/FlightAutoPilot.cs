@@ -91,7 +91,7 @@ namespace POTM
 
                                 float lrDist = Mathf.Abs(rayHits[1].distance - rayHits[2].distance);
                                 float udDist = Mathf.Abs(rayHits[3].distance - rayHits[4].distance);
-
+                                /*
                                 if(distRatio > 0.8f)
                                 {
                                     //PULLS UP AND SIDEWAYS, NOT ALWAYS BEST
@@ -138,6 +138,11 @@ namespace POTM
                                     controlsOverride.x += Mathf.Sign(udDist) * 1.3f * distRatio;
                                     controlsOverride.y += -Mathf.Sign(lrDist) * 1.3f * distRatio;
                                 }
+                                */
+
+                                //Add code for turning even when far
+                                controlsOverride.x += Mathf.Sign(udDist) * 1.3f * distRatio;
+                                controlsOverride.y += -Mathf.Sign(lrDist) * 1.3f * distRatio;
                                 break;
                         }
                     }
