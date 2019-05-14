@@ -385,7 +385,7 @@ namespace POTM
                 planePitch = 0;
                 cam.ResetCamera();
                 */
-                //BOUNCE OFF WALSS CODE
+                //BOUNCE OFF WALLS CODE
 
                 //Change rotation according to angle of crassh
                 RaycastHit colPt;
@@ -398,13 +398,6 @@ namespace POTM
                 planeRB.angularVelocity = Vector3.zero;
                 planeYaw = 0;
                 planePitch = 0;
-
-
-                /*
-                 * cannot obunce because of current flight implementation
-                Vector3 bounceDir = (transform.position - clPt).normalized;
-                planeRB.AddForce(bounceDir * 100f);
-                */
             }
         }
 
