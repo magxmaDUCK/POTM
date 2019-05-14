@@ -14,8 +14,6 @@ namespace POTM
 
         public float turnOffDuration = 1.0f;
 
-        public GameObject PickUpFX;
-
         private float offIntensity = 0;
 
         public LightPickup()
