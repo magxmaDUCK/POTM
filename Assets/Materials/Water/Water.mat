@@ -8,13 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Water
-  m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
+  m_Shader: {fileID: 4800000, guid: f56124217dfa1e64991ac46d08a215e3, type: 3}
   m_ShaderKeywords: _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
-  stringTagMap: {}
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    MotionVector: User
   disabledShaderPasses:
   - DistortionVectors
   - TransparentDepthPrepass
@@ -92,6 +93,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SurfaceDistortion:
+        m_Texture: {fileID: 2800000, guid: f2a82a67895710244b5f44b25f5f077c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SurfaceNoise:
+        m_Texture: {fileID: 2800000, guid: c09a0feac188bd84eaf4c357ecefaabe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _TangentMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -109,6 +118,41 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_1AE1D4CB: 1
+    - Vector1_1E58CA3C: 1
+    - Vector1_24DAD7F: 1
+    - Vector1_39047021: 0
+    - Vector1_39222957: 1
+    - Vector1_3D495A1F: 1
+    - Vector1_489F9EEF: 1.02
+    - Vector1_4B305923: 5
+    - Vector1_4F92311A: 1
+    - Vector1_51075417: 0
+    - Vector1_5190E028: 1
+    - Vector1_5232C9B8: 1
+    - Vector1_5EB91206: 1
+    - Vector1_6DA97D7: 35
+    - Vector1_722CB011: 0
+    - Vector1_7FB5584F: 0.313
+    - Vector1_8BF7F1BF: 1
+    - Vector1_905986FC: 1
+    - Vector1_986CF1D2: 0.3
+    - Vector1_9E5F763C: 0.57
+    - Vector1_A38692A6: 0.723
+    - Vector1_AD7DFD35: 0
+    - Vector1_B42C4654: 1
+    - Vector1_B98A4C60: 1.24
+    - Vector1_BC8BA90A: 2
+    - Vector1_BD72615D: 2
+    - Vector1_BF07B4C4: 2
+    - Vector1_C6051FE9: 1
+    - Vector1_CC89A15C: 1
+    - Vector1_D42CC29E: 2
+    - Vector1_F0FA9185: -0.26
+    - Vector1_F2029A8E: 1
+    - Vector1_F4A73BA: 1
+    - Vector1_F976D8BD: 0.484
+    - Vector1_FABC47E4: 0
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -124,6 +168,7 @@ Material:
     - _CullMode: 2
     - _CullModeForward: 2
     - _Cutoff: 0.5
+    - _DepthMaxDistance: 1
     - _DepthOffsetEnable: 0
     - _DetailAlbedoScale: 1
     - _DetailNormalScale: 1
@@ -158,6 +203,8 @@ Material:
     - _EnableSpecularOcclusion: 0
     - _EnableWind: 0
     - _EnergyConservingSpecularColor: 1
+    - _FoamMaxDistance: 0.4
+    - _FoamMinDistance: 0.04
     - _HdrpVersion: 2
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
@@ -202,6 +249,8 @@ Material:
     - _Stiffness: 1
     - _SubsurfaceMask: 1
     - _SupportDecals: 1
+    - _SurfaceDistortionAmount: 0.298
+    - _SurfaceNoiseCutoff: 0.681
     - _SurfaceType: 0
     - _TexWorldScale: 1
     - _TexWorldScaleEmissive: 1
@@ -221,15 +270,25 @@ Material:
     - _ZTestModeDistortion: 4
     - _ZWrite: 1
     m_Colors:
+    - Color_3CACD0BA: {r: 0.21960783, g: 0.35294116, b: 0.50980395, a: 1}
+    - Color_936A8730: {r: 0.14509785, g: 0.9490196, b: 1, a: 1}
+    - Color_D70B9788: {r: 0.14509797, g: 0.9490196, b: 1, a: 1}
+    - Color_E63B4CEF: {r: 0.14509797, g: 0.9490196, b: 1, a: 1}
+    - Vector2_B86025B3: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_D494475D: {r: 1, g: 1, b: 0, a: 0}
     - _BaseColor: {r: 0.44045925, g: 0.74147946, b: 0.9245283, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0.44045922, g: 0.74147946, b: 0.9245283, a: 1}
+    - _DepthGradientDeep: {r: 0.08599999, g: 0.40699998, b: 1, a: 0.749}
+    - _DepthGradientShallow: {r: 0.32499996, g: 0.807, b: 0.971, a: 0.725}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SurfaceNoiseScroll: {r: 0.03, g: 0.03, b: 0, a: 0}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
