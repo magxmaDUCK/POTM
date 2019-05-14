@@ -155,7 +155,7 @@ namespace POTM
             }
 
             AkSoundEngine.SetRTPCValue("Wind_Yaw", planeYaw);
-            AkSoundEngine.SetRTPCValue("Wind_Pitch", planePitch);
+            AkSoundEngine.SetRTPCValue("Wind_Pitch", pitchAngle);
 
             yaw += autoPilot.controlsOverride.x;
             pitch += autoPilot.controlsOverride.y;
@@ -271,6 +271,7 @@ namespace POTM
             }
             else
             {
+                //pitchAngle;
                 AkSoundEngine.SetRTPCValue("Wind_Move", planePitch);
             }
 
