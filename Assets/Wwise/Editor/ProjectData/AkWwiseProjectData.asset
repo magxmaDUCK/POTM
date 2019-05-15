@@ -24,21 +24,8 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: f3bb76a65116464ab8677079403d8853
     GuidInternal: 
-    m_lastTime: -8586436896488402326
-    List:
-    - name: ArchReverb
-      guid: 1d4f44988028474abf17e7edf0eb42d0
-      id: 1868844497
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Master Audio Bus
-        ObjectType: 2
-      - ElementName: AURO 3D
-        ObjectType: 2
-      - ElementName: ArchReverb
-        ObjectType: 1
-      Path: Default Work Unit\Master Audio Bus\AURO 3D\ArchReverb
+    m_lastTime: -8586436835714769638
+    List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -50,7 +37,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 02522841b21ceb4ab50a02e82da18aec
     GuidInternal: 
-    m_lastTime: -8586436903812802355
+    m_lastTime: -8586436835714689854
     List:
     - name: PotM
       guid: f2b8e3691563cc4a8113e087753feb8e
@@ -72,7 +59,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: e0aabc591baf36408043515028f544aa
     GuidInternal: 
-    m_lastTime: -8586436904082791200
+    m_lastTime: -8586436835714809530
     List:
     - name: Load_Dummy_Melodie
       guid: 7d68bbf3f3b1a347b49cb04c828e05d8
@@ -383,7 +370,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: afab9d03bd31b240bc24790f761c48f0
     GuidInternal: 
-    m_lastTime: -8586438393510304364
+    m_lastTime: -8586437629676731601
     List:
     - name: MelodieSelecter
       guid: 995538d91b0b5f4f8d14ebd226665bd6
@@ -421,7 +408,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: dc5b375c941f76418aff0957bc08dad9
     GuidInternal: 
-    m_lastTime: -8586436906178188009
+    m_lastTime: -8586436835714590117
     List:
     - name: PickupLight_1
       guid: d90f9a9798566642ac45cef802e5775c
@@ -436,5 +423,11 @@ MonoBehaviour:
   - /PotMWwise
   - /PotMWwise/Events
   - /PotMWwise/Events/PotM
+  - /PotMWwise/SoundBanks
+  - /PotMWwise/SoundBanks/PotM
+  - /PotMWwise/States
+  - /PotMWwise/States/PotM
+  - /PotMWwise/Switches
+  - /PotMWwise/Switches/PotM
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
