@@ -9,7 +9,7 @@ namespace POTM
         public LightColors colors;
         
         // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
             Renderer rend = GetComponent<Renderer>();
             rend.material = colors.col[Random.Range(0, colors.col.Count)];
