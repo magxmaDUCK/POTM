@@ -11,10 +11,7 @@ GameObject:
   - component: {fileID: 6212084690361845573}
   - component: {fileID: 6212084690361845570}
   - component: {fileID: 6212084690361845571}
-  - component: {fileID: 6212084690361845572}
-  - component: {fileID: 6212084690361845575}
-  - component: {fileID: 20677346497456478}
-  - component: {fileID: 2963151268376913930}
+  - component: {fileID: 7962178694842649701}
   m_Layer: 0
   m_Name: lightPickupFX
   m_TagString: Untagged
@@ -159,7 +156,7 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6212084690361845572
+--- !u!114 &7962178694842649701
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,55 +165,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6212084690361845568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdafc37f32b176349b1684c4455b98e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 95d8f485c29d4e14dab86d036c494c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ExecuteInEditor: 1
-  m_Bindings:
-  - {fileID: 6212084690361845575}
-  m_VisualEffect: {fileID: 6212084690361845570}
---- !u!114 &6212084690361845575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6212084690361845568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07c3070554d0a8944a95ff8f018c2c9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Parameter:
-    m_Name: AttractiveTargetPosition
-  Target: {fileID: 0}
---- !u!135 &20677346497456478
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6212084690361845568}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.5
-  m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &2963151268376913930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6212084690361845568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a34876d999801b44bb026fb9a425542, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 6212084690361845570}
-  EventName: OnPlay
-  colliders:
-  - {fileID: 20677346497456478}
-  activation: 0
+  player: {fileID: 5531773749473138410, guid: c8d52371a054c5e42aa2f1e6266d6665, type: 3}

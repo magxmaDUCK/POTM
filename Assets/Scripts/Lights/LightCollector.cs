@@ -11,11 +11,14 @@ namespace POTM
         private SphereCollider triggerZone;
         public Transform player;
         public Transform WwiseGlobal;
+        public GameObject lightFX;
 
         // Start is called before the first frame update
         void Start()
         {
             triggerZone = GetComponent<SphereCollider>();
+            lightFX.GetComponent<PickupVFX>().player = player;
+
         }
 
         private void Update()
@@ -26,14 +29,18 @@ namespace POTM
         //Add a big trigger collider around the plane, for light detection and pickups.
         private void OnTriggerEnter(Collider collision)
         {
-            //Debug.Log("hello");
             LightPickup light = collision.gameObject.GetComponent<LightPickup>();
+
             if(light != null && light.IsOn())
             {
-                //Debug.Log("ll");
+                //Increment score and turn off lights
                 score += light.getScoreValue();
                 WwiseGlobal.transform.position = collision.transform.position;
                 light.TurnOff();
+
+                //Start VFX that follows player;
+                GameObject go = Instantiate(lightFX, collision.transform.position, Quaternion.identity);
+                go.SetActive(true);
             }
 
             //check layer 
