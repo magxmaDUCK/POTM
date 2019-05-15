@@ -10,6 +10,7 @@ namespace POTM
         private int score;
         private SphereCollider triggerZone;
         public Transform player;
+        public Transform WwiseGlobal;
 
         // Start is called before the first frame update
         void Start()
@@ -31,6 +32,7 @@ namespace POTM
             {
                 //Debug.Log("ll");
                 score += light.getScoreValue();
+                WwiseGlobal.transform.position = collision.transform.position;
                 light.TurnOff();
             }
 
