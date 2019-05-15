@@ -14,7 +14,8 @@ public class MapBorder : MonoBehaviour
     {
         if( Vector2.Distance(Vector2.zero, new Vector2(transform.position.x, transform.position.z)) > (islandRadius + farPlane))
         {
-            transform.position = new Vector3(-transform.position.x, transform.position.y, -transform.position.z);
+            Vector3 dir = (Vector3.zero - transform.position).normalized;
+            transform.position = new Vector3(dir.x * (farPlane + islandRadius), transform.position.y, dir.z*(farPlane + islandRadius));
         }
     }
 }
