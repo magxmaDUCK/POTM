@@ -16,6 +16,10 @@ namespace POTM
 
         private float offIntensity = 0;
 
+        //param Random Melodies
+        int melodieSelect = 1 ;
+        private int RTPCtype = (int)AkQueryRTPCValue.RTPCValue_Global;
+
         public LightPickup()
         {
             on = true;
@@ -30,8 +34,6 @@ namespace POTM
         private Light light;
 
         private Material mat;
-
-
 
         private void Start()
         {
@@ -78,10 +80,22 @@ namespace POTM
 
         virtual public void TurnOff()
         {
-           AkSoundEngine.PostEvent("Play_Light_Pickup", gameObject);
+           AkSoundEngine.GetRTPCValue("LightNumbers", gameObject, 0 , out float out_rValue, ref RTPCtype);
+           if (out_rValue >= 16)
+           {
+               AkSoundEngine.SetRTPCValue("LightNumbers",0 , null);
+               melodieSelect = Random.Range(1, 4);
+           }
+           AkSoundEngine.PostTrigger("PickupLight_1", null);
+            //AkSoundEngine.PostEvent("Play_Melodie_0" + melodieSelect, gameObject);
+            //AkSoundEngine.PostEvent("Play_Melodie_0" + melodieSelect, gameObject /*, (uint)AkCallbackType.AK_MusicSyncGrid, CallBackLight, null);
             on = false;
-            startTime = Time.time;
+           startTime = Time.time;
         }
+        /*private void CallBackLight(object in_cookie, AkCallbackType in_type, object in_info)
+        {
+            AkSoundEngine.PostEvent("Play_Melodie_0" + melodieSelect, gameObject);
+        }*/
 
         public int getScoreValue()
         {
