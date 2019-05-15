@@ -83,7 +83,7 @@ namespace AK
 
     namespace TRIGGERS
     {
-        static const AkUniqueID PICKUPLIGHT = 2491260467U;
+        static const AkUniqueID PICKUPLIGHT_1 = 1615847571U;
     } // namespace TRIGGERS
 
     namespace BANKS
@@ -103,11 +103,6 @@ namespace AK
         static const AkUniqueID SIDECHAIN = 0U;
         static const AkUniqueID WORLD = 2609808943U;
     } // namespace BUSSES
-
-    namespace AUX_BUSSES
-    {
-        static const AkUniqueID ARCHREVERB = 1868844497U;
-    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {
