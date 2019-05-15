@@ -5,7 +5,7 @@ using UnityEngine.Experimental.VFX;
 
 public class PickupVFX : MonoBehaviour
 {
-    public Transform player;
+    [SerializeField]public Transform player;
 
     private VisualEffect lightFX;
 
