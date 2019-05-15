@@ -62,15 +62,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FrontAlbedo:
-        m_Texture: {fileID: 2800000, guid: f76a6781fb2b3b946b0b1114f5580612, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _FrontMetallic:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _FrontMetallic:
+        m_Texture: {fileID: 2800000, guid: 351ff095837d19a478a4b7ac6ca07bbd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _FrontNormal:
-        m_Texture: {fileID: 2800000, guid: bf83cfd22cfe3cd44b570fe69a930629, type: 3}
+        m_Texture: {fileID: 2800000, guid: c09a0feac188bd84eaf4c357ecefaabe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
@@ -102,7 +102,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SideAlbedo:
-        m_Texture: {fileID: 2800000, guid: f76a6781fb2b3b946b0b1114f5580612, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SidesAO:
@@ -110,11 +110,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SidesMetallic:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 351ff095837d19a478a4b7ac6ca07bbd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SidesNormal:
-        m_Texture: {fileID: 2800000, guid: bf83cfd22cfe3cd44b570fe69a930629, type: 3}
+        m_Texture: {fileID: 2800000, guid: c09a0feac188bd84eaf4c357ecefaabe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
