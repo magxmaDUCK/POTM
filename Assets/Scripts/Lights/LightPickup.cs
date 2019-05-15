@@ -86,12 +86,16 @@ namespace POTM
                AkSoundEngine.SetRTPCValue("LightNumbers",0 , null);
                melodieSelect = Random.Range(1, 4);
            }
-
-           AkSoundEngine.PostEvent("Play_Melodie_0" + melodieSelect, gameObject/*, AkCallbackType.AK_MusicSyncGrid,*/ );
-           Debug.Log("RTPCvALUE " + out_rValue);
-           Debug.Log("Melodie " + melodieSelect);
+           // AkSoundEngine.PostEvent("Play_Melodie_0" + melodieSelect, gameObject);
+            /*   AkSoundEngine.PostEvent("Play_Melodie_0" + melodieSelect, gameObject /*, (uint)AkCallbackType.AK_MusicSyncGrid, CallBackLight, null);
+             /*Debug.Log("RTPCValue " + out_rValue);
+              Debug.Log("Melodie " + melodieSelect);*/
             on = false;
            startTime = Time.time;
+        }
+        private void CallBackLight(object in_cookie, AkCallbackType in_type, object in_info)
+        {
+            AkSoundEngine.PostEvent("Play_Melodie_0" + melodieSelect, gameObject);
         }
 
         public int getScoreValue()
