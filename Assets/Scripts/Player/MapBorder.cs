@@ -7,7 +7,7 @@ public class MapBorder : MonoBehaviour
     [Min(0)]
     public float islandRadius;
 
-    private float farPlane;
+    private float farPlane = 1000;
     
     // Update is called once per frame
     void Update()
