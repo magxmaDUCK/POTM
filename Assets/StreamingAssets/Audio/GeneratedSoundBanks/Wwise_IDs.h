@@ -53,17 +53,40 @@ namespace AK
 
     namespace SWITCHES
     {
-        namespace MELODIESELECTER
+        namespace AMBSWITCH
         {
-            static const AkUniqueID GROUP = 3532158187U;
+            static const AkUniqueID GROUP = 1304803515U;
 
             namespace SWITCH
             {
-                static const AkUniqueID MELODIE_01 = 1161931464U;
-                static const AkUniqueID MELODIE_02 = 1161931467U;
-                static const AkUniqueID MELODIE_03 = 1161931466U;
+                static const AkUniqueID HIGHAIR = 4073709503U;
+                static const AkUniqueID LOWAIR = 3846824923U;
+                static const AkUniqueID MIDAIR = 1143232103U;
+                static const AkUniqueID UNDERGROUND = 1543687740U;
             } // namespace SWITCH
-        } // namespace MELODIESELECTER
+        } // namespace AMBSWITCH
+
+        namespace HIGHSPEED
+        {
+            static const AkUniqueID GROUP = 909092410U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID FALSE = 2452206122U;
+                static const AkUniqueID TRUE = 3053630529U;
+            } // namespace SWITCH
+        } // namespace HIGHSPEED
+
+        namespace SWITCHLOWAIR
+        {
+            static const AkUniqueID GROUP = 2949664251U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID GROUND = 2528658256U;
+                static const AkUniqueID OCEAN = 3802555985U;
+            } // namespace SWITCH
+        } // namespace SWITCHLOWAIR
 
     } // namespace SWITCHES
 
