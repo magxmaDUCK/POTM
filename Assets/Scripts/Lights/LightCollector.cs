@@ -18,7 +18,6 @@ namespace POTM
         {
             triggerZone = GetComponent<SphereCollider>();
             lightFX.GetComponent<PickupVFX>().player = player;
-
         }
 
         private void Update()
