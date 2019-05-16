@@ -9,6 +9,8 @@ public class PickupVFX : MonoBehaviour
 
     private VisualEffect lightFX;
 
+    private Vector3 position;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,8 @@ public class PickupVFX : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        position = lightFX.GetVector3("");
+
         lightFX.SetVector3("AttractiveTargetPosition", player.position);
     }
 }
