@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5531773749473138411}
   - component: {fileID: 7634737155475185145}
   - component: {fileID: 8021593404369031130}
-  - component: {fileID: 5531773750814028962}
   - component: {fileID: 5531773750814028961}
   - component: {fileID: 5531773749484037239}
   - component: {fileID: 4855512082650620827}
@@ -91,7 +90,7 @@ MonoBehaviour:
   balanceAngle: -3
   balanceDeadZone: 17
   cruisingSpeed: 8
-  accelRatio: 1.4
+  accelRatio: 1.6
   decelRatio: 3
   maxTurningAngle: 45
   joystickDiffTolerence: 0.4
@@ -134,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96a4644398ddc3e4caf3c7bb3d83651d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  islandRadius: 0
+  islandRadius: 1000
 --- !u!114 &5531773750814028962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +163,7 @@ MonoBehaviour:
   eventIdInternal: 0
   valueGuidInternal: 
   m_callbackDataInternal: {fileID: 0}
+>>>>>>> master
 --- !u!114 &5531773750814028961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +322,7 @@ MonoBehaviour:
   minDist: 0.3
   cameraAngle: -4
   cameraHeight: 0.1
-  maxFOV: 73.87587
+  maxFOV: 92.93588
   minFOV: 41.20535
   pitchOffsetAngle: 0
   yawOffsetAngle: 10
@@ -525,7 +525,6 @@ GameObject:
   - component: {fileID: 5531773750882414246}
   - component: {fileID: 5531773750882414247}
   - component: {fileID: 5531773749630844271}
-  - component: {fileID: 5531773749630844265}
   m_Layer: 0
   m_Name: paper_airplane
   m_TagString: Untagged
@@ -614,17 +613,3 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &5531773749630844265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5531773750882414249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b401c27336e0134bb5371c63116ae43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
