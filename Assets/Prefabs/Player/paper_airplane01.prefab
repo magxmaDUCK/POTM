@@ -83,14 +83,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800f07c516b8e3c489681e784e6cb90b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 6
-  maxSpeed: 30
+  minSpeed: 8
+  maxSpeed: 35
   turnSpeed: 2
   dipSpeed: 1
   balanceAngle: -3
   balanceDeadZone: 17
-  cruisingSpeed: 8
-  accelRatio: 1.6
+  cruisingSpeed: 10
+  accelRatio: 2.5
   decelRatio: 3
   maxTurningAngle: 45
   joystickDiffTolerence: 0.4
