@@ -388,16 +388,19 @@ namespace POTM
                 //BOUNCE OFF WALLS CODE
 
                 //Change rotation according to angle of crassh
-                RaycastHit colPt;
-                Physics.Raycast(transform.position - transform.forward*2, transform.forward, out colPt);
-                Vector3 reflectedVector = Vector3.Reflect(transform.forward ,colPt.normal);
+                if (collision.gameObject.layer != LayerMask.NameToLayer("AudioBox"))
+                {
+                    RaycastHit colPt;
+                    Physics.Raycast(transform.position - transform.forward * 2, transform.forward, out colPt);
+                    Vector3 reflectedVector = Vector3.Reflect(transform.forward, colPt.normal);
 
-                Quaternion newRot = Quaternion.LookRotation(reflectedVector);
-                transform.rotation = newRot;
-                planeRB.velocity = transform.forward * cruisingSpeed;
-                planeRB.angularVelocity = Vector3.zero;
-                planeYaw = 0;
-                planePitch = 0;
+                    Quaternion newRot = Quaternion.LookRotation(reflectedVector);
+                    transform.rotation = newRot;
+                    planeRB.velocity = transform.forward * cruisingSpeed;
+                    planeRB.angularVelocity = Vector3.zero;
+                    planeYaw = 0;
+                    planePitch = 0;
+                }
             }
         }
 
