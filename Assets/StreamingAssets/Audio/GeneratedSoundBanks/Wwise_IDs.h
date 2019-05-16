@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_GROUND = 3429773683U;
         static const AkUniqueID PLAY_IN_WOOSH = 3654176658U;
         static const AkUniqueID PLAY_INIT = 426840996U;
         static const AkUniqueID PLAY_MELODIE_01 = 3867730695U;
@@ -20,6 +21,7 @@ namespace AK
         static const AkUniqueID PLAY_MELODIE_03 = 3867730693U;
         static const AkUniqueID PLAY_MELODIE_04 = 3867730690U;
         static const AkUniqueID PLAY_OUT_WOOSH = 4029469807U;
+        static const AkUniqueID PLAY_SEA = 3157907375U;
         static const AkUniqueID PLAY_WATERFALL = 467174588U;
     } // namespace EVENTS
 

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(Collider))]
 public class EventPositionConfiner : MonoBehaviour
@@ -13,19 +14,26 @@ public class EventPositionConfiner : MonoBehaviour
     #region private variables
     private IEnumerator positionClamperRoutine;
 
-    private Collider trigger;
+    //private Collider trigger;
     private Transform targetTransform;
 
     private GameObject eventEmitter;
+    private Collider[] triggerArray;
+    //private Collider actualtrigger;
     #endregion
 
     private void Awake()
     {
-        trigger = GetComponent<Collider>();
-        trigger.isTrigger = true;
+        triggerArray = GetComponents<Collider>();
+        foreach(Collider trigger in triggerArray)
+        {
+            trigger.isTrigger = true;
+        }
+
 
         eventEmitter = new GameObject("Clamped Emitter");
         eventEmitter.transform.parent = transform;
+        eventEmitter.layer = LayerMask.NameToLayer("AudioBox");
         Rigidbody RB = eventEmitter.AddComponent<Rigidbody>();
         RB.isKinematic = true;
         SphereCollider SPC = eventEmitter.AddComponent<SphereCollider>();
@@ -63,13 +71,32 @@ public class EventPositionConfiner : MonoBehaviour
         }
     }
 
+    /*private void OnTriggerEnter(Collider other)
+    {
+        foreach (Collider trigger in triggerArray)
+        {
+            trigger.trigge
+        }
+        actualtrigger = other;
+    }*/
+
     IEnumerator ClampEmitterPosition()
     {
         while (true)
         {
-            Vector3 closestPoint = trigger.ClosestPoint(targetTransform.position);
+            float minDistance = float.PositiveInfinity;
+            Vector3 closestPoint = Vector3.zero;
+            foreach (Collider trigger in triggerArray)
+            {
+                Vector3 triggerClosest = trigger.ClosestPoint(targetTransform.position);
+                float distance = Vector3.Distance(triggerClosest, targetTransform.position);
+                if (distance < minDistance)
+                {
+                    minDistance = distance;
+                    closestPoint = triggerClosest;
+                }
+            }
             eventEmitter.transform.position = closestPoint;
-
             yield return new WaitForSecondsRealtime(UpdateInterval);
         }
     }
