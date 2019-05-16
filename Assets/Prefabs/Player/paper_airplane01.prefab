@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5531773749473138411}
   - component: {fileID: 7634737155475185145}
   - component: {fileID: 8021593404369031130}
-  - component: {fileID: 5531773750814028962}
   - component: {fileID: 5531773750814028961}
   - component: {fileID: 5531773749484037239}
   - component: {fileID: 4855512082650620827}
@@ -135,35 +134,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   islandRadius: 1000
---- !u!114 &5531773750814028962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5531773749473138412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1d7ef4588b38ab4e896058818456b14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
 --- !u!114 &5531773750814028961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,7 +495,6 @@ GameObject:
   - component: {fileID: 5531773750882414246}
   - component: {fileID: 5531773750882414247}
   - component: {fileID: 5531773749630844271}
-  - component: {fileID: 5531773749630844265}
   m_Layer: 0
   m_Name: paper_airplane
   m_TagString: Untagged
@@ -614,17 +583,3 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &5531773749630844265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5531773750882414249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b401c27336e0134bb5371c63116ae43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0

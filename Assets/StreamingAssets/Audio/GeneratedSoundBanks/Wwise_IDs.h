@@ -25,18 +25,6 @@ namespace AK
 
     namespace STATES
     {
-        namespace FLY_STATE
-        {
-            static const AkUniqueID GROUP = 4043522470U;
-
-            namespace STATE
-            {
-                static const AkUniqueID AIR = 1050421051U;
-                static const AkUniqueID ARCH = 3652584297U;
-                static const AkUniqueID UNDERGROUND = 1543687740U;
-            } // namespace STATE
-        } // namespace FLY_STATE
-
         namespace MUSICSTATE
         {
             static const AkUniqueID GROUP = 1021618141U;
@@ -59,9 +47,8 @@ namespace AK
 
             namespace SWITCH
             {
-                static const AkUniqueID HIGHAIR = 4073709503U;
+                static const AkUniqueID AIR = 1050421051U;
                 static const AkUniqueID LOWAIR = 3846824923U;
-                static const AkUniqueID MIDAIR = 1143232103U;
                 static const AkUniqueID UNDERGROUND = 1543687740U;
             } // namespace SWITCH
         } // namespace AMBSWITCH
@@ -76,17 +63,6 @@ namespace AK
                 static const AkUniqueID TRUE = 3053630529U;
             } // namespace SWITCH
         } // namespace HIGHSPEED
-
-        namespace SWITCHLOWAIR
-        {
-            static const AkUniqueID GROUP = 2949664251U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID GROUND = 2528658256U;
-                static const AkUniqueID OCEAN = 3802555985U;
-            } // namespace SWITCH
-        } // namespace SWITCHLOWAIR
 
     } // namespace SWITCHES
 
@@ -107,6 +83,9 @@ namespace AK
     namespace TRIGGERS
     {
         static const AkUniqueID PICKUPLIGHT_1 = 1615847571U;
+        static const AkUniqueID PICKUPLIGHT_2 = 1615847568U;
+        static const AkUniqueID PICKUPLIGHT_3 = 1615847569U;
+        static const AkUniqueID PICKUPLIGHT_4 = 1615847574U;
     } // namespace TRIGGERS
 
     namespace BANKS
