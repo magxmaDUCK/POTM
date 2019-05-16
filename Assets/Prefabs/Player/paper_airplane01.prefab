@@ -91,7 +91,7 @@ MonoBehaviour:
   balanceAngle: -3
   balanceDeadZone: 17
   cruisingSpeed: 8
-  accelRatio: 1.4
+  accelRatio: 1.6
   decelRatio: 3
   maxTurningAngle: 45
   joystickDiffTolerence: 0.4
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96a4644398ddc3e4caf3c7bb3d83651d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  islandRadius: 0
+  islandRadius: 1000
 --- !u!114 &5531773750814028962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +322,7 @@ MonoBehaviour:
   minDist: 0.3
   cameraAngle: -4
   cameraHeight: 0.1
-  maxFOV: 73.87587
+  maxFOV: 92.93588
   minFOV: 41.20535
   pitchOffsetAngle: 0
   yawOffsetAngle: 10
