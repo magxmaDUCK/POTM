@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 354883740835429110}
   - component: {fileID: 354883740838329046}
   - component: {fileID: 354883740837328918}
-  - component: {fileID: 2591419266953093176}
+  - component: {fileID: 3735306966300038916}
   m_Layer: 0
   m_Name: EnormousSoilGrassModule02
   m_TagString: Untagged
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2591419266953093176
-BoxCollider:
+--- !u!64 &3735306966300038916
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,6 +88,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 43.170395, y: 42.78973, z: 34.212032}
-  m_Center: {x: -0.19517708, y: -0.0048418054, z: 17.106012}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 6352f1aadc7fe15409da09f7397c304a, type: 3}
