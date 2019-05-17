@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9050219328354547140}
   - component: {fileID: 9050219328351647204}
   - component: {fileID: 9050219328352778020}
-  - component: {fileID: 6508014638181080647}
+  - component: {fileID: 4854825165004190821}
   m_Layer: 0
   m_Name: BigSoilGrassModule01
   m_TagString: Untagged
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6508014638181080647
-BoxCollider:
+--- !u!64 &4854825165004190821
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,6 +88,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 22.352245, y: 21.961105, z: 18.022362}
-  m_Center: {x: -0.18396139, y: 0.09286215, z: 6.790077}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: e95d1ae2304cd2943a92e37fef6823a5, type: 3}
