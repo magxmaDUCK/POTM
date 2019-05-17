@@ -9,11 +9,13 @@ public class FirstPersonCameraController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
         float turn = Input.GetAxis("Horizontal");
+        Vector3 rot = transform.rotation.eulerAngles;
 
-        transform.Rotate(new Vector3(60, 0, 0));
+        transform.Rotate(-rot);
         transform.Rotate(new Vector3(0, turn * HorizontalSens * Time.deltaTime, 0));
-        transform.Rotate(new Vector3(-60, 0, 0));
+        transform.Rotate(rot);
+        
+        
     }
 }

@@ -426,7 +426,6 @@ GameObject:
   - component: {fileID: 1245810360}
   - component: {fileID: 1245810362}
   - component: {fileID: 1245810361}
-  - component: {fileID: 1245810363}
   m_Layer: 0
   m_Name: starEmission
   m_TagString: Untagged
@@ -441,13 +440,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245810359}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 4.47, y: -6.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1567582245}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!73398921 &1245810361
 VFXRenderer:
   m_ObjectHideFlags: 2
@@ -500,9 +499,9 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 1.0471976
+      - m_Value: 6.2409706
         m_Name: New ArcTorus_arc
-        m_Overridden: 0
+        m_Overridden: 1
       - m_Value: 1
         m_Name: New ArcTorus_majorRadius
         m_Overridden: 0
@@ -513,7 +512,7 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 0, y: 0, z: 0}
+      - m_Value: {x: 0.41821146, y: 0, z: 0}
         m_Name: New ArcTorus_center
         m_Overridden: 1
     m_Vector4f:
@@ -521,7 +520,10 @@ VisualEffect:
     m_Uint:
       m_Array: []
     m_Int:
-      m_Array: []
+      m_Array:
+      - m_Value: 0
+        m_Name: nbStars
+        m_Overridden: 0
     m_Matrix4x4f:
       m_Array: []
     m_AnimationCurve:
@@ -532,19 +534,6 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
---- !u!114 &1245810363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245810359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 696da69edc1347b4aa1b11d545a04c73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HorizontalSens: 10
 --- !u!1 &1299657886
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +546,7 @@ GameObject:
   - component: {fileID: 1299657889}
   - component: {fileID: 1299657888}
   - component: {fileID: 1299657887}
+  - component: {fileID: 1299657891}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -696,6 +686,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1299657891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299657886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696da69edc1347b4aa1b11d545a04c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HorizontalSens: 5
 --- !u!1 &1395494832
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,6 +767,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1567582245}
+  - component: {fileID: 1567582246}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -786,6 +790,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1567582246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567582244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 416fd3160397da94bbe76ce8b2133f23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1701544754
 GameObject:
   m_ObjectHideFlags: 0
