@@ -8,8 +8,16 @@ namespace POTM
     {
         public bool directionnalBoost = false;
         public float boostSpeed = 5.0f;
-        public Vector3 boostDirection;
+        public List<Vector3> boostDirections = new List<Vector3>();
         public float maxAngle = 45f;
+
+        private void Start()
+        {
+            foreach(Vector3 bd in boostDirections)
+            {
+                bd.Normalize();
+            }
+        }
 
         private void OnTriggerEnter(Collider other)
         {
@@ -19,9 +27,12 @@ namespace POTM
             {
                 if (directionnalBoost)
                 {
-                    if(directionIsSimilar(other.transform.forward, boostDirection))
+                    foreach(Vector3 bd in boostDirections)
                     {
-                        pc.currentSpeed += 5.0f;
+                        if(directionIsSimilar(other.transform.forward, bd))
+                        {
+                            pc.currentSpeed += 5.0f;
+                        }
                     }
                 }
                 else
@@ -33,7 +44,14 @@ namespace POTM
 
         private bool directionIsSimilar(Vector3 A, Vector3 B)
         {
-            return (Vector3.Angle(A, B) > maxAngle);
+            return (Vector3.Angle(A, B) < maxAngle);
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            foreach (Vector3 bd in boostDirections)
+                Gizmos.DrawRay(transform.position, bd);
         }
     }
 }

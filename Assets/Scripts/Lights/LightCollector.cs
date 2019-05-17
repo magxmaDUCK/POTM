@@ -47,7 +47,7 @@ namespace POTM
 
             if(collision.gameObject.layer == LayerMask.NameToLayer("Wooshable"))
             {
-                AkSoundEngine.PostEvent("Play_In_Woosh", this.gameObject);
+                AkSoundEngine.PostEvent("Play_In_Woosh", collision.gameObject);
                 //Debug.Log("Wooooooshing");
             }
         }
@@ -58,7 +58,7 @@ namespace POTM
             if (other.gameObject.layer == LayerMask.NameToLayer("Wooshable"))
             {
                 //stop woosh sound
-                AkSoundEngine.PostEvent("Play_Out_Woosh", this.gameObject);
+                //AkSoundEngine.PostEvent("Play_Out_Woosh", other.gameObject);
                 //Debug.Log("Wooooooshing'nt");
             }
         }

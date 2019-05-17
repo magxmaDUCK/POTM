@@ -5,9 +5,9 @@ using UnityEngine;
 public class SetAmbSwitch : MonoBehaviour
 {
     [SerializeField] AK.Wwise.Switch ambSwitch;
-
-    private void OnColliderEnter(Collider other)
+    
+    private void OnTriggerEnter(Collider other)
     {
-        ambSwitch.SetValue(null);
+        ambSwitch.SetValue(GameObject.Find("WwiseGlobal"));
     }
 }
