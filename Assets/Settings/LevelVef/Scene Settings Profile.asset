@@ -89,7 +89,7 @@ MonoBehaviour:
   active: 1
   maxShadowDistance:
     m_OverrideState: 1
-    m_Value: 200
+    m_Value: 400
     min: 0
   cascadeShadowSplitCount:
     m_OverrideState: 1
@@ -146,7 +146,7 @@ MonoBehaviour:
     min: 0
   indirectDiffuseIntensity:
     m_OverrideState: 1
-    m_Value: 4
+    m_Value: 5
     min: 0
 --- !u!114 &114500577969940594
 MonoBehaviour:
@@ -190,7 +190,7 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: -0.03
+    m_Value: -1
   multiplier:
     m_OverrideState: 1
     m_Value: 1
@@ -229,13 +229,13 @@ MonoBehaviour:
     max: 5
   skyTint:
     m_OverrideState: 1
-    m_Value: {r: 0.29076183, g: 0.29598826, b: 0.6226415, a: 1}
+    m_Value: {r: 0.095007114, g: 0.09777397, b: 0.3301887, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
   groundColor:
     m_OverrideState: 1
-    m_Value: {r: 0.24230151, g: 0.25009203, b: 0.5188679, a: 1}
+    m_Value: {r: 0.22014064, g: 0.22759758, b: 0.4811321, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
