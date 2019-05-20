@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.005827548, g: 0.008534934, b: 0.025309548, a: 1}
+  m_IndirectSpecularColor: {r: 0.0062474194, g: 0.009029301, b: 0.026102275, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -32783,6 +32783,7 @@ GameObject:
   - component: {fileID: 799071676}
   - component: {fileID: 799071678}
   - component: {fileID: 799071677}
+  - component: {fileID: 799071679}
   m_Layer: 12
   m_Name: Air
   m_TagString: Untagged
@@ -32837,6 +32838,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6331939, y: 2.7353125, z: 1.0142254}
   m_Center: {x: -0.15037641, y: 0.8676562, z: -0.022055207}
+--- !u!65 &799071679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799071675}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19218989, y: 1.8836504, z: 0.59405375}
+  m_Center: {x: -0.37087792, y: 2.1898987, z: -0.060800735}
 --- !u!1001 &799540988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89715,6 +89729,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rendering
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526319798154958887, guid: 798a569551d535a4ab9bd68e0e25a9e4,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 2737870700123722621, guid: 798a569551d535a4ab9bd68e0e25a9e4,
         type: 3}
