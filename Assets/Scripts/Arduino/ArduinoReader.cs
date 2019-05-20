@@ -12,10 +12,12 @@ public class ArduinoReader : MonoBehaviour
     [HideInInspector]public float potP2 = 0;
     [HideInInspector]public float dist = 0;
 
-    [NonSerialized] public float potMax = 890;
-    [NonSerialized] public float potMin = 10;
-    [NonSerialized]public float distMax = 170;
-    [NonSerialized] public float distMin = 50;
+    [NonSerialized] public float potMaxG = 600;
+    [NonSerialized] public float potMaxD = 700;
+    [NonSerialized] public float potMinG = 300;
+    [NonSerialized] public float potMinD = 400;
+    [NonSerialized] public float distMax = 170;
+    [NonSerialized] public float distMin = 75;
 
 
     private SerialPort _stream = new SerialPort("COM3", 9600);
@@ -158,10 +160,10 @@ public class ArduinoReader : MonoBehaviour
             potP1 = int.Parse(words[3]);
             potP2 = int.Parse(words[5]);
 
-            potP1 = Mathf.Min(potP1, potMax);
-            potP1 = Mathf.Max(potP1, potMin);
-            potP2 = Mathf.Min(potP2, potMax);
-            potP2 = Mathf.Max(potP2, potMin);
+            potP1 = Mathf.Min(potP1, potMaxG);
+            potP1 = Mathf.Max(potP1, potMinG);
+            potP2 = Mathf.Min(potP2, potMaxD);
+            potP2 = Mathf.Max(potP2, potMinD);
 
             dist = Mathf.Min(dist, distMax);
             dist = Mathf.Max(dist, distMin);
