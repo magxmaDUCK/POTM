@@ -70,11 +70,8 @@ namespace POTM
 
             if(!on && lightoff)
             {
-               if(mat.name == "OrbLanternLight01 (Instance)" || mat.name == "OrbLanternLight02 (Instance)" || mat.name == "OrbLanternLight03 (Instance)")
-               {
-                    Destroy(gameObject);
-               }
-               Destroy(this);
+                Destroy(gameObject);
+                Destroy(this);
             }
         }
 
