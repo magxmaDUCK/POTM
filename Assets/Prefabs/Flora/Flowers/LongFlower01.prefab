@@ -157,11 +157,6 @@ PrefabInstance:
       propertyPath: points.Array.data[5].z
       value: 0.50095755
       objectReference: {fileID: 0}
-    - target: {fileID: 8418686913539202150, guid: 4e9feb5f3224ebd4485062ef2b07774f,
-        type: 3}
-      propertyPath: m_Name
-      value: OrbLight
-      objectReference: {fileID: 0}
     - target: {fileID: 8418686913539227718, guid: 4e9feb5f3224ebd4485062ef2b07774f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -215,6 +210,16 @@ PrefabInstance:
     - target: {fileID: 8418686913539227718, guid: 4e9feb5f3224ebd4485062ef2b07774f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418686913539202150, guid: 4e9feb5f3224ebd4485062ef2b07774f,
+        type: 3}
+      propertyPath: m_Name
+      value: OrbLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418686913539202150, guid: 4e9feb5f3224ebd4485062ef2b07774f,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7460223690378144272, guid: 4e9feb5f3224ebd4485062ef2b07774f,
