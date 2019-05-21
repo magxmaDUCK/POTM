@@ -38,8 +38,9 @@ namespace POTM
                 light.TurnOff();
 
                 //Start VFX that follows player;
-                //GameObject go = Instantiate(lightFX, collision.transform.position, Quaternion.identity);
-                //go.SetActive(true);
+                GameObject go = Instantiate(lightFX, collision.transform.position, Quaternion.identity);
+                go.SetActive(true);
+                go.GetComponent<PickupVFX>().player = player;
             }
 
             //check layer 
