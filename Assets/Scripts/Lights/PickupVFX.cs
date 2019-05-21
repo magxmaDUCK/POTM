@@ -33,6 +33,7 @@ public class PickupVFX : MonoBehaviour
         if(timePassed > duration)
         {
             lightFX.SendEvent("OnStop");
+            transform.position = player.transform.position;
         }
 
         if(timePassed > duration + 2f)
