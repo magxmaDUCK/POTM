@@ -27,6 +27,9 @@ namespace POTM
         public float pitchOffsetAngle;
         [Tooltip("The max angle of the camera while turning")]
         public float yawOffsetAngle;
+        [Tooltip("The time to smoothen the camera position")]
+        public float smoothTime;
+        public float smoothTimeRot;
 
         //Empty game object in front of plane to know where it is going;
         [Tooltip("Where the camera is looking at")]
@@ -47,6 +50,9 @@ namespace POTM
         private float speedDiff;
         private float distDiff;
         private float diffFov;
+
+        private Vector3 velocity = Vector3.zero;
+        private Vector3 velocityRot = Vector3.zero;
 
         private float perlinX = 1f;
         private float perlinY = 1f;
@@ -71,12 +77,15 @@ namespace POTM
             Vector3 playerRot = player.transform.rotation.eulerAngles;
 
             //Change camera distance + reset height
-            transform.position = 
-                (player.transform.position 
-                + -player.transform.forward * (minDist + additionalDist) 
+            transform.position = Vector3.SmoothDamp(
+                transform.position,
+                (player.transform.position
+                + -player.transform.forward * (minDist + additionalDist)
                 + player.transform.up * (0.01f + additionalHeight))
-                + (rotationShake?Vector3.zero:CameraShake());
-                
+                ,
+                ref velocity,
+                smoothTime)+(rotationShake ? Vector3.zero : CameraShake());
+
 
             //Set camera height value so that it fits in the center of the screen;
             //Vector3 onScreenPlanePos = cam.WorldToScreenPoint(player.transform.position);
@@ -87,15 +96,25 @@ namespace POTM
             //Move camera so that its aligned on the 1st or 2nd third of the screen;
 
             //Turn and move camera to side
+
             /*
-               transform.rotation = Quaternion.Euler(
-                new Vector3(
-                    cameraAngle + playerRot.x + (player.pitch * pitchOffsetAngle),
-                    player.planeYaw*yawOffsetAngle + playerRot.y,
-                    playerRot.z 
-                ) 
-                + (rotationShake?CameraShake():Vector3.zero));
-            */
+                      transform.rotation = Quaternion.Euler(
+                           Vector3.SmoothDamp( transform.rotation.eulerAngles,
+                        new Vector3(
+                            cameraAngle + playerRot.x,
+                            playerRot.y,
+                            playerRot.z 
+                        ) ,
+                        ref velocityRot,
+                        smoothTimeRot)
+                        + (rotationShake?CameraShake():Vector3.zero));
+                        */
+
+            transform.rotation = Quaternion.Lerp(transform.rotation,
+                Quaternion.Euler(new Vector3(
+                    cameraAngle + playerRot.x,
+                    playerRot.y,
+                    playerRot.z)), smoothTimeRot);
 
             //Set FOV according to speed
             cam.fieldOfView = minFOV + additionalFOV;
