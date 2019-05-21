@@ -34,8 +34,10 @@ namespace AK
             namespace STATE
             {
                 static const AkUniqueID AIR = 1050421051U;
+                static const AkUniqueID BEACH = 4075332698U;
                 static const AkUniqueID CLOSE = 1451272583U;
                 static const AkUniqueID FAR = 1183803292U;
+                static const AkUniqueID UNDERGROUND = 1543687740U;
             } // namespace STATE
         } // namespace MUSICSTATE
 

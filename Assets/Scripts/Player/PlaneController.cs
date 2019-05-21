@@ -101,9 +101,13 @@ namespace POTM
             //Get controls
             if (seesaw)
             {
-                yawP1 = ((float)AR.dist * 2.0f) / (AR.distMax - AR.distMin) - 2.0f;
-                pitchP1 = ((float)AR.potP1 * 2.0f) / (AR.potMax - AR.potMin) - 1.0f;
-                pitchP2 = ((float)AR.potP2 * 2.0f) / (AR.potMax - AR.potMin) - 1.0f;
+                //yawP1 = ((float)AR.dist) * 2.0f / (AR.distMax - AR.distMin) - 2.0f;
+                yawP1 = (((float)AR.dist - (float)AR.distMin) * 2f / ((float)AR.distMax - (float)AR.distMin)) - 1f;
+                yawP1 = -yawP1;
+
+                pitchP1 = ((float)AR.potP1 * 2.0f) / (AR.potMaxG - AR.potMinG) - 1.0f;
+                pitchP2 = ((float)AR.potP2 * 2.0f) / (AR.potMaxD - AR.potMinD) - 1.0f;
+                pitchP2 = -pitchP2;
 
                 //Debug.Log("d : " + yawP1 + " x : " + pitchP1 + " y : " + pitchP2);
                 yaw = yawP1;

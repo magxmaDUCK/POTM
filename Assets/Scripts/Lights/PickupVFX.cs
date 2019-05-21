@@ -30,7 +30,13 @@ public class PickupVFX : MonoBehaviour
         transform.position = Vector3.Lerp(position, player.transform.position, timePassed / duration);
         lightFX.SetVector3("AttractiveTargetPosition", player.position);
 
-        if(timePassed > duration + 0.2f)
+        if(timePassed > duration)
+        {
+            lightFX.SendEvent("OnStop");
+            transform.position = player.transform.position;
+        }
+
+        if(timePassed > duration + 2f)
         {
             Destroy(this.gameObject);
         }
