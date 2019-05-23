@@ -12,6 +12,7 @@ public class ArduinoReader : MonoBehaviour
     [HideInInspector]public float potP2 = 0;
     [HideInInspector]public float dist = 0;
 
+    //Set parameters according to controller used
     [NonSerialized] public float potMaxG = 600;
     [NonSerialized] public float potMaxD = 700;
     [NonSerialized] public float potMinG = 300;
@@ -21,6 +22,7 @@ public class ArduinoReader : MonoBehaviour
 
 
     private SerialPort _stream = new SerialPort("COM3", 9600);
+    //private SerialPort _stream = new SerialPort("COM4", 9600);
 
     private Thread thread;
     private object runArduinoReaderLock = new object();
