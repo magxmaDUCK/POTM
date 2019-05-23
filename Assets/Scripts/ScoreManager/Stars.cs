@@ -16,7 +16,7 @@ namespace POTM
 
         private ScoreManager SM;
 
-        private float onlineStarsTime = 0.5f;
+        public float onlineStarsTime = 0.5f;
         private float startTime = 0f;
 
         // Start is called before the first frame update
@@ -25,7 +25,7 @@ namespace POTM
             SM = ScoreManager.Instance;
             SM.postScore();
 
-            expansionVFX = Instantiate(expansionVFX, transform);
+            expansionVFX = Instantiate(expansionVFX, transform.position, Quaternion.Euler(90, 0, 0), transform);
             expFX = expansionVFX.GetComponent<VisualEffect>();
             expFX.Stop();
             onlineStarsVFX = Instantiate(onlineStarsVFX, transform);
@@ -47,7 +47,5 @@ namespace POTM
                 onlineFX.Play();
             }
         }
-
-
     }
 }
