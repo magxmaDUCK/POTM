@@ -7,7 +7,7 @@ namespace POTM
     public class LightCollector : MonoBehaviour
     {
 
-        private int score;
+        private ScoreManager SM;
         private SphereCollider triggerZone;
         public Transform player;
         public Transform WwiseGlobal;
@@ -18,6 +18,7 @@ namespace POTM
         {
             triggerZone = GetComponent<SphereCollider>();
             lightFX.GetComponent<PickupVFX>().player = player;
+            SM = ScoreManager.Instance;
         }
 
         private void Update()
@@ -33,7 +34,7 @@ namespace POTM
             if(light != null && light.IsOn())
             {
                 //Increment score and turn off lights
-                score += light.getScoreValue();
+                SM.increaseScore(light.getScoreValue());
                 WwiseGlobal.transform.position = collision.transform.position;
                 light.TurnOff();
 
@@ -62,11 +63,6 @@ namespace POTM
                 //AkSoundEngine.PostEvent("Play_Out_Woosh", other.gameObject);
                 //Debug.Log("Wooooooshing'nt");
             }
-        }
-
-        public int GetScore()
-        {
-            return score;
         }
     }
 }
