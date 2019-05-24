@@ -13,6 +13,8 @@ public class ArduinoReader : MonoBehaviour
     [HideInInspector]public float dist = 0;
 
     //Set parameters according to controller used
+
+    //S
     [NonSerialized] public float potMaxG = 600;
     [NonSerialized] public float potMaxD = 700;
     [NonSerialized] public float potMinG = 300;
@@ -20,6 +22,7 @@ public class ArduinoReader : MonoBehaviour
     [NonSerialized] public float distMax = 170;
     [NonSerialized] public float distMin = 75;
 
+    public bool fullSize = false;
 
     private SerialPort _stream = new SerialPort("COM3", 9600);
     //private SerialPort _stream = new SerialPort("COM4", 9600);
@@ -48,9 +51,29 @@ public class ArduinoReader : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        
         thread = new Thread(ArduinoThread);
         thread.Start();
+
+        if (fullSize)
+        {
+            //L
+            potMaxG = 600;
+            potMaxD = 700;
+            potMinG = 300;
+            potMinD = 400;
+            distMax = 170;
+            distMin = 75;
+        }
+        else
+        {
+            //S
+            potMaxG = 600;
+            potMaxD = 700;
+            potMinG = 300;
+            potMinD = 400;
+            distMax = 170;
+            distMin = 75;
+        }
     }
     
     public void ArduinoThread()
