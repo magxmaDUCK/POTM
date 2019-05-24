@@ -399,11 +399,17 @@ namespace POTM
                     Vector3 reflectedVector = Vector3.Reflect(transform.forward, colPt.normal);
 
                     //planeRB.AddForce(colPt.normal * 20, ForceMode.Impulse);
-                    planeRB.AddForce(colPt.normal * 20, ForceMode.VelocityChange);
-                    transform.Rotate(0, 90, 0);
+                    //planeRB.AddForce(colPt.normal * 20, ForceMode.VelocityChange);
+                    //transform.Rotate(0, 90, 0);
+
+                    /*float currentRotation = transform.rotation.eulerAngles.x;
+                    transform.Rotate(new Vector3(-currentRotation, 0, 0));
+                    transform.Rotate(new Vector3(0, 45, 0));
+                    transform.Rotate(new Vector3(currentRotation, 0, 0));
+                    */
 
                     Quaternion newRot = Quaternion.LookRotation(reflectedVector);
-                    //transform.rotation = newRot;
+                    transform.rotation = newRot;
                     planeRB.velocity = transform.forward * minSpeed;
                     planeRB.angularVelocity = Vector3.zero;
                     planeYaw = 0;

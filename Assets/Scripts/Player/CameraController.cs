@@ -77,14 +77,13 @@ namespace POTM
             Vector3 playerRot = player.transform.rotation.eulerAngles;
 
             //Change camera distance + reset height
-            transform.position = Vector3.SmoothDamp(
+            transform.position = Vector3.Lerp(
                 transform.position,
                 (player.transform.position
                 + -player.transform.forward * (minDist + additionalDist)
                 + player.transform.up * (0.01f + additionalHeight))
                 ,
-                ref velocity,
-                smoothTime)+(rotationShake ? Vector3.zero : CameraShake());
+                smoothTime * Time.fixedDeltaTime)+(rotationShake ? Vector3.zero : CameraShake());
 
 
             //Set camera height value so that it fits in the center of the screen;
@@ -114,7 +113,7 @@ namespace POTM
                 Quaternion.Euler(new Vector3(
                     cameraAngle + playerRot.x,
                     playerRot.y,
-                    playerRot.z)), smoothTimeRot);
+                    playerRot.z)), smoothTimeRot * Time.fixedDeltaTime);
 
             //Set FOV according to speed
             cam.fieldOfView = minFOV + additionalFOV;
