@@ -29,6 +29,8 @@ namespace POTM
         [Range(0, 90)]
         public float maxTurningAngle;
 
+        public float topSpeedAnim = 20f;
+
         [Range(0,1)]
         public float joystickDiffTolerence = 0.4f;
 
@@ -46,7 +48,7 @@ namespace POTM
         [HideInInspector] public float currentSpeed;
         private Rigidbody planeRB;
         private CameraController cam;
-        private MeshRenderer planeMesh;
+        public GameObject planeMesh;
         private CapsuleCollider planeCollider;
         private ArduinoReader AR;
 
@@ -72,12 +74,13 @@ namespace POTM
 
         private FlightAutoPilot autoPilot;
 
+        private Animator animation;
+
         // Start is called before the first frame update
         private void Awake()
         {
             planeRB = GetComponent<Rigidbody>();
             cam = GetComponentInChildren<CameraController>();
-            planeMesh = GetComponentInChildren<MeshRenderer>();
             currentSpeed = (maxSpeed + minSpeed) / 2;
             planeRB.velocity = transform.forward * maxSpeed;
             if (maxTurningAngle >= 90)
@@ -88,6 +91,7 @@ namespace POTM
             planeCollider = GetComponent<CapsuleCollider>();
             speedDiff = maxSpeed - minSpeed;
             autoPilot = GetComponent<FlightAutoPilot>();
+            animation = GetComponent<Animator>();
         }
 
         void Start()
@@ -255,6 +259,15 @@ namespace POTM
             //Set le RTPC de vitesse Wwiseqq
 
             AkSoundEngine.SetRTPCValue("Wind_Speed", (currentSpeed - minSpeed)/speedDiff);
+
+            if(currentSpeed >= topSpeedAnim)
+            {
+                animation.SetBool("topSpeed", true);
+            }
+            else
+            {
+                animation.SetBool("topSpeed", false);
+            }
         }
 
         public void updateDisplay()
@@ -359,7 +372,7 @@ namespace POTM
             transform.Rotate(new Vector3(currentRotation, 0, 0));
 
             resetRoll();
-            planeMesh.transform.Rotate(new Vector3(0, 0, planeYaw * maxTurningAngle));
+            planeMesh.transform.Rotate(new Vector3(0, 0, - planeYaw * maxTurningAngle));
         }
 
         [ExecuteInEditMode]
