@@ -398,9 +398,13 @@ namespace POTM
                     Physics.Raycast(transform.position - transform.forward * 2, transform.forward, out colPt);
                     Vector3 reflectedVector = Vector3.Reflect(transform.forward, colPt.normal);
 
+                    //planeRB.AddForce(colPt.normal * 20, ForceMode.Impulse);
+                    planeRB.AddForce(colPt.normal * 20, ForceMode.VelocityChange);
+                    transform.Rotate(0, 90, 0);
+
                     Quaternion newRot = Quaternion.LookRotation(reflectedVector);
-                    transform.rotation = newRot;
-                    planeRB.velocity = transform.forward * cruisingSpeed;
+                    //transform.rotation = newRot;
+                    planeRB.velocity = transform.forward * minSpeed;
                     planeRB.angularVelocity = Vector3.zero;
                     planeYaw = 0;
                     planePitch = 0;
