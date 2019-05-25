@@ -75,6 +75,7 @@ namespace POTM
         private bool event3Started = false;
         private bool event4Started = false;
 
+        [Tooltip("The Parent Gameobject, all his children are the light pickups to be deactivated")]
         public GameObject QuartierMarchand;
         public GameObject QuartierRestaurant;
         public GameObject FeuDeCamp;
