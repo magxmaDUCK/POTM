@@ -40,7 +40,8 @@ public class PickupVFX : MonoBehaviour
 
         GradientColorKey[] keysC = new GradientColorKey[2];
 
-        keysC[0].color = mat.color;
+        
+        keysC[0].color = mat.GetColor("_EmissionColor");
         keysC[0].time = 0;
 
         keysC[1].color = Color.white;

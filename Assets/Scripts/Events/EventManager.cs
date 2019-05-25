@@ -65,15 +65,22 @@ namespace POTM
 
         /////////////////////////////
 
-        public float timeEvent1;
-        public float timeEvent2;
-        public float timeEvent3;
-        public float timeEvent4;
+        public float timeEvent1 = 0f;
+        public float timeEvent2 = 150f;
+        public float timeEvent3 = 300f;
+        public float timeEvent4 = 450f;
 
-        public bool event1Started = false;
-        public bool event2Started = false;
-        public bool event3Started = false;
-        public bool event4Started = false;
+        private bool event1Started = false;
+        private bool event2Started = false;
+        private bool event3Started = false;
+        private bool event4Started = false;
+
+        public GameObject QuartierMarchand;
+        public GameObject QuartierRestaurant;
+        public GameObject FeuDeCamp;
+        public GameObject Firework;
+
+
 
 
         private void Start()
@@ -86,43 +93,64 @@ namespace POTM
             if(Time.time > timeEvent1 && !event1Started)
             {
                 Event1();
+                event1Started = true;
             }
 
             if (Time.time > timeEvent2 && !event2Started)
             {
                 Event2();
+                event2Started = true;
             }
 
             if (Time.time > timeEvent3 && !event3Started)
             {
                 Event3();
+                event3Started = true;
             }
 
             if (Time.time > timeEvent4 && !event4Started)
             {
                 Event4();
+                event4Started = true;
             }
         }
 
         //Events Description
         private void Event1()
         {
-
+            
         }
 
         private void Event2()
         {
-
+            
+            LightPickup[] fireplaces = FeuDeCamp.GetComponentsInChildren<LightPickup>();
+            foreach(LightPickup f in fireplaces)
+            {
+                f.TurnOff();
+            }
         }
 
         private void Event3()
         {
+            LightPickup[] lights = QuartierMarchand.GetComponentsInChildren<LightPickup>();
+            foreach(LightPickup l in lights)
+            {
+                l.TurnOff();
+            }
 
+            //Start fireworkds
         }
 
         private void Event4()
         {
+            LightPickup[] lights = QuartierRestaurant.GetComponentsInChildren<LightPickup>();
+            foreach (LightPickup l in lights)
+            {
+                l.TurnOff();
+            }
 
+            //turn off Fireworks
         }
 
         //End the event currently activated
