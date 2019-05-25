@@ -70,7 +70,6 @@ namespace POTM
 
             if(!on && lightoff)
             {
-                Destroy(gameObject);
                 Destroy(this);
             }
         }

@@ -45,6 +45,7 @@ namespace POTM
                 GameObject go = Instantiate(lightFX, collision.transform.position, Quaternion.identity);
                 go.SetActive(true);
                 go.GetComponent<PickupVFX>().player = player;
+                go.GetComponent<PickupVFX>().mat = collision.GetComponent<Renderer>().material;
             }
 
             //check layer 
