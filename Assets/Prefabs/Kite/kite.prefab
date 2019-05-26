@@ -334,7 +334,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: e74e68f0d2167e4468c89c34b5be2ea2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1030,11 +1030,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8882200192091889655}
     m_Modifications:
-    - target: {fileID: 6285163765443113873, guid: 0172431958f95604eb350162e207c795,
-        type: 3}
-      propertyPath: m_Name
-      value: plumeTete
-      objectReference: {fileID: 0}
     - target: {fileID: 3139707086289616808, guid: 0172431958f95604eb350162e207c795,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1090,6 +1085,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1836585740454402629, guid: 0172431958f95604eb350162e207c795,
+        type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.0000000042048285
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836585740454402629, guid: 0172431958f95604eb350162e207c795,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.00000006576804
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285163765443113873, guid: 0172431958f95604eb350162e207c795,
+        type: 3}
+      propertyPath: m_Name
+      value: plumeTete
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0172431958f95604eb350162e207c795, type: 3}
 --- !u!4 &2616570859709433955 stripped
@@ -1105,11 +1115,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8882200192091889655}
     m_Modifications:
-    - target: {fileID: 6285163765443113873, guid: 0172431958f95604eb350162e207c795,
-        type: 3}
-      propertyPath: m_Name
-      value: plumeTete (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 3139707086289616808, guid: 0172431958f95604eb350162e207c795,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1165,35 +1170,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -180.00002
       objectReference: {fileID: 0}
-    - target: {fileID: 1836585740454402629, guid: 0172431958f95604eb350162e207c795,
+    - target: {fileID: 6285163765443113873, guid: 0172431958f95604eb350162e207c795,
         type: 3}
-      propertyPath: m_AABB.m_Center.z
-      value: -0.05569458
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836585740454402629, guid: 0172431958f95604eb350162e207c795,
-        type: 3}
-      propertyPath: m_AABB.m_Extent.z
-      value: 0.87112415
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836585740454402629, guid: 0172431958f95604eb350162e207c795,
-        type: 3}
-      propertyPath: m_AABB.m_Center.x
-      value: -0.40775293
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836585740454402629, guid: 0172431958f95604eb350162e207c795,
-        type: 3}
-      propertyPath: m_AABB.m_Center.y
-      value: -0.000000004204825
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836585740454402629, guid: 0172431958f95604eb350162e207c795,
-        type: 3}
-      propertyPath: m_AABB.m_Extent.y
-      value: 0.00000008864865
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836585740454402629, guid: 0172431958f95604eb350162e207c795,
-        type: 3}
-      propertyPath: m_AABB.m_Extent.x
-      value: 0.38387293
+      propertyPath: m_Name
+      value: plumeTete (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0172431958f95604eb350162e207c795, type: 3}
@@ -1210,11 +1190,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8882200192091889655}
     m_Modifications:
-    - target: {fileID: 521310451864677081, guid: bbe6ed872eca92b409bf23bee74e7381,
-        type: 3}
-      propertyPath: m_Name
-      value: plumeArriere (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 9025927928347712927, guid: bbe6ed872eca92b409bf23bee74e7381,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1270,35 +1245,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180.00002
       objectReference: {fileID: 0}
-    - target: {fileID: 5089697019108464407, guid: bbe6ed872eca92b409bf23bee74e7381,
+    - target: {fileID: 521310451864677081, guid: bbe6ed872eca92b409bf23bee74e7381,
         type: 3}
-      propertyPath: m_AABB.m_Center.x
-      value: 0.49407953
-      objectReference: {fileID: 0}
-    - target: {fileID: 5089697019108464407, guid: bbe6ed872eca92b409bf23bee74e7381,
-        type: 3}
-      propertyPath: m_AABB.m_Center.y
-      value: -0.000676038
-      objectReference: {fileID: 0}
-    - target: {fileID: 5089697019108464407, guid: bbe6ed872eca92b409bf23bee74e7381,
-        type: 3}
-      propertyPath: m_AABB.m_Center.z
-      value: -0.38272852
-      objectReference: {fileID: 0}
-    - target: {fileID: 5089697019108464407, guid: bbe6ed872eca92b409bf23bee74e7381,
-        type: 3}
-      propertyPath: m_AABB.m_Extent.x
-      value: 0.03753662
-      objectReference: {fileID: 0}
-    - target: {fileID: 5089697019108464407, guid: bbe6ed872eca92b409bf23bee74e7381,
-        type: 3}
-      propertyPath: m_AABB.m_Extent.y
-      value: 0.000000111964255
-      objectReference: {fileID: 0}
-    - target: {fileID: 2284881909685402673, guid: bbe6ed872eca92b409bf23bee74e7381,
-        type: 3}
-      propertyPath: m_Coefficients.Array.size
-      value: 55
+      propertyPath: m_Name
+      value: plumeArriere (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbe6ed872eca92b409bf23bee74e7381, type: 3}
@@ -1315,11 +1265,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8882200192091889655}
     m_Modifications:
-    - target: {fileID: 521310451864677081, guid: bbe6ed872eca92b409bf23bee74e7381,
-        type: 3}
-      propertyPath: m_Name
-      value: plumeArriere
-      objectReference: {fileID: 0}
     - target: {fileID: 9025927928347712927, guid: bbe6ed872eca92b409bf23bee74e7381,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1375,10 +1320,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2284881909685402673, guid: bbe6ed872eca92b409bf23bee74e7381,
+    - target: {fileID: 521310451864677081, guid: bbe6ed872eca92b409bf23bee74e7381,
         type: 3}
-      propertyPath: m_Coefficients.Array.size
-      value: 55
+      propertyPath: m_Name
+      value: plumeArriere
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbe6ed872eca92b409bf23bee74e7381, type: 3}
