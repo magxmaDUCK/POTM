@@ -35,7 +35,7 @@ public class FireworkEmitter : MonoBehaviour
 
     private void LaunchFirework()
     {
-        GameObject go = Instantiate(FireWork, transform.position, Quaternion.identity, transform);
+        GameObject go = Instantiate(FireWork, transform.position, Quaternion.identity);
         go.GetComponent<Spline.Walker>().path = path;
     }
 
