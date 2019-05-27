@@ -85,7 +85,7 @@ namespace POTM
                 }
             }
 
-            if(pitch > 0.9f)
+            if(pitch > 0.9f && !started)
             {
                 GetComponent<Spline.Walker>().enabled = true;
                 startTime = Time.time;
