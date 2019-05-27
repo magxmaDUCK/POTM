@@ -548,8 +548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800f07c516b8e3c489681e784e6cb90b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 4
-  maxSpeed: 20
+  minSpeed: 8
+  maxSpeed: 30
   turnSpeed: 2
   dipSpeed: 1
   balanceAngle: -3
@@ -1552,17 +1552,17 @@ MonoBehaviour:
   player: {fileID: 3243748068902447540}
   baseDistanceFromPlayer: 5
   maxDist: 5
-  minDist: 5
-  cameraAngle: 5
-  cameraHeight: 3
+  minDist: 1.7
+  cameraAngle: 2.49
+  cameraHeight: 2.96
   maxFOV: 92.93588
   minFOV: 41.20535
   pitchOffsetAngle: 0
   yawOffsetAngle: 10
-  smoothTime: 2.1
-  smoothTimeRot: 2.8
+  smoothTime: 2.5
+  smoothTimeRot: 5
   target: {fileID: 3243748068902447543}
-  shakeStrength: 0.02
+  shakeStrength: 0.01
   shakeSpeed: 5
   rotationShake: 0
   display: {fileID: 0}
