@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.VFX;
 
 namespace POTM
 {
@@ -14,16 +15,21 @@ namespace POTM
         private float endTime = 6f;
         private bool exploded = false;
 
+        private VisualEffect rocketFX;
+
         void Start()
         {
             startTime += Time.time;
             endTime += Time.time;
+            rocketFX = GetComponent<VisualEffect>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            if(Time.time - startTime > explosionTime && !exploded)
+            rocketFX.SetVector3("pos", transform.position);
+
+            if (Time.time - startTime > explosionTime && !exploded)
             {
                 Material mat = colors.col[Random.Range(0, colors.col.Count)];
                 for (int i = 0; i < 30; i++)
