@@ -7,11 +7,13 @@ namespace POTM
 {
     public class EndGame : MonoBehaviour
     {
+        public LevelChanger lc;
+
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.GetComponent<PlaneController>())
             {
-                SceneManager.LoadScene("StarrySky");
+                lc.FadeToLevel("StarrySky");
             }
         }
     }

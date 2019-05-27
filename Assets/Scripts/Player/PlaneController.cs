@@ -411,7 +411,7 @@ namespace POTM
                 //BOUNCE OFF WALLS CODE
 
                 //Change rotation according to angle of crassh (reflection)
-                if (collision.gameObject.layer != LayerMask.NameToLayer("AudioBox"))
+                if (collision.gameObject.layer != LayerMask.NameToLayer("AudioBox") && collision.gameObject.layer != LayerMask.NameToLayer("Ending"))
                 {
                     RaycastHit colPt;
                     Physics.Raycast(transform.position - transform.forward * 2, transform.forward, out colPt);
