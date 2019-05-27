@@ -79,10 +79,21 @@ namespace POTM
         // Start is called before the first frame update
         private void Awake()
         {
+            
+        }
+
+        void Start()
+        {
+            
+        }
+
+        private void OnEnable()
+        {
+            AR = GetComponent<ArduinoReader>();
             planeRB = GetComponent<Rigidbody>();
             cam = GetComponentInChildren<CameraController>();
-            currentSpeed = (maxSpeed + minSpeed) / 2;
-            planeRB.velocity = transform.forward * maxSpeed;
+            //currentSpeed = (maxSpeed + minSpeed) / 2;
+            //planeRB.velocity = transform.forward * maxSpeed;
             if (maxTurningAngle >= 90)
             {
                 maxTurningAngle = 89;
@@ -92,11 +103,6 @@ namespace POTM
             speedDiff = maxSpeed - minSpeed;
             autoPilot = GetComponent<FlightAutoPilot>();
             animation = GetComponent<Animator>();
-        }
-
-        void Start()
-        {
-            AR = GetComponent<ArduinoReader>();
         }
 
         // Update is called once per frame
@@ -405,7 +411,7 @@ namespace POTM
                 //BOUNCE OFF WALLS CODE
 
                 //Change rotation according to angle of crassh (reflection)
-                if (collision.gameObject.layer != LayerMask.NameToLayer("AudioBox"))
+                if (collision.gameObject.layer != LayerMask.NameToLayer("AudioBox") && collision.gameObject.layer != LayerMask.NameToLayer("Ending"))
                 {
                     RaycastHit colPt;
                     Physics.Raycast(transform.position - transform.forward * 2, transform.forward, out colPt);

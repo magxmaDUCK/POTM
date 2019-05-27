@@ -1,37 +1,51 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.VFX;
 
-public class Firework : MonoBehaviour
+namespace POTM
 {
-    public GameObject spark;
-
-    private float startTime = 0;
-    private float explosionTime = 3;
-    private float endTime = 6;
-    private bool exploded = false;
-
-    void Start()
+    public class Firework : MonoBehaviour
     {
-        startTime += Time.time;
-        endTime += Time.time;
-    }
+        public GameObject spark;
+        public LightColors colors;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Time.time - startTime > explosionTime && !exploded)
+        private float startTime = 0f;
+        private float explosionTime = 3f;
+        private float endTime = 6f;
+        private bool exploded = false;
+
+        private VisualEffect rocketFX;
+
+        void Start()
         {
-            for(int i = 0; i < 6; i++)
-            {
-                Instantiate(spark, transform.position, transform.rotation, transform);
-            }
-            exploded = true;
+            startTime += Time.time;
+            endTime += Time.time;
+            rocketFX = GetComponent<VisualEffect>();
         }
 
-        if(Time.time - startTime > endTime)
+        // Update is called once per frame
+        void Update()
         {
-            Destroy(gameObject);
+            rocketFX.SetVector3("pos", transform.position);
+
+            if (Time.time - startTime > explosionTime && !exploded)
+            {
+                Material mat = colors.col[Random.Range(0, colors.col.Count)];
+                for (int i = 0; i < 30; i++)
+                {
+                    GameObject go  = Instantiate(spark, transform.position, transform.rotation);
+                    Renderer rend = go.GetComponent<Renderer>();
+                    rend.material = mat;
+                }
+                exploded = true;
+                Destroy(gameObject);
+            }
+
+            if(Time.time - startTime > endTime)
+            {
+            
+            }
         }
     }
 }
