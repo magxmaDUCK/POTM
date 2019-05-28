@@ -17,12 +17,18 @@ public class PickupVFX : MonoBehaviour
 
     public float duration = 1.0f;
 
-    float timePassed = 0f;
+    private float timePassed = 0f;
+
+    private bool stopped = false;
+
+    private Renderer childRend;
+    private TrailRenderer childTRend;
 
     // Start is called before the first frame update
     void Start()
     {
         lightFX = GetComponent<VisualEffect>();
+        childRend = transform.GetChild(1).GetComponent<Renderer>();
         position = transform.position;
 
         //SET VFX COLOR TO MATERIAL COLOR
@@ -63,8 +69,18 @@ public class PickupVFX : MonoBehaviour
 
         if(timePassed > duration)
         {
-            lightFX.SendEvent("OnStop");
+            if (!stopped)
+            {
+                lightFX.SendEvent("OnStop");
+                stopped = true;
+                
+            }
             transform.position = player.transform.position;
+
+            float ratio = (timePassed - duration) / 2f;
+            
+            childRend.material.SetFloat("_DisolveLerp", 1 - ratio);
+            Debug.Log( 1 -ratio);
         }
 
         if(timePassed > duration + 2f)
