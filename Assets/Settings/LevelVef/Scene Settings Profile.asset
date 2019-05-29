@@ -15,7 +15,6 @@ MonoBehaviour:
   components:
   - {fileID: 114457955596031718}
   - {fileID: 114500577969940594}
-  - {fileID: 114958038203217322}
   - {fileID: 114469158853801264}
   - {fileID: 114294371067251326}
   - {fileID: 114227988796978152}
@@ -45,15 +44,15 @@ MonoBehaviour:
     m_Value: 0
   multiplier:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.89
     min: 0
   upperHemisphereLuxValue:
     m_OverrideState: 0
     m_Value: 0.02944898
     min: 0
   desiredLuxValue:
-    m_OverrideState: 0
-    m_Value: 20000
+    m_OverrideState: 1
+    m_Value: 0.01
   updateMode:
     m_OverrideState: 1
     m_Value: 0
@@ -79,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2150ee00179b2f4418ea8b21a7e98eea, type: 3}
   m_Name: ExponentialFog
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   colorMode:
     m_OverrideState: 1
     m_Value: 1
@@ -109,7 +108,7 @@ MonoBehaviour:
     min: 0
   mipFogFar:
     m_OverrideState: 0
-    m_Value: 1000
+    m_Value: 100
     min: 0
   fogDistance:
     m_OverrideState: 1
@@ -117,7 +116,7 @@ MonoBehaviour:
     min: 0
   fogBaseHeight:
     m_OverrideState: 1
-    m_Value: 350
+    m_Value: 300
   fogHeightAttenuation:
     m_OverrideState: 1
     m_Value: 0.01
@@ -274,78 +273,3 @@ MonoBehaviour:
   fogHeightEnd:
     m_OverrideState: 0
     m_Value: 10
---- !u!114 &114958038203217322
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df29e7cc05fbec4aa43e06ea875565d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 0
-  rotation:
-    m_OverrideState: 1
-    m_Value: 0
-    min: 0
-    max: 360
-  skyIntensityMode:
-    m_OverrideState: 1
-    m_Value: 0
-  exposure:
-    m_OverrideState: 1
-    m_Value: -1
-  multiplier:
-    m_OverrideState: 1
-    m_Value: 1
-    min: 0
-  upperHemisphereLuxValue:
-    m_OverrideState: 1
-    m_Value: 1
-    min: 0
-  desiredLuxValue:
-    m_OverrideState: 1
-    m_Value: 20000
-  updateMode:
-    m_OverrideState: 1
-    m_Value: 0
-  updatePeriod:
-    m_OverrideState: 1
-    m_Value: 0
-    min: 0
-  includeSunInBaking:
-    m_OverrideState: 1
-    m_Value: 0
-  sunSize:
-    m_OverrideState: 1
-    m_Value: 0.025
-    min: 0
-    max: 1
-  sunSizeConvergence:
-    m_OverrideState: 1
-    m_Value: 4.02
-    min: 1
-    max: 10
-  atmosphereThickness:
-    m_OverrideState: 1
-    m_Value: 0.58
-    min: 0
-    max: 5
-  skyTint:
-    m_OverrideState: 1
-    m_Value: {r: 0.095007114, g: 0.09777397, b: 0.3301887, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  groundColor:
-    m_OverrideState: 1
-    m_Value: {r: 0.22014064, g: 0.22759758, b: 0.4811321, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  enableSunDisk:
-    m_OverrideState: 1
-    m_Value: 1
