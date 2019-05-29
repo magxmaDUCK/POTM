@@ -31,13 +31,13 @@ namespace POTM
                     {
                         if(directionIsSimilar(other.transform.forward, bd))
                         {
-                            pc.currentSpeed += 5.0f;
+                            pc.currentSpeed += boostSpeed;
                         }
                     }
                 }
                 else
                 {
-                    pc.currentSpeed += 5.0f;
+                    pc.currentSpeed += boostSpeed;
                 }
             }
         }

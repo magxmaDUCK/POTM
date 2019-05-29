@@ -73,7 +73,7 @@ namespace POTM
             {
                 if (!stopped)
                 {
-                    lightFX.SendEvent("OnStop");
+                    lightFX.SendEvent("OnStoup");
                     stopped = true;
                     Destroy(transform.GetChild(1).gameObject);
 
