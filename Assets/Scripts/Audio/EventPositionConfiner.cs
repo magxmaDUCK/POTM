@@ -110,4 +110,10 @@ public class EventPositionConfiner : MonoBehaviour
         }
     }
 
+    public void setEvent(AK.Wwise.Event Ev)
+    {
+        Event = Ev;
+        Event.Post(eventEmitter);
+    }
+
 }

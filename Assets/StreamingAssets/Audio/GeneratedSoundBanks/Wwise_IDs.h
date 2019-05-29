@@ -13,9 +13,18 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID LIGHTNUMBERS1RELATIVE = 2021637748U;
+        static const AkUniqueID LOAD_DUMMY_MELODIE = 70694936U;
+        static const AkUniqueID PLAY_BOOST = 3783768423U;
+        static const AkUniqueID PLAY_FIREPLACE = 1501216439U;
+        static const AkUniqueID PLAY_FIREWORKS_BURST = 262246631U;
+        static const AkUniqueID PLAY_FIREWORKS_SPIN = 2729573343U;
         static const AkUniqueID PLAY_GROUND = 3429773683U;
         static const AkUniqueID PLAY_IN_WOOSH = 3654176658U;
         static const AkUniqueID PLAY_INIT = 426840996U;
+        static const AkUniqueID PLAY_KITE_FOLD = 1606650647U;
+        static const AkUniqueID PLAY_KITE_FOLEY = 3604214747U;
+        static const AkUniqueID PLAY_KITE_UNFOLD = 1612194206U;
         static const AkUniqueID PLAY_MELODIE_01 = 3867730695U;
         static const AkUniqueID PLAY_MELODIE_02 = 3867730692U;
         static const AkUniqueID PLAY_MELODIE_03 = 3867730693U;
@@ -81,7 +90,6 @@ namespace AK
         static const AkUniqueID WIND_PITCH = 2818241024U;
         static const AkUniqueID WIND_SPEED = 3110594711U;
         static const AkUniqueID WIND_YAW = 4252835159U;
-        static const AkUniqueID WOOSHPANNING = 2717581126U;
     } // namespace GAME_PARAMETERS
 
     namespace TRIGGERS
