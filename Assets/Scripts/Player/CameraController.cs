@@ -28,7 +28,9 @@ namespace POTM
         [Tooltip("The max angle of the camera while turning")]
         public float yawOffsetAngle;
         [Tooltip("The time to smoothen the camera position")]
-        public float smoothTime;
+        public float minSmoothTime;
+        public float maxSmoothTime;
+
         public float smoothTimeRot;
 
         //Empty game object in front of plane to know where it is going;
@@ -57,6 +59,14 @@ namespace POTM
         private float perlinX = 1f;
         private float perlinY = 1f;
 
+
+        private float additionalDist;
+        private float additionalHeight;
+        private float additionalFOV;
+        private Vector3 playerRot;
+        private float smoothTime;
+
+        private float playerSpeedDiff;
         // Start is called before the first frame update
         void Start()
         {
@@ -66,16 +76,18 @@ namespace POTM
             diffFov = maxFOV - minFOV;
 
             ResetCamera();
+            playerSpeedDiff = (player.maxSpeed - player.minSpeed);
         }
 
         // Update is called once per frame
         void FixedUpdate()
         {
-            float additionalDist = (player.currentSpeed * distDiff) / speedDiff;
-            float additionalHeight = (player.currentSpeed * (cameraHeight-0.01f)) / speedDiff;
-            float additionalFOV = (player.currentSpeed * diffFov) / speedDiff;
-            Vector3 playerRot = player.transform.rotation.eulerAngles;
+            additionalDist = (player.currentSpeed * distDiff) / speedDiff;
+            additionalHeight = (player.currentSpeed * (cameraHeight-0.01f)) / speedDiff;
+            additionalFOV = (player.currentSpeed * diffFov) / speedDiff;
+            playerRot = player.transform.rotation.eulerAngles;
 
+            smoothTime = Mathf.Lerp( minSmoothTime, maxSmoothTime, (player.currentSpeed - player.minSpeed) / playerSpeedDiff);
             //Change camera distance + reset height
             transform.position = Vector3.Lerp(
                 transform.position,

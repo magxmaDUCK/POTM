@@ -93,6 +93,7 @@ MonoBehaviour:
   accelRatio: 2.8
   decelRatio: 3
   maxTurningAngle: 45
+  topSpeedAnim: 20
   joystickDiffTolerence: 0.4
   display: {fileID: 0}
   newControls: 1
@@ -100,6 +101,7 @@ MonoBehaviour:
   multiplayer: 1
   seesaw: 0
   currentSpeed: 0
+  planeMesh: {fileID: 0}
   yaw: 0
   pitch: 0
   planeYaw: 0
@@ -183,6 +185,7 @@ MonoBehaviour:
   potP1: 0
   potP2: 0
   dist: 0
+  fullSize: 0
 --- !u!114 &5809554282840374604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,6 +299,9 @@ MonoBehaviour:
   minFOV: 41.20535
   pitchOffsetAngle: 0
   yawOffsetAngle: 10
+  minSmoothTime: 0
+  maxSmoothTime: 0
+  smoothTimeRot: 0
   target: {fileID: 5531773749473138412}
   shakeStrength: 0.005
   shakeSpeed: 3

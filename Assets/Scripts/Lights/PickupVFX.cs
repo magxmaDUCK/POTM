@@ -3,73 +3,92 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.VFX;
 
-public class PickupVFX : MonoBehaviour
+namespace POTM
 {
-    [SerializeField]public Transform player;
-
-    [SerializeField]public Material mat;
-
-    private VisualEffect lightFX;
-
-    private Vector3 position;
-
-    private float startTime = 0;
-
-    public float duration = 1.0f;
-
-    float timePassed = 0f;
-
-    // Start is called before the first frame update
-    void Start()
+    public class PickupVFX : MonoBehaviour
     {
-        lightFX = GetComponent<VisualEffect>();
-        position = transform.position;
+        [SerializeField] public Transform player;
 
-        //SET VFX COLOR TO MATERIAL COLOR
-        GradientAlphaKey[] keysA= new GradientAlphaKey[4];
+        [SerializeField] public Material mat;
 
-        keysA[0].alpha = 0;
-        keysA[0].time = 0;
-        keysA[1].alpha = 0;
-        keysA[1].time = 1;
+        private VisualEffect lightFX;
 
-        keysA[2].alpha = 255;
-        keysA[2].time = 0.29f;
-        keysA[3].alpha = 255;
-        keysA[3].time = 0.77f;
+        private Vector3 position;
 
-        GradientColorKey[] keysC = new GradientColorKey[2];
+        private float startTime = 0;
 
-        
-        keysC[0].color = mat.GetColor("_EmissionColor");
-        keysC[0].time = 0;
+        public float duration = 1.0f;
 
-        keysC[1].color = Color.white;
-        keysC[1].time = 1;
+        private float timePassed = 0f;
 
-        Gradient g = new Gradient();
-        g.SetKeys(keysC, keysA);
+        private bool stopped = false;
 
-        lightFX.SetGradient("lightGradiant", g);
+        private Renderer childRend;
+        private TrailRenderer childTRend;
 
-        startTime = Time.time;
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        timePassed = Time.time - startTime;
-        transform.position = Vector3.Lerp(position, player.transform.position, timePassed / duration);
-
-        if(timePassed > duration)
+        // Start is called before the first frame update
+        void Start()
         {
-            lightFX.SendEvent("OnStop");
-            transform.position = player.transform.position;
+            lightFX = GetComponent<VisualEffect>();
+            childRend = transform.GetChild(1).GetComponent<Renderer>();
+            position = transform.position;
+
+            //SET VFX COLOR TO MATERIAL COLOR
+            GradientAlphaKey[] keysA = new GradientAlphaKey[4];
+
+            keysA[0].alpha = 0;
+            keysA[0].time = 0;
+            keysA[1].alpha = 0;
+            keysA[1].time = 1;
+
+            keysA[2].alpha = 255;
+            keysA[2].time = 0.29f;
+            keysA[3].alpha = 255;
+            keysA[3].time = 0.77f;
+
+            GradientColorKey[] keysC = new GradientColorKey[2];
+
+
+            keysC[0].color = mat.GetColor("_EmissionColor");
+            keysC[0].time = 0;
+
+            keysC[1].color = Color.white;
+            keysC[1].time = 1;
+
+            Gradient g = new Gradient();
+            g.SetKeys(keysC, keysA);
+
+            lightFX.SetGradient("lightGradiant", g);
+
+            startTime = Time.time;
         }
 
-        if(timePassed > duration + 2f)
+        // Update is called once per frame
+        void FixedUpdate()
         {
-            Destroy(gameObject);
+            timePassed = Time.time - startTime;
+            transform.position = Vector3.Lerp(position, player.transform.position, timePassed / duration);
+
+            if (timePassed > duration)
+            {
+                if (!stopped)
+                {
+                    lightFX.SendEvent("OnStoup");
+                    stopped = true;
+                    Destroy(transform.GetChild(1).gameObject);
+
+                }
+                transform.position = player.transform.position;
+
+                float ratio = (timePassed - duration) / 2f;
+                //childRend.material.SetFloat("_DisolveLerp", 1 - ratio);
+                Debug.Log(1 - ratio);
+            }
+
+            if (timePassed > duration + 2f)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
