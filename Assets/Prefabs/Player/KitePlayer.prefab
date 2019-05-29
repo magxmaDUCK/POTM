@@ -1552,14 +1552,15 @@ MonoBehaviour:
   player: {fileID: 3243748068902447540}
   baseDistanceFromPlayer: 5
   maxDist: 5
-  minDist: 1.7
+  minDist: 2.09
   cameraAngle: 2.49
   cameraHeight: 2.96
   maxFOV: 92.93588
-  minFOV: 41.20535
+  minFOV: 55.51567
   pitchOffsetAngle: 0
   yawOffsetAngle: 10
-  smoothTime: 2.5
+  minSmoothTime: 2.8
+  maxSmoothTime: 15
   smoothTimeRot: 5
   target: {fileID: 3243748068902447543}
   shakeStrength: 0.01
@@ -1919,6 +1920,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3243748068902680027}
     m_Modifications:
+    - target: {fileID: 521310451864677081, guid: bbe6ed872eca92b409bf23bee74e7381,
+        type: 3}
+      propertyPath: m_Name
+      value: plumeArriere
+      objectReference: {fileID: 0}
     - target: {fileID: 9025927928347712927, guid: bbe6ed872eca92b409bf23bee74e7381,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1973,11 +1979,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 521310451864677081, guid: bbe6ed872eca92b409bf23bee74e7381,
-        type: 3}
-      propertyPath: m_Name
-      value: plumeArriere
       objectReference: {fileID: 0}
     - target: {fileID: 5089697019108464407, guid: bbe6ed872eca92b409bf23bee74e7381,
         type: 3}
@@ -2124,6 +2125,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3243748068902680027}
     m_Modifications:
+    - target: {fileID: 521310451864677081, guid: bbe6ed872eca92b409bf23bee74e7381,
+        type: 3}
+      propertyPath: m_Name
+      value: plumeArriere (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 9025927928347712927, guid: bbe6ed872eca92b409bf23bee74e7381,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2178,11 +2184,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180.00002
-      objectReference: {fileID: 0}
-    - target: {fileID: 521310451864677081, guid: bbe6ed872eca92b409bf23bee74e7381,
-        type: 3}
-      propertyPath: m_Name
-      value: plumeArriere (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5089697019108464407, guid: bbe6ed872eca92b409bf23bee74e7381,
         type: 3}
