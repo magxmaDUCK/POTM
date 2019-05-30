@@ -64,6 +64,8 @@ namespace POTM
         protected EventManager() { }
 
         /////////////////////////////
+        
+            //ADAPT SO THAT TIME STARTS WHEN PLAYERRS STARTS PLAYING
 
         public float timeEvent1 = 0f;
         public float timeEvent2 = 150f;
