@@ -76,13 +76,14 @@ namespace POTM
 
         virtual public void TurnOff()
         {
+           AkSoundEngine.PostEvent("LightNumbers1Relative", gameObject);
            AkSoundEngine.GetRTPCValue("LightNumbers", gameObject, 0 , out float out_rValue, ref RTPCtype);
            if (out_rValue >= 16)
            {
                AkSoundEngine.SetRTPCValue("LightNumbers",0 , null);
                melodieSelect = Random.Range(1, 4);
            }
-           AkSoundEngine.PostTrigger("PickupLight_1", null);
+           AkSoundEngine.PostTrigger("PickupLight_" + melodieSelect , null);
             //AkSoundEngine.PostEvent("Play_Melodie_0" + melodieSelect, gameObject);
             //AkSoundEngine.PostEvent("Play_Melodie_0" + melodieSelect, gameObject /*, (uint)AkCallbackType.AK_MusicSyncGrid, CallBackLight, null);
             on = false;

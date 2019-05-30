@@ -76,6 +76,8 @@ namespace POTM
 
         private Animator animation;
 
+        private bool unfold = false;
+
         // Start is called before the first frame update
         private void Awake()
         {
@@ -269,10 +271,20 @@ namespace POTM
             if(currentSpeed >= topSpeedAnim)
             {
                 animation.SetBool("topSpeed", true);
+                if (unfold)
+                {
+                    AkSoundEngine.PostEvent("Play_Kite_Fold", gameObject);
+                    unfold = false;
+                }          
             }
             else
             {
                 animation.SetBool("topSpeed", false);
+                if (!unfold)
+                {
+                    AkSoundEngine.PostEvent("Play_Kite_Unfold", gameObject);
+                    unfold = true;
+                }
             }
         }
 

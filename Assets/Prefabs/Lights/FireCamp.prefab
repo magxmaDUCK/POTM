@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5146902917988135406}
+  - component: {fileID: 2357760296165389328}
+  - component: {fileID: 5309514420537554975}
   m_Layer: 0
   m_Name: FireCamp
   m_TagString: Untagged
@@ -48,6 +50,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2357760296165389328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8828796029186619587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c14c0035061febb4ca0998c6b13139a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 1
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &5309514420537554975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8828796029186619587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d7ef4588b38ab4e896058818456b14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a8a7ee6ae2ebdb84ca0c38ff04fc4f1e,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
 --- !u!1001 &966119252197642020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55,11 +109,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5146902917988135406}
     m_Modifications:
-    - target: {fileID: 2226843317055019340, guid: 2a62e5e3abcabca4a932c5d76cab9254,
-        type: 3}
-      propertyPath: m_Name
-      value: LittleRockModule02 (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 2226843317054981484, guid: 2a62e5e3abcabca4a932c5d76cab9254,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -129,6 +178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1007168
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226843317055019340, guid: 2a62e5e3abcabca4a932c5d76cab9254,
+        type: 3}
+      propertyPath: m_Name
+      value: LittleRockModule02 (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a62e5e3abcabca4a932c5d76cab9254, type: 3}
@@ -235,11 +289,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5146902917988135406}
     m_Modifications:
-    - target: {fileID: 2226843317055019340, guid: 2a62e5e3abcabca4a932c5d76cab9254,
-        type: 3}
-      propertyPath: m_Name
-      value: LittleRockModule02 (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 2226843317054981484, guid: 2a62e5e3abcabca4a932c5d76cab9254,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -309,6 +358,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.74364007
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226843317055019340, guid: 2a62e5e3abcabca4a932c5d76cab9254,
+        type: 3}
+      propertyPath: m_Name
+      value: LittleRockModule02 (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a62e5e3abcabca4a932c5d76cab9254, type: 3}
@@ -865,11 +919,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5146902917988135406}
     m_Modifications:
-    - target: {fileID: 2226843317055019340, guid: 2a62e5e3abcabca4a932c5d76cab9254,
-        type: 3}
-      propertyPath: m_Name
-      value: LittleRockModule02 (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 2226843317054981484, guid: 2a62e5e3abcabca4a932c5d76cab9254,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -940,6 +989,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.7436401
       objectReference: {fileID: 0}
+    - target: {fileID: 2226843317055019340, guid: 2a62e5e3abcabca4a932c5d76cab9254,
+        type: 3}
+      propertyPath: m_Name
+      value: LittleRockModule02 (6)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a62e5e3abcabca4a932c5d76cab9254, type: 3}
 --- !u!4 &2594644979437137827 stripped
@@ -955,11 +1009,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5146902917988135406}
     m_Modifications:
-    - target: {fileID: 3825805319759214455, guid: d82b131f67341324c915602dac9e312d,
-        type: 3}
-      propertyPath: m_Name
-      value: WoodLog01 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 3825805319759178583, guid: d82b131f67341324c915602dac9e312d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1030,6 +1079,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.740662
       objectReference: {fileID: 0}
+    - target: {fileID: 3825805319759214455, guid: d82b131f67341324c915602dac9e312d,
+        type: 3}
+      propertyPath: m_Name
+      value: WoodLog01 (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d82b131f67341324c915602dac9e312d, type: 3}
 --- !u!4 &8208261031556883540 stripped
@@ -1045,11 +1099,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5146902917988135406}
     m_Modifications:
-    - target: {fileID: 2226843317055019340, guid: 2a62e5e3abcabca4a932c5d76cab9254,
-        type: 3}
-      propertyPath: m_Name
-      value: LittleRockModule02 (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 2226843317054981484, guid: 2a62e5e3abcabca4a932c5d76cab9254,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1120,6 +1169,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.9299161
       objectReference: {fileID: 0}
+    - target: {fileID: 2226843317055019340, guid: 2a62e5e3abcabca4a932c5d76cab9254,
+        type: 3}
+      propertyPath: m_Name
+      value: LittleRockModule02 (5)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a62e5e3abcabca4a932c5d76cab9254, type: 3}
 --- !u!4 &6575385058920714781 stripped
@@ -1135,11 +1189,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5146902917988135406}
     m_Modifications:
-    - target: {fileID: 4579732085667285435, guid: fa2de3334a42ed04c8283d009723dfa3,
-        type: 3}
-      propertyPath: m_Name
-      value: Fire
-      objectReference: {fileID: 0}
     - target: {fileID: 7788305265026246947, guid: fa2de3334a42ed04c8283d009723dfa3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1195,6 +1244,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4579732085667285435, guid: fa2de3334a42ed04c8283d009723dfa3,
+        type: 3}
+      propertyPath: m_Name
+      value: Fire
+      objectReference: {fileID: 0}
     - target: {fileID: 6802663638567368919, guid: fa2de3334a42ed04c8283d009723dfa3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1225,11 +1279,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5146902917988135406}
     m_Modifications:
-    - target: {fileID: 2226843317055019340, guid: 2a62e5e3abcabca4a932c5d76cab9254,
-        type: 3}
-      propertyPath: m_Name
-      value: LittleRockModule02 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 2226843317054981484, guid: 2a62e5e3abcabca4a932c5d76cab9254,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1300,6 +1349,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.74364007
       objectReference: {fileID: 0}
+    - target: {fileID: 2226843317055019340, guid: 2a62e5e3abcabca4a932c5d76cab9254,
+        type: 3}
+      propertyPath: m_Name
+      value: LittleRockModule02 (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a62e5e3abcabca4a932c5d76cab9254, type: 3}
 --- !u!4 &4821511001367958153 stripped
@@ -1315,11 +1369,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5146902917988135406}
     m_Modifications:
-    - target: {fileID: 3825805319759214455, guid: d82b131f67341324c915602dac9e312d,
-        type: 3}
-      propertyPath: m_Name
-      value: WoodLog01 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 3825805319759178583, guid: d82b131f67341324c915602dac9e312d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1390,6 +1439,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.818894
       objectReference: {fileID: 0}
+    - target: {fileID: 3825805319759214455, guid: d82b131f67341324c915602dac9e312d,
+        type: 3}
+      propertyPath: m_Name
+      value: WoodLog01 (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d82b131f67341324c915602dac9e312d, type: 3}
 --- !u!4 &7688494729473529674 stripped
@@ -1405,11 +1459,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5146902917988135406}
     m_Modifications:
-    - target: {fileID: 2226843317055019340, guid: 2a62e5e3abcabca4a932c5d76cab9254,
-        type: 3}
-      propertyPath: m_Name
-      value: LittleRockModule02
-      objectReference: {fileID: 0}
     - target: {fileID: 2226843317054981484, guid: 2a62e5e3abcabca4a932c5d76cab9254,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1480,6 +1529,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.74364173
       objectReference: {fileID: 0}
+    - target: {fileID: 2226843317055019340, guid: 2a62e5e3abcabca4a932c5d76cab9254,
+        type: 3}
+      propertyPath: m_Name
+      value: LittleRockModule02
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a62e5e3abcabca4a932c5d76cab9254, type: 3}
 --- !u!4 &8859343648478764844 stripped
@@ -1495,11 +1549,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5146902917988135406}
     m_Modifications:
-    - target: {fileID: 2226843317055019340, guid: 2a62e5e3abcabca4a932c5d76cab9254,
-        type: 3}
-      propertyPath: m_Name
-      value: LittleRockModule02 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 2226843317054981484, guid: 2a62e5e3abcabca4a932c5d76cab9254,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1570,6 +1619,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1.1316714
       objectReference: {fileID: 0}
+    - target: {fileID: 2226843317055019340, guid: 2a62e5e3abcabca4a932c5d76cab9254,
+        type: 3}
+      propertyPath: m_Name
+      value: LittleRockModule02 (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a62e5e3abcabca4a932c5d76cab9254, type: 3}
 --- !u!4 &8488321704228236484 stripped
@@ -1585,11 +1639,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5146902917988135406}
     m_Modifications:
-    - target: {fileID: 3825805319759214455, guid: d82b131f67341324c915602dac9e312d,
-        type: 3}
-      propertyPath: m_Name
-      value: WoodLog01
-      objectReference: {fileID: 0}
     - target: {fileID: 3825805319759178583, guid: d82b131f67341324c915602dac9e312d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1659,6 +1708,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.9558
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825805319759214455, guid: d82b131f67341324c915602dac9e312d,
+        type: 3}
+      propertyPath: m_Name
+      value: WoodLog01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d82b131f67341324c915602dac9e312d, type: 3}
