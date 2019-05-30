@@ -32,6 +32,7 @@ namespace POTM
                         if(directionIsSimilar(other.transform.forward, bd))
                         {
                             pc.currentSpeed += boostSpeed;
+                            AkSoundEngine.PostEvent("Play_Boost", gameObject);
                         }
                     }
                 }

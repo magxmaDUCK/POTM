@@ -22,6 +22,7 @@ namespace POTM
             startTime += Time.time;
             endTime += Time.time;
             rocketFX = GetComponent<VisualEffect>();
+            AkSoundEngine.PostEvent("Play_FireWorks_Spin", gameObject);
         }
 
         // Update is called once per frame
@@ -37,6 +38,7 @@ namespace POTM
                     GameObject go  = Instantiate(spark, transform.position, transform.rotation);
                     Renderer rend = go.GetComponent<Renderer>();
                     rend.material = mat;
+                    AkSoundEngine.PostEvent("Play_FireWorks_Burst", gameObject);
                 }
                 exploded = true;
                 Destroy(gameObject);
