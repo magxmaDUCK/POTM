@@ -82,7 +82,6 @@ namespace POTM
 
                 float ratio = (timePassed - duration) / 2f;
                 //childRend.material.SetFloat("_DisolveLerp", 1 - ratio);
-                Debug.Log(1 - ratio);
             }
 
             if (timePassed > duration + 2f)
