@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: f3bb76a65116464ab8677079403d8853
     GuidInternal: 
-    m_lastTime: -8586435216858787418
+    m_lastTime: -8586424595567054731
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 02522841b21ceb4ab50a02e82da18aec
     GuidInternal: 
-    m_lastTime: -8586435826343606629
+    m_lastTime: -8586423735255697758
     List:
     - name: PotM
       guid: f2b8e3691563cc4a8113e087753feb8e
@@ -53,14 +53,26 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 643a38164064c9459658ade970c81302
     GuidInternal: 
-    m_lastTime: -8586435843657522775
+    m_lastTime: -8586426973530702487
     List: []
   - PhysicalPath: Events\PotM.wwu
     ParentPhysicalPath: 
     guid: e0aabc591baf36408043515028f544aa
     GuidInternal: 
-    m_lastTime: -8586435843657433258
+    m_lastTime: -8586423724252111836
     List:
+    - name: LightNumbers1Relative
+      guid: 3f3ed2cc301a6143b4d6781707b79e7d
+      id: 2021637748
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: LightNumbers1Relative
+        ObjectType: 3
+      Path: PotM\LightNumbers1Relative
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Load_Dummy_Melodie
       guid: 7d68bbf3f3b1a347b49cb04c828e05d8
       id: 70694936
@@ -70,6 +82,54 @@ MonoBehaviour:
       - ElementName: Load_Dummy_Melodie
         ObjectType: 3
       Path: PotM\Load_Dummy_Melodie
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Boost
+      guid: 4b067d55babaf946a86c5f13dbe23deb
+      id: 3783768423
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_Boost
+        ObjectType: 3
+      Path: PotM\Play_Boost
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_FirePlace
+      guid: 5bc195f0db655d4fa9f8d18bdc4f0079
+      id: 1501216439
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_FirePlace
+        ObjectType: 3
+      Path: PotM\Play_FirePlace
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_FireWorks_Burst
+      guid: d280523f2a6ee544af6b91f403bcb0b0
+      id: 262246631
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_FireWorks_Burst
+        ObjectType: 3
+      Path: PotM\Play_FireWorks_Burst
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_FireWorks_Spin
+      guid: adc168a512ce284899d742e52c3091b0
+      id: 2729573343
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_FireWorks_Spin
+        ObjectType: 3
+      Path: PotM\Play_FireWorks_Spin
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -106,6 +166,42 @@ MonoBehaviour:
       - ElementName: Play_Init
         ObjectType: 3
       Path: PotM\Play_Init
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Kite_Fold
+      guid: d96b8fbb9b95dd4280be0fcab6fdc900
+      id: 1606650647
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_Kite_Fold
+        ObjectType: 3
+      Path: PotM\Play_Kite_Fold
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Kite_Foley
+      guid: f558dc6b65a7e940a096c90fad813b1b
+      id: 3604214747
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_Kite_Foley
+        ObjectType: 3
+      Path: PotM\Play_Kite_Foley
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Kite_Unfold
+      guid: 51515e3f46fad14f93b0ab5900b8038e
+      id: 1612194206
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_Kite_Unfold
+        ObjectType: 3
+      Path: PotM\Play_Kite_Unfold
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -204,7 +300,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: fd9bdaf483f2634ba661fa0c42ecb746
     GuidInternal: 
-    m_lastTime: -8586435211985678900
+    m_lastTime: -8586423735259876575
     List:
     - name: Doppler
       guid: 321943c3f5cde34ca697c971f0a054a1
@@ -287,15 +383,6 @@ MonoBehaviour:
       - ElementName: Wind_Yaw
         ObjectType: 13
       Path: PotM\Wind_Yaw
-    - name: WooshPanning
-      guid: 9d3f2840f7300943aa383ea78462e8f3
-      id: 2717581126
-      PathAndIcons:
-      - ElementName: PotM
-        ObjectType: 12
-      - ElementName: WooshPanning
-        ObjectType: 13
-      Path: PotM\WooshPanning
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -307,8 +394,39 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 09ba98002194974789c4ed30b053403c
     GuidInternal: 
-    m_lastTime: -8586435960692191176
+    m_lastTime: -8586423729617654679
     List:
+    - name: MusicSelection
+      guid: 57245b6ffd41754b8ff254939ebca469
+      id: 2296304956
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: MusicSelection
+        ObjectType: 9
+      Path: PotM\MusicSelection
+      values:
+      - name: None
+        guid: 1c81ffe779f8f94bb126a0bbbecd3e9f
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Part1
+        guid: 3247dda2114f354282019c72bcb0ddb2
+        id: 3177314147
+        PathAndIcons:
+        - ElementName: Part1
+          ObjectType: 8
+      - name: Part2
+        guid: d4941afd0c434d4ea00f1792c8e2ccd2
+        id: 3177314144
+        PathAndIcons:
+        - ElementName: Part2
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: MusicState
       guid: 900b314867164e4a8eba1a5c3179a3ee
       id: 1021618141
@@ -324,6 +442,12 @@ MonoBehaviour:
         id: 1050421051
         PathAndIcons:
         - ElementName: Air
+          ObjectType: 8
+      - name: Beach
+        guid: a84f0bd840bcbd47b21de4f7cb328917
+        id: 4075332698
+        PathAndIcons:
+        - ElementName: Beach
           ObjectType: 8
       - name: Close
         guid: c4cbfd6f9f0b884e90b0eb2fcfe8bee7
@@ -343,6 +467,12 @@ MonoBehaviour:
         PathAndIcons:
         - ElementName: None
           ObjectType: 8
+      - name: Underground
+        guid: 9217e58d9f9f6f42845117bde52a55c3
+        id: 1543687740
+        PathAndIcons:
+        - ElementName: Underground
+          ObjectType: 8
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -357,7 +487,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: afab9d03bd31b240bc24790f761c48f0
     GuidInternal: 
-    m_lastTime: -8586435967224333579
+    m_lastTime: -8586429848946685762
     List:
     - name: AmbSwitch
       guid: 888c7640b470574e98ba85dc9857b222
@@ -420,13 +550,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: dc5b375c941f76418aff0957bc08dad9
     GuidInternal: 
-    m_lastTime: -8586435960276424435
+    m_lastTime: -8586429848946685762
     List: []
   - PhysicalPath: Triggers\PotM.wwu
     ParentPhysicalPath: 
     guid: 2eaf77335d812a4a93c6af99471baf59
     GuidInternal: 
-    m_lastTime: -8586435960099557081
+    m_lastTime: -8586429848946675787
     List:
     - name: PickupLight_1
       guid: d90f9a9798566642ac45cef802e5775c

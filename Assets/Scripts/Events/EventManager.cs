@@ -127,31 +127,32 @@ namespace POTM
         private void Event2()
         {
             
-            LightPickup[] fireplaces = FeuDeCamp.GetComponentsInChildren<LightPickup>();
+            /*LightPickup[] fireplaces = FeuDeCamp.GetComponentsInChildren<LightPickup>();
             foreach(LightPickup f in fireplaces)
             {
                 f.TurnOff();
             }
+            */
         }
 
         private void Event3()
         {
-            LightPickup[] lights = QuartierMarchand.GetComponentsInChildren<LightPickup>();
+            /*LightPickup[] lights = QuartierMarchand.GetComponentsInChildren<LightPickup>();
             foreach(LightPickup l in lights)
             {
                 l.TurnOff();
-            }
-
+            }*/
+            AkSoundEngine.SetState("MusicSelection", "Part2");
             //Start fireworkds
         }
 
         private void Event4()
         {
-            LightPickup[] lights = QuartierRestaurant.GetComponentsInChildren<LightPickup>();
+           /* LightPickup[] lights = QuartierRestaurant.GetComponentsInChildren<LightPickup>();
             foreach (LightPickup l in lights)
             {
                 l.TurnOff();
-            }
+            }*/
 
             //turn off Fireworks
         }
