@@ -149,8 +149,8 @@ MonoBehaviour:
   lightLayers: 1
   shadowNearPlane: 0.1
   shadowSoftness: 0.5
-  blockerSampleCount: 24
-  filterSampleCount: 16
+  blockerSampleCount: 1
+  filterSampleCount: 1
   minFilterSize: 0.00001
 --- !u!114 &7526319798154958937
 MonoBehaviour:
@@ -169,7 +169,7 @@ MonoBehaviour:
   shadowDimmer: 1
   volumetricShadowDimmer: 1
   shadowFadeDistance: 10000
-  contactShadows: 1
+  contactShadows: 0
   viewBiasMin: 0.2
   viewBiasMax: 100
   viewBiasScale: 1

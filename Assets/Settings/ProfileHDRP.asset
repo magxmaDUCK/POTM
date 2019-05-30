@@ -19,14 +19,14 @@ MonoBehaviour:
     overrides: 0
     enableShadow: 1
     enableContactShadows: 0
-    enableShadowMask: 1
+    enableShadowMask: 0
     enableSSR: 0
     enableSSAO: 1
     enableSubsurfaceScattering: 0
     enableTransmission: 0
     enableAtmosphericScattering: 1
-    enableVolumetrics: 1
-    enableReprojectionForVolumetrics: 1
+    enableVolumetrics: 0
+    enableReprojectionForVolumetrics: 0
     enableLightLayers: 1
     diffuseGlobalDimmer: 1
     specularGlobalDimmer: 1
@@ -42,7 +42,7 @@ MonoBehaviour:
     enablePostprocess: 1
     enableOpaqueObjects: 1
     enableTransparentObjects: 1
-    enableRealtimePlanarReflection: 1
+    enableRealtimePlanarReflection: 0
     enableMSAA: 0
     enableAsyncCompute: 1
     runLightListAsync: 1
@@ -158,14 +158,14 @@ MonoBehaviour:
     supportLightLayers: 0
     supportDistortion: 1
     supportTransparentBackface: 1
-    supportTransparentDepthPrepass: 1
-    supportTransparentDepthPostpass: 1
+    supportTransparentDepthPrepass: 0
+    supportTransparentDepthPostpass: 0
     supportedLitShaderMode: 2
     supportDecals: 1
     msaaSampleCount: 1
     supportMotionVectors: 1
     supportRuntimeDebugDisplay: 1
-    supportDitheringCrossFade: 1
+    supportDitheringCrossFade: 0
     supportRayTracing: 0
     lightLoopSettings:
       cookieSize: 128
