@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4494210903650348051}
   - component: {fileID: 4494210903653248051}
   - component: {fileID: 4494210903652249331}
+  - component: {fileID: 89315361073398850}
   m_Layer: 0
   m_Name: millHouseModule
   m_TagString: Untagged
@@ -77,3 +78,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &89315361073398850
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4494210903650316339}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 04faadac8f7655e4e9af679735c06df8, type: 3}

@@ -203,8 +203,8 @@ VisualEffect:
       - m_Value:
           serializedVersion: 2
           key0: {r: 1, g: 1, b: 1, a: 0}
-          key1: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-          key2: {r: 0, g: 0, b: 0, a: 0.8}
+          key1: {r: 0.5, g: 0.5, b: 0.5, a: 0.3372549}
+          key2: {r: 0, g: 0, b: 0, a: 0.09803922}
           key3: {r: 0, g: 0, b: 0, a: 0}
           key4: {r: 0, g: 0, b: 0, a: 0}
           key5: {r: 0, g: 0, b: 0, a: 0}
@@ -230,7 +230,7 @@ VisualEffect:
           m_NumColorKeys: 2
           m_NumAlphaKeys: 4
         m_Name: lightGradiant
-        m_Overridden: 0
+        m_Overridden: 1
     m_NamedObject:
       m_Array: []
     m_Bool:

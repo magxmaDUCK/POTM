@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6802948128343089193}
   - component: {fileID: 6802948128345956361}
   - component: {fileID: 6802948128344990409}
+  - component: {fileID: 44926226506423655}
   m_Layer: 0
   m_Name: plank02
   m_TagString: Untagged
@@ -77,3 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &44926226506423655
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6802948128343063561}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.635, y: 2.5400007, z: 0.06350042}
+  m_Center: {x: 0, y: 0, z: 0.03222745}
