@@ -42,7 +42,11 @@ namespace Spline
 
             for(int i = 1; i <= frequency; i++)
             {
-                index = Random.Range(0, items.Length - 1);
+                index = Random.Range(0, items.Length);
+                if(items.Length > 1)
+                {
+                    Debug.Log(index);
+                }
                 pos = path.GetPoint(i * step);
 
                 if (localOffset)

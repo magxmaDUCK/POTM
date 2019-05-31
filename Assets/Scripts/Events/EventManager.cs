@@ -64,9 +64,11 @@ namespace POTM
         protected EventManager() { }
 
         /////////////////////////////
-        
-            //ADAPT SO THAT TIME STARTS WHEN PLAYERRS STARTS PLAYING
 
+        //ADAPT SO THAT TIME STARTS WHEN PLAYERRS STARTS PLAYING
+
+        public bool playing = false;
+        public float startTime = 0f;
         public float timeEvent1 = 0f;
         public float timeEvent2 = 150f;
         public float timeEvent3 = 300f;
@@ -93,28 +95,31 @@ namespace POTM
 
         private void Update()
         {
-            if(Time.time > timeEvent1 && !event1Started)
+            if (playing)
             {
-                Event1();
-                event1Started = true;
-            }
+                if(Time.time - startTime > timeEvent1 && !event1Started)
+                {
+                    Event1();
+                    event1Started = true;
+                }
 
-            if (Time.time > timeEvent2 && !event2Started)
-            {
-                Event2();
-                event2Started = true;
-            }
+                if (Time.time - startTime > timeEvent2 && !event2Started)
+                {
+                    Event2();
+                    event2Started = true;
+                }
 
-            if (Time.time > timeEvent3 && !event3Started)
-            {
-                Event3();
-                event3Started = true;
-            }
+                if (Time.time - startTime > timeEvent3 && !event3Started)
+                {
+                    Event3();
+                    event3Started = true;
+                }
 
-            if (Time.time > timeEvent4 && !event4Started)
-            {
-                Event4();
-                event4Started = true;
+                if (Time.time - startTime > timeEvent4 && !event4Started)
+                {
+                    Event4();
+                    event4Started = true;
+                }
             }
         }
 

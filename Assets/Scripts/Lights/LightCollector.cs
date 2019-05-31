@@ -13,6 +13,8 @@ namespace POTM
         public Transform WwiseGlobal;
         public GameObject lightFX;
 
+        public EmiisionManager EM;
+
         bool hasWoosh = false;
         GameObject wooshParent = null;
 
@@ -38,6 +40,7 @@ namespace POTM
             {
                 //Increment score and turn off lights
                 SM.increaseScore(light.getScoreValue());
+                EM.pickupTimes.Add(Time.time);
                 WwiseGlobal.transform.position = collision.transform.position;
                 light.TurnOff();
 
