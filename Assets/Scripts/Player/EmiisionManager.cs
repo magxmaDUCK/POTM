@@ -25,6 +25,7 @@ namespace POTM
         {
             rend = body.GetComponent<Renderer>();
             baseCol = rend.material.GetVector("_EmissionColor");
+            rend.material.EnableKeyword("_EMISSIVE");
         }
 
         // Update is called once per frame
@@ -50,7 +51,10 @@ namespace POTM
 
             intensity = Mathf.Min(intensity, maxIntensity);
             Debug.Log(intensity);
+            //rend.material.color = baseCol * intensity;
             rend.material.SetVector("_EmissionColor", baseCol * intensity);
+            //DynamicGI.SetEmissive(rend, baseCol * intensity);
+
             //rend.material.EnableKeyword("_EMISSION");
         }
     }
