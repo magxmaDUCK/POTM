@@ -32,10 +32,22 @@ namespace AK
         static const AkUniqueID PLAY_OUT_WOOSH = 4029469807U;
         static const AkUniqueID PLAY_SEA = 3157907375U;
         static const AkUniqueID PLAY_WATERFALL = 467174588U;
+        static const AkUniqueID PLAY_WOODMILL = 2171436799U;
     } // namespace EVENTS
 
     namespace STATES
     {
+        namespace MUSICSELECTION
+        {
+            static const AkUniqueID GROUP = 2296304956U;
+
+            namespace STATE
+            {
+                static const AkUniqueID PART1 = 3177314147U;
+                static const AkUniqueID PART2 = 3177314144U;
+            } // namespace STATE
+        } // namespace MUSICSELECTION
+
         namespace MUSICSTATE
         {
             static const AkUniqueID GROUP = 1021618141U;
@@ -85,6 +97,7 @@ namespace AK
         static const AkUniqueID LIGHTNUMBERS = 2670876599U;
         static const AkUniqueID PAUSE_GAME = 528278262U;
         static const AkUniqueID RTPC_DISTANCE = 262290038U;
+        static const AkUniqueID SIDE_CHAIN_FLY = 3382630948U;
         static const AkUniqueID SIDECHAIN_LIGHT = 3476959006U;
         static const AkUniqueID WIND_MOVE = 1191899237U;
         static const AkUniqueID WIND_PITCH = 2818241024U;
@@ -110,6 +123,7 @@ namespace AK
     {
         static const AkUniqueID AURO_3D = 2856286951U;
         static const AkUniqueID CHARACHTER = 1750807868U;
+        static const AkUniqueID FLY = 1133470540U;
         static const AkUniqueID LIGHTS = 3192784746U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MOTION_FACTORY_BUS = 985987111U;

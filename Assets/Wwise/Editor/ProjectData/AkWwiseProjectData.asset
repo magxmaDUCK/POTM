@@ -53,13 +53,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 643a38164064c9459658ade970c81302
     GuidInternal: 
-    m_lastTime: -8586426973530702487
+    m_lastTime: -8586424718643931608
     List: []
   - PhysicalPath: Events\PotM.wwu
     ParentPhysicalPath: 
     guid: e0aabc591baf36408043515028f544aa
     GuidInternal: 
-    m_lastTime: -8586423724252111836
+    m_lastTime: -8586422987239950099
     List:
     - name: LightNumbers1Relative
       guid: 3f3ed2cc301a6143b4d6781707b79e7d
@@ -394,7 +394,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 09ba98002194974789c4ed30b053403c
     GuidInternal: 
-    m_lastTime: -8586423729617654679
+    m_lastTime: -8586423116347770959
     List:
     - name: MusicSelection
       guid: 57245b6ffd41754b8ff254939ebca469
@@ -596,11 +596,7 @@ MonoBehaviour:
       Path: PotM\PickupLight_4
   ExpandedItems:
   - /PotMWwise
-  - /PotMWwise/States
-  - /PotMWwise/States/PotM
-  - /PotMWwise/States/PotM/MusicState
-  - /PotMWwise/Switches
-  - /PotMWwise/Switches/PotM
-  - /PotMWwise/Switches/PotM/AmbSwitch
+  - /PotMWwise/Events
+  - /PotMWwise/Events/PotM
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
