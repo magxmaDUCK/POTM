@@ -97,6 +97,8 @@ namespace POTM
                 GetComponent<Spline.Walker>().enabled = false;
                 GetComponent<PlaneController>().enabled = true;
                 GetComponent<FlightAutoPilot>().enabled = true;
+                EventManager.Instance.startTime = Time.time;
+                EventManager.Instance.playing = true;
                 Destroy(this);
             }
         }
