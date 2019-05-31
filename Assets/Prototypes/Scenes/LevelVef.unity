@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.2763439, g: 0.35404065, b: 0.509434, a: 1}
   m_AmbientEquatorColor: {r: 0.32778567, g: 0.34659004, b: 0.5471698, a: 1}
   m_AmbientGroundColor: {r: 0.17292953, g: 0.15792987, b: 0.3679245, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.0062474194, g: 0.009029301, b: 0.026102275, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1364,11 +1364,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1634401407}
     m_Modifications:
-    - target: {fileID: 5632385941224658170, guid: 3db9a7f3bb8ac6e43a995b460e45f850,
-        type: 3}
-      propertyPath: m_Name
-      value: RoofModule01 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 5632385941224949978, guid: 3db9a7f3bb8ac6e43a995b460e45f850,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1438,6 +1433,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.74350023
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632385941224658170, guid: 3db9a7f3bb8ac6e43a995b460e45f850,
+        type: 3}
+      propertyPath: m_Name
+      value: RoofModule01 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3db9a7f3bb8ac6e43a995b460e45f850, type: 3}
@@ -26787,11 +26787,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1634401407}
     m_Modifications:
-    - target: {fileID: 5632385941224658170, guid: 3db9a7f3bb8ac6e43a995b460e45f850,
-        type: 3}
-      propertyPath: m_Name
-      value: RoofModule01
-      objectReference: {fileID: 0}
     - target: {fileID: 5632385941224949978, guid: 3db9a7f3bb8ac6e43a995b460e45f850,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26861,6 +26856,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.74350023
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632385941224658170, guid: 3db9a7f3bb8ac6e43a995b460e45f850,
+        type: 3}
+      propertyPath: m_Name
+      value: RoofModule01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3db9a7f3bb8ac6e43a995b460e45f850, type: 3}
@@ -27548,11 +27548,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1634401407}
     m_Modifications:
-    - target: {fileID: 9050219328354773476, guid: 777b832182a4c8d4fb631c88f83fa176,
-        type: 3}
-      propertyPath: m_Name
-      value: BigSoilGrassModule01
-      objectReference: {fileID: 0}
     - target: {fileID: 9050219328354547140, guid: 777b832182a4c8d4fb631c88f83fa176,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27617,6 +27612,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050219328354773476, guid: 777b832182a4c8d4fb631c88f83fa176,
+        type: 3}
+      propertyPath: m_Name
+      value: BigSoilGrassModule01
       objectReference: {fileID: 0}
     - target: {fileID: 9050219328352778020, guid: 777b832182a4c8d4fb631c88f83fa176,
         type: 3}
@@ -28185,11 +28185,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1634401407}
     m_Modifications:
-    - target: {fileID: 9050219328354773476, guid: 777b832182a4c8d4fb631c88f83fa176,
-        type: 3}
-      propertyPath: m_Name
-      value: BigSoilGrassModule01 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 9050219328354547140, guid: 777b832182a4c8d4fb631c88f83fa176,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28259,6 +28254,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050219328354773476, guid: 777b832182a4c8d4fb631c88f83fa176,
+        type: 3}
+      propertyPath: m_Name
+      value: BigSoilGrassModule01 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 9050219328352778020, guid: 777b832182a4c8d4fb631c88f83fa176,
         type: 3}
@@ -29550,6 +29550,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60339d9e0ca24734f9d3aad21912b778, type: 3}
+--- !u!1 &1100197770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3243748068902447541, guid: 67704fd2458ba2a45a5b2d2b992f624d,
+    type: 3}
+  m_PrefabInstance: {fileID: 443876888}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1106866300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31136,6 +31142,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2663163587130393286, guid: 31ce9a3e2a7b78c4790c89e059990f79,
         type: 3}
+    - target: {fileID: 3145260356632856521, guid: 49540f261a3da1841961bdf4ae968497,
+        type: 3}
+      propertyPath: EM
+      value: 
+      objectReference: {fileID: 1249548204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49540f261a3da1841961bdf4ae968497, type: 3}
 --- !u!1 &1232907664
@@ -31529,6 +31540,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1248178015}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1249548191 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3243748068902447543, guid: 67704fd2458ba2a45a5b2d2b992f624d,
+    type: 3}
+  m_PrefabInstance: {fileID: 443876888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1249548204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249548191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c32e65ca3229c41916c50dc98aa9d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 1100197770}
+  pickupTimes: []
 --- !u!1001 &1249745814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42959,11 +42990,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1634401407}
     m_Modifications:
-    - target: {fileID: 1699266849207212320, guid: e02be58b1c6909c4c98f53fe8fd3a075,
-        type: 3}
-      propertyPath: m_Name
-      value: HouseModule04
-      objectReference: {fileID: 0}
     - target: {fileID: 1940237719070026830, guid: e02be58b1c6909c4c98f53fe8fd3a075,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43028,6 +43054,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699266849207212320, guid: e02be58b1c6909c4c98f53fe8fd3a075,
+        type: 3}
+      propertyPath: m_Name
+      value: HouseModule04
       objectReference: {fileID: 0}
     - target: {fileID: 710172906973365729, guid: e02be58b1c6909c4c98f53fe8fd3a075,
         type: 3}
@@ -43272,11 +43303,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1634401407}
     m_Modifications:
-    - target: {fileID: 1699266849207212320, guid: e02be58b1c6909c4c98f53fe8fd3a075,
-        type: 3}
-      propertyPath: m_Name
-      value: HouseModule04 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 1940237719070026830, guid: e02be58b1c6909c4c98f53fe8fd3a075,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43346,6 +43372,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.92586
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699266849207212320, guid: e02be58b1c6909c4c98f53fe8fd3a075,
+        type: 3}
+      propertyPath: m_Name
+      value: HouseModule04 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 710172906973365729, guid: e02be58b1c6909c4c98f53fe8fd3a075,
         type: 3}
@@ -44287,11 +44318,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1634401407}
     m_Modifications:
-    - target: {fileID: 1699266849207212320, guid: e02be58b1c6909c4c98f53fe8fd3a075,
-        type: 3}
-      propertyPath: m_Name
-      value: HouseModule04 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1940237719070026830, guid: e02be58b1c6909c4c98f53fe8fd3a075,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44346,6 +44372,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699266849207212320, guid: e02be58b1c6909c4c98f53fe8fd3a075,
+        type: 3}
+      propertyPath: m_Name
+      value: HouseModule04 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 710172906973365729, guid: e02be58b1c6909c4c98f53fe8fd3a075,
         type: 3}
@@ -49450,7 +49481,7 @@ PrefabInstance:
     - target: {fileID: 7526319798154958887, guid: 798a569551d535a4ab9bd68e0e25a9e4,
         type: 3}
       propertyPath: m_Intensity
-      value: 1.6
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7526319798154958887, guid: 798a569551d535a4ab9bd68e0e25a9e4,
         type: 3}
