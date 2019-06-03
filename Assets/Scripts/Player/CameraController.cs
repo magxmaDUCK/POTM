@@ -82,12 +82,13 @@ namespace POTM
         // Update is called once per frame
         void FixedUpdate()
         {
-            additionalDist = (player.currentSpeed * distDiff) / speedDiff;
-            additionalHeight = (player.currentSpeed * (cameraHeight-0.01f)) / speedDiff;
-            additionalFOV = (player.currentSpeed * diffFov) / speedDiff;
+            float currentSpeed = Mathf.Max(player.currentSpeed - player.minSpeed, 0);
+            additionalDist = (currentSpeed * distDiff) / speedDiff;
+            additionalHeight = (currentSpeed * (cameraHeight-0.01f)) / speedDiff;
+            additionalFOV = (currentSpeed * diffFov) / speedDiff;
             playerRot = player.transform.rotation.eulerAngles;
 
-            smoothTime = Mathf.Lerp( minSmoothTime, maxSmoothTime, (player.currentSpeed - player.minSpeed) / playerSpeedDiff);
+            smoothTime = Mathf.Lerp(smoothTime, Mathf.Lerp( minSmoothTime, maxSmoothTime, (player.currentSpeed - player.minSpeed) / playerSpeedDiff), 2f * Time.fixedDeltaTime);
             //Change camera distance + reset height
             transform.position = Vector3.Lerp(
                 transform.position,
@@ -97,7 +98,7 @@ namespace POTM
                 ,
                 smoothTime * Time.fixedDeltaTime)+(rotationShake ? Vector3.zero : CameraShake());
 
-
+            Debug.Log(currentSpeed);
             //Set camera height value so that it fits in the center of the screen;
             //Vector3 onScreenPlanePos = cam.WorldToScreenPoint(player.transform.position);
             //float screenHeightPos = cam.pixelHeight / 3;
@@ -128,7 +129,8 @@ namespace POTM
                     playerRot.z)), smoothTimeRot * Time.fixedDeltaTime);
 
             //Set FOV according to speed
-            cam.fieldOfView = minFOV + additionalFOV;
+            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, minFOV + additionalFOV, 2f * Time.fixedDeltaTime);
+            //cam.fieldOfView = minFOV + additionalFOV;
 
             UpdateDisplay();
         }

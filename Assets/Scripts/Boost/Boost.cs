@@ -31,14 +31,14 @@ namespace POTM
                     {
                         if(directionIsSimilar(other.transform.forward, bd))
                         {
-                            pc.currentSpeed += boostSpeed;
+                            pc.AddSpeed(boostSpeed);
                             AkSoundEngine.PostEvent("Play_Boost", gameObject);
                         }
                     }
                 }
                 else
                 {
-                    pc.currentSpeed += boostSpeed;
+                    pc.AddSpeed(boostSpeed);
                 }
             }
         }
