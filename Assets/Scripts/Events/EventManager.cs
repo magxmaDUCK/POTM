@@ -102,24 +102,28 @@ namespace POTM
                 {
                     Event1();
                     event1Started = true;
+                    Debug.Log("First");
                 }
 
                 if (Time.time - startTime > timeEvent2 && !event2Started)
                 {
                     Event2();
                     event2Started = true;
+                    Debug.Log("fireplace");
                 }
 
                 if (Time.time - startTime > timeEvent3 && !event3Started)
                 {
                     Event3();
                     event3Started = true;
+                    Debug.Log("Fireworks");
                 }
 
                 if (Time.time - startTime > timeEvent4 && !event4Started)
                 {
                     Event4();
                     event4Started = true;
+                    Debug.Log("all off");
                 }
             }
         }
