@@ -67,6 +67,7 @@ namespace POTM
         private float smoothTime;
 
         private float playerSpeedDiff;
+        float currentSpeed = 0f;
         // Start is called before the first frame update
         void Start()
         {
@@ -82,7 +83,7 @@ namespace POTM
         // Update is called once per frame
         void FixedUpdate()
         {
-            float currentSpeed = Mathf.Max(player.currentSpeed - player.minSpeed, 0);
+            currentSpeed = Mathf.Max(player.currentSpeed - player.minSpeed, 0);
             additionalDist = (currentSpeed * distDiff) / speedDiff;
             additionalHeight = (currentSpeed * (cameraHeight-0.01f)) / speedDiff;
             additionalFOV = (currentSpeed * diffFov) / speedDiff;
