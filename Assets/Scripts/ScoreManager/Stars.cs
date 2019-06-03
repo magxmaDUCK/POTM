@@ -36,7 +36,6 @@ namespace POTM
             SM = ScoreManager.Instance;
             SM.postScore();
 
-            AkSoundEngine.PostEvent("Play_OutroPart1", gameObject);
             expansionVFX = Instantiate(expansionVFX, transform.position, Quaternion.identity, transform);
             expFX = expansionVFX.GetComponent<VisualEffect>();
             expFX.Stop();
