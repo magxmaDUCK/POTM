@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1225143303051783423}
+  - component: {fileID: 1613565783208847805}
   m_Layer: 0
   m_Name: House05
   m_TagString: Untagged
@@ -55,6 +56,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1613565783208847805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2718667135492531075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3fe843c4f8ab641b26887175ea32ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light:
+  - {fileID: 2966049263304367617}
 --- !u!1001 &545450502005039965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -512,11 +527,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1225143303051783423}
     m_Modifications:
-    - target: {fileID: 2029756760542710851, guid: 799e95cc2bc0b894d9ad9406c22b3988,
-        type: 3}
-      propertyPath: m_Name
-      value: WaterPlane (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 6572429507360365430, guid: 799e95cc2bc0b894d9ad9406c22b3988,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -582,6 +592,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -209.95999
       objectReference: {fileID: 0}
+    - target: {fileID: 2029756760542710851, guid: 799e95cc2bc0b894d9ad9406c22b3988,
+        type: 3}
+      propertyPath: m_Name
+      value: WaterPlane (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 799e95cc2bc0b894d9ad9406c22b3988, type: 3}
 --- !u!4 &5056031494944218644 stripped
@@ -597,11 +612,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1225143303051783423}
     m_Modifications:
-    - target: {fileID: 1699266849207212320, guid: e02be58b1c6909c4c98f53fe8fd3a075,
-        type: 3}
-      propertyPath: m_Name
-      value: HouseModule04 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1940237719070026830, guid: e02be58b1c6909c4c98f53fe8fd3a075,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -667,6 +677,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1699266849207212320, guid: e02be58b1c6909c4c98f53fe8fd3a075,
+        type: 3}
+      propertyPath: m_Name
+      value: HouseModule04 (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e02be58b1c6909c4c98f53fe8fd3a075, type: 3}
 --- !u!4 &373667482628833613 stripped
@@ -682,11 +697,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1225143303051783423}
     m_Modifications:
-    - target: {fileID: 2029756760542710851, guid: 799e95cc2bc0b894d9ad9406c22b3988,
-        type: 3}
-      propertyPath: m_Name
-      value: WaterPlane (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 6572429507360365430, guid: 799e95cc2bc0b894d9ad9406c22b3988,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -751,6 +761,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -29.960001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029756760542710851, guid: 799e95cc2bc0b894d9ad9406c22b3988,
+        type: 3}
+      propertyPath: m_Name
+      value: WaterPlane (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 799e95cc2bc0b894d9ad9406c22b3988, type: 3}
@@ -1217,11 +1232,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1225143303051783423}
     m_Modifications:
-    - target: {fileID: 2029756760542710851, guid: 799e95cc2bc0b894d9ad9406c22b3988,
-        type: 3}
-      propertyPath: m_Name
-      value: WaterPlane (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 6572429507360365430, guid: 799e95cc2bc0b894d9ad9406c22b3988,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1286,6 +1296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -269.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029756760542710851, guid: 799e95cc2bc0b894d9ad9406c22b3988,
+        type: 3}
+      propertyPath: m_Name
+      value: WaterPlane (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 799e95cc2bc0b894d9ad9406c22b3988, type: 3}
@@ -1482,11 +1497,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1225143303051783423}
     m_Modifications:
-    - target: {fileID: 2029756760542710851, guid: 799e95cc2bc0b894d9ad9406c22b3988,
-        type: 3}
-      propertyPath: m_Name
-      value: WaterPlane (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 6572429507360365430, guid: 799e95cc2bc0b894d9ad9406c22b3988,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -1552,6 +1562,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -149.96
       objectReference: {fileID: 0}
+    - target: {fileID: 2029756760542710851, guid: 799e95cc2bc0b894d9ad9406c22b3988,
+        type: 3}
+      propertyPath: m_Name
+      value: WaterPlane (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 799e95cc2bc0b894d9ad9406c22b3988, type: 3}
 --- !u!4 &332145352043566235 stripped
@@ -1567,11 +1582,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1225143303051783423}
     m_Modifications:
-    - target: {fileID: 2029756760542710851, guid: 799e95cc2bc0b894d9ad9406c22b3988,
-        type: 3}
-      propertyPath: m_Name
-      value: WaterPlane (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 6572429507360365430, guid: 799e95cc2bc0b894d9ad9406c22b3988,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1636,6 +1646,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -329.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029756760542710851, guid: 799e95cc2bc0b894d9ad9406c22b3988,
+        type: 3}
+      propertyPath: m_Name
+      value: WaterPlane (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 799e95cc2bc0b894d9ad9406c22b3988, type: 3}
@@ -1804,6 +1819,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83be8884246d1b84faa20c8159d6a69d, type: 3}
+--- !u!114 &2966049263304367617 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5214028810682022043, guid: 83be8884246d1b84faa20c8159d6a69d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7021803974806890138}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8391e815c10b8b43a1f427b893d7d2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4474501794728879706 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6875565272835801280, guid: 83be8884246d1b84faa20c8159d6a69d,
@@ -1907,11 +1934,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1225143303051783423}
     m_Modifications:
-    - target: {fileID: 5632385941224658170, guid: 3db9a7f3bb8ac6e43a995b460e45f850,
-        type: 3}
-      propertyPath: m_Name
-      value: RoofModule01
-      objectReference: {fileID: 0}
     - target: {fileID: 5632385941224949978, guid: 3db9a7f3bb8ac6e43a995b460e45f850,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1976,6 +1998,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632385941224658170, guid: 3db9a7f3bb8ac6e43a995b460e45f850,
+        type: 3}
+      propertyPath: m_Name
+      value: RoofModule01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3db9a7f3bb8ac6e43a995b460e45f850, type: 3}
@@ -2172,11 +2199,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1225143303051783423}
     m_Modifications:
-    - target: {fileID: 2029756760542710851, guid: 799e95cc2bc0b894d9ad9406c22b3988,
-        type: 3}
-      propertyPath: m_Name
-      value: WaterPlane (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 6572429507360365430, guid: 799e95cc2bc0b894d9ad9406c22b3988,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2241,6 +2263,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -89.96001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029756760542710851, guid: 799e95cc2bc0b894d9ad9406c22b3988,
+        type: 3}
+      propertyPath: m_Name
+      value: WaterPlane (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 799e95cc2bc0b894d9ad9406c22b3988, type: 3}
