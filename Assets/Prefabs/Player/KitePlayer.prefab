@@ -691,6 +691,7 @@ MonoBehaviour:
   seesaw: 0
   multiplayer: 0
   joystickDiffTolerence: 0.4
+  duration: 5
 --- !u!114 &398786498823414460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,7 +705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
-  duration: 20
+  duration: 5
   lookForwards: 1
   mode: 0
   backAndForthAlwaysForward: 0

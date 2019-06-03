@@ -81,7 +81,21 @@ namespace POTM
         // Start is called before the first frame update
         private void Awake()
         {
-            
+            //AR = GetComponent<ArduinoReader>();
+            //planeRB = GetComponent<Rigidbody>();
+            //planeRB.velocity = Vector3.zero;
+            //cam = GetComponentInChildren<CameraController>();
+            //currentSpeed = (maxSpeed + minSpeed) / 2;
+            //planeRB.velocity = transform.forward * maxSpeed;
+            /*if (maxTurningAngle >= 90)
+            {
+                maxTurningAngle = 89;
+            }
+            */
+            //planeCollider = GetComponent<CapsuleCollider>();
+            //speedDiff = maxSpeed - minSpeed;
+            //autoPilot = GetComponent<FlightAutoPilot>();
+            //animation = GetComponent<Animator>();
         }
 
         void Start()
@@ -441,8 +455,11 @@ namespace POTM
 
                     Quaternion newRot = Quaternion.LookRotation(reflectedVector);
                     transform.rotation = newRot;
-                    planeRB.velocity = transform.forward * minSpeed;
-                    planeRB.angularVelocity = Vector3.zero;
+                    if(planeRB != null)
+                    {
+                        planeRB.velocity = transform.forward * minSpeed;
+                        planeRB.angularVelocity = Vector3.zero;
+                    }
                     planeYaw = 0;
                     planePitch = 0;
 

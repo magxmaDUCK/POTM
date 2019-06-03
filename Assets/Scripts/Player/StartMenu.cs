@@ -23,6 +23,8 @@ namespace POTM
         private float startTime;
         private bool started = false;
 
+        public float duration = 5f;
+
         private ArduinoReader AR;
         // Start is called before the first frame update
         private void Awake()
@@ -93,7 +95,7 @@ namespace POTM
                 started = true;
             }
 
-            if(Time.time - startTime > 3f && started)
+            if(Time.time - startTime > duration && started)
             {
                 GetComponent<Spline.Walker>().enabled = false;
                 GetComponent<PlaneController>().enabled = true;

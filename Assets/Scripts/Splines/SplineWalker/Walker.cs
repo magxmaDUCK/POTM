@@ -57,7 +57,8 @@ namespace Spline
             if (!backAndForthAlwaysForward)
             {
                 if (lookForwards)
-                    transform.LookAt(position + path.GetDirection(progress));
+                    transform.forward = path.GetDirection(progress);
+                        //transform.LookAt(position + path.GetDirection(progress));
             }
             else
             {
