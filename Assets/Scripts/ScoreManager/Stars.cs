@@ -10,16 +10,25 @@ namespace POTM
 
         public GameObject expansionVFX;
         public GameObject onlineStarsVFX;
+        public GameObject sphereVFX;
+        public GameObject explosionVFX;
 
         private VisualEffect expFX;
         private VisualEffect onlineFX;
 
+        private VisualEffect sphereFX;
+        private VisualEffect explosionFX;
+
         private ScoreManager SM;
 
         public float onlineStarsTime = 0.5f;
+        public float sphereTime = 2f;
+        public float explosionTime = 4f;
         private float startTime = 0f;
 
-        private bool onlineStarted;
+        private bool onlineStarted = false;
+        private bool sphereStarted = false;
+        private bool explosionStarted = false;
         private int onlineGalaxies = 0;
         // Start is called before the first frame update
         void Start()
@@ -27,39 +36,66 @@ namespace POTM
             SM = ScoreManager.Instance;
             SM.postScore();
 
-            expansionVFX = Instantiate(expansionVFX, transform.position, Quaternion.Euler(90, 0, 0), transform);
+            AkSoundEngine.PostEvent("Play_OutroPart1", gameObject);
+            expansionVFX = Instantiate(expansionVFX, transform.position, Quaternion.identity, transform);
             expFX = expansionVFX.GetComponent<VisualEffect>();
             expFX.Stop();
-            onlineStarsVFX = Instantiate(onlineStarsVFX, transform);
-            onlineFX = onlineStarsVFX.GetComponent<VisualEffect>();
-            onlineFX.Stop();
 
-            expFX.SetInt("nbStars", SM.getPlayerScore());
-
-            int onlineScore = SM.getOnlineScore();
-            if(onlineScore > 1000000)
-            {
-                onlineGalaxies = onlineScore / 1000000;
-                int onlineStars = onlineScore % 1000000;
-                onlineFX.SetInt("nbStars", onlineStars);
-                //onlineFX.SetInt("nbGalaxies", onlineGalaxies);
-            }
-            else
-            {
-                onlineFX.SetInt("nbStars", onlineScore);
-            }
+            //expFX.SetInt("nbStars", SM.getPlayerScore());
+            expFX.SetInt("nbStars", 400);
 
             expFX.Play();
+            startTime = Time.time;
+        }
+
+        private void OnEnable()
+        {
             startTime = Time.time;
         }
 
         // Update is called once per frame
         void Update()
         {
+            Debug.Log(Time.time - startTime);
+            if(Time.time - startTime > sphereTime && !sphereStarted)
+            {
+                AkSoundEngine.PostEvent("Play_OutroPart2", gameObject);
+                GameObject sphereGO = Instantiate(sphereVFX, transform.position, Quaternion.identity, transform);
+                sphereFX = sphereGO.GetComponent<VisualEffect>();
+                sphereFX.SetInt("nb Stars", 400);
+                sphereStarted = true;
+            }
+
+            if (Time.time - startTime > explosionTime && !explosionStarted)
+            {
+                sphereFX.Stop();
+                Destroy(sphereFX);
+                GameObject explosionGO = Instantiate(explosionVFX, transform.position, Quaternion.identity, transform);
+                explosionFX = explosionGO.GetComponent<VisualEffect>();
+                explosionFX.SetInt("nb Stars", 400);
+                explosionStarted = true;
+            }
+
+
             if (Time.time - startTime > onlineStarsTime && !onlineStarted)
             {
-                onlineFX.Play();
-                while(onlineGalaxies > 0)
+                onlineStarsVFX = Instantiate(onlineStarsVFX, transform.position, Quaternion.identity, transform);
+                onlineFX = onlineStarsVFX.GetComponent<VisualEffect>();
+
+                int onlineScore = SM.getOnlineScore();
+                if (onlineScore > 1000000)
+                {
+                    onlineGalaxies = onlineScore / 1000000;
+                    int onlineStars = onlineScore % 1000000;
+                    onlineFX.SetInt("nbStars", 400);
+                    //onlineFX.SetInt("nbGalaxies", onlineGalaxies);
+                }
+                else
+                {
+                    onlineFX.SetInt("nbStars", 400000);
+                }
+
+                while (onlineGalaxies > 0)
                 {
                     int r = Random.RandomRange(1, 4);
 
@@ -79,6 +115,7 @@ namespace POTM
                 }
                 onlineStarted = true;
             }
+            
         }
     }
 }
