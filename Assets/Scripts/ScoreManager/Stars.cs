@@ -36,7 +36,7 @@ namespace POTM
             SM = ScoreManager.Instance;
             SM.postScore();
 
-            AkSoundEngine.PostEvent("Play_Outro", gameObject);
+            AkSoundEngine.PostEvent("Play_OutroPart1", gameObject);
             expansionVFX = Instantiate(expansionVFX, transform.position, Quaternion.identity, transform);
             expFX = expansionVFX.GetComponent<VisualEffect>();
             expFX.Stop();
@@ -48,11 +48,18 @@ namespace POTM
             startTime = Time.time;
         }
 
+        private void OnEnable()
+        {
+            startTime = Time.time;
+        }
+
         // Update is called once per frame
         void Update()
         {
+            Debug.Log(Time.time - startTime);
             if(Time.time - startTime > sphereTime && !sphereStarted)
             {
+                AkSoundEngine.PostEvent("Play_OutroPart2", gameObject);
                 GameObject sphereGO = Instantiate(sphereVFX, transform.position, Quaternion.identity, transform);
                 sphereFX = sphereGO.GetComponent<VisualEffect>();
                 sphereFX.SetInt("nb Stars", 400);
@@ -72,7 +79,7 @@ namespace POTM
 
             if (Time.time - startTime > onlineStarsTime && !onlineStarted)
             {
-                onlineStarsVFX = Instantiate(onlineStarsVFX, transform);
+                onlineStarsVFX = Instantiate(onlineStarsVFX, transform.position, Quaternion.identity, transform);
                 onlineFX = onlineStarsVFX.GetComponent<VisualEffect>();
 
                 int onlineScore = SM.getOnlineScore();
