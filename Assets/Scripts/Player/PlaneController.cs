@@ -458,5 +458,12 @@ namespace POTM
         {
             return value < (closeTo + offset) && value > (closeTo - offset);  
         }
+
+        public void AddSpeed(float v)
+        {
+            currentSpeed += v;
+            if (currentSpeed > maxSpeed) currentSpeed = maxSpeed;
+            if (currentSpeed < minSpeed) currentSpeed = minSpeed;
+        }
     }
 }
