@@ -100,7 +100,7 @@ namespace POTM
                 ,
                 smoothTime * Time.fixedDeltaTime)+(rotationShake ? Vector3.zero : CameraShake());
 
-            Debug.Log(currentSpeed);
+            //Debug.Log(currentSpeed);
             //Set camera height value so that it fits in the center of the screen;
             //Vector3 onScreenPlanePos = cam.WorldToScreenPoint(player.transform.position);
             //float screenHeightPos = cam.pixelHeight / 3;
