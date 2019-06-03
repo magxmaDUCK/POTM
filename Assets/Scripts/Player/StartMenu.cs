@@ -34,6 +34,7 @@ namespace POTM
         void Start()
         {
             AR = GetComponent<ArduinoReader>();
+            EventManager.Instance.NewGame();
         }
 
         // Update is called once per frame

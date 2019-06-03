@@ -167,5 +167,10 @@ namespace POTM
         {
 
         }
+
+        public void NewGame()
+        {
+            playing = false;
+        }
     }
 }
