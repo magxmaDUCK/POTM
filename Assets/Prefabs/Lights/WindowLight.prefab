@@ -209,14 +209,13 @@ GameObject:
   - component: {fileID: 803872720999261398}
   - component: {fileID: 7440060326071014576}
   - component: {fileID: 4759524899889657063}
-  - component: {fileID: 2134178928779864929}
   - component: {fileID: 216090039742628747}
   m_Layer: 0
   m_Name: EmitterQuad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 123
   m_IsActive: 1
 --- !u!4 &4277003451978343048
 Transform:
@@ -248,7 +247,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3359945798062825199}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -290,19 +289,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 6.1232336e-17}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2134178928779864929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3359945798062825199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8391e815c10b8b43a1f427b893d7d2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnOffDuration: 1
 --- !u!114 &216090039742628747
 MonoBehaviour:
   m_ObjectHideFlags: 0
