@@ -8,6 +8,6 @@ public class SetAmbSwitch : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        ambSwitch.SetValue(GameObject.Find("WwiseGlobal"));
+        ambSwitch.SetValue(GameObject.Find("WwiseHandler"));
     }
 }

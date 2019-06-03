@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: f3bb76a65116464ab8677079403d8853
     GuidInternal: 
-    m_lastTime: -8586424595567054731
+    m_lastTime: -8586420293805124790
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 02522841b21ceb4ab50a02e82da18aec
     GuidInternal: 
-    m_lastTime: -8586423735255697758
+    m_lastTime: -8586420293804975159
     List:
     - name: PotM
       guid: f2b8e3691563cc4a8113e087753feb8e
@@ -53,13 +53,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 643a38164064c9459658ade970c81302
     GuidInternal: 
-    m_lastTime: -8586424718643931608
+    m_lastTime: -8586420293805244372
     List: []
   - PhysicalPath: Events\PotM.wwu
     ParentPhysicalPath: 
     guid: e0aabc591baf36408043515028f544aa
     GuidInternal: 
-    m_lastTime: -8586422987239950099
+    m_lastTime: -8586420289276347193
     List:
     - name: LightNumbers1Relative
       guid: 3f3ed2cc301a6143b4d6781707b79e7d
@@ -94,6 +94,18 @@ MonoBehaviour:
       - ElementName: Play_Boost
         ObjectType: 3
       Path: PotM\Play_Boost
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Bounce
+      guid: 173657b3e464fe438b340349bb15b1fb
+      id: 3465618802
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_Bounce
+        ObjectType: 3
+      Path: PotM\Play_Bounce
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -265,6 +277,42 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_OutroPart1
+      guid: 9050ebae8ef96c46994d19c5b6e1f1ba
+      id: 3433472117
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_OutroPart1
+        ObjectType: 3
+      Path: PotM\Play_OutroPart1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_OutroPart2
+      guid: d056f2c26625fe428478fac4a8a9ca48
+      id: 3433472118
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_OutroPart2
+        ObjectType: 3
+      Path: PotM\Play_OutroPart2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_RumbleKite
+      guid: 2fa134a5a5adbb49927d1dbbfccf11a0
+      id: 2183935648
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_RumbleKite
+        ObjectType: 3
+      Path: PotM\Play_RumbleKite
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Sea
       guid: 1f5bfca8724b8c42b9e01c11456d34b8
       id: 3157907375
@@ -274,6 +322,18 @@ MonoBehaviour:
       - ElementName: Play_Sea
         ObjectType: 3
       Path: PotM\Play_Sea
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Stars
+      guid: 7cd28015d1c4a949a3a073628902f95c
+      id: 2230670293
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_Stars
+        ObjectType: 3
+      Path: PotM\Play_Stars
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -289,6 +349,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_WoodMill
+      guid: 37d846ad2f08be4e910ed1bae28f9949
+      id: 2171436799
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_WoodMill
+        ObjectType: 3
+      Path: PotM\Play_WoodMill
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -300,7 +372,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: fd9bdaf483f2634ba661fa0c42ecb746
     GuidInternal: 
-    m_lastTime: -8586423735259876575
+    m_lastTime: -8586420329836660524
     List:
     - name: Doppler
       guid: 321943c3f5cde34ca697c971f0a054a1
@@ -338,6 +410,15 @@ MonoBehaviour:
       - ElementName: RTPC_Distance
         ObjectType: 13
       Path: PotM\RTPC_Distance
+    - name: Side_Chain_Fly
+      guid: 32b2444228ee184b896005f207c29f46
+      id: 3382630948
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Side_Chain_Fly
+        ObjectType: 13
+      Path: PotM\Side_Chain_Fly
     - name: SideChain_Light
       guid: b429f84826639d4994a58795fae0dc5d
       id: 3476959006
@@ -347,6 +428,15 @@ MonoBehaviour:
       - ElementName: SideChain_Light
         ObjectType: 13
       Path: PotM\SideChain_Light
+    - name: StarsImplose
+      guid: b9f2ae4eef442442a61379f6c93dd52d
+      id: 1580041701
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: StarsImplose
+        ObjectType: 13
+      Path: PotM\StarsImplose
     - name: Wind_Move
       guid: 9cdc7c7aa6fc6c4d8773008235d3d6f0
       id: 1191899237

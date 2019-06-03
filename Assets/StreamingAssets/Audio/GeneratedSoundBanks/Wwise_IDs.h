@@ -16,6 +16,7 @@ namespace AK
         static const AkUniqueID LIGHTNUMBERS1RELATIVE = 2021637748U;
         static const AkUniqueID LOAD_DUMMY_MELODIE = 70694936U;
         static const AkUniqueID PLAY_BOOST = 3783768423U;
+        static const AkUniqueID PLAY_BOUNCE = 3465618802U;
         static const AkUniqueID PLAY_FIREPLACE = 1501216439U;
         static const AkUniqueID PLAY_FIREWORKS_BURST = 262246631U;
         static const AkUniqueID PLAY_FIREWORKS_SPIN = 2729573343U;
@@ -30,7 +31,11 @@ namespace AK
         static const AkUniqueID PLAY_MELODIE_03 = 3867730693U;
         static const AkUniqueID PLAY_MELODIE_04 = 3867730690U;
         static const AkUniqueID PLAY_OUT_WOOSH = 4029469807U;
+        static const AkUniqueID PLAY_OUTROPART1 = 3433472117U;
+        static const AkUniqueID PLAY_OUTROPART2 = 3433472118U;
+        static const AkUniqueID PLAY_RUMBLEKITE = 2183935648U;
         static const AkUniqueID PLAY_SEA = 3157907375U;
+        static const AkUniqueID PLAY_STARS = 2230670293U;
         static const AkUniqueID PLAY_WATERFALL = 467174588U;
         static const AkUniqueID PLAY_WOODMILL = 2171436799U;
     } // namespace EVENTS
@@ -99,6 +104,7 @@ namespace AK
         static const AkUniqueID RTPC_DISTANCE = 262290038U;
         static const AkUniqueID SIDE_CHAIN_FLY = 3382630948U;
         static const AkUniqueID SIDECHAIN_LIGHT = 3476959006U;
+        static const AkUniqueID STARSIMPLOSE = 1580041701U;
         static const AkUniqueID WIND_MOVE = 1191899237U;
         static const AkUniqueID WIND_PITCH = 2818241024U;
         static const AkUniqueID WIND_SPEED = 3110594711U;

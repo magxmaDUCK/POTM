@@ -445,6 +445,8 @@ namespace POTM
                     planeRB.angularVelocity = Vector3.zero;
                     planeYaw = 0;
                     planePitch = 0;
+
+                    AkSoundEngine.PostEvent("Play_Bounce", gameObject);
                 }
             }
         }

@@ -38,11 +38,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1196090647756015460}
     m_Modifications:
-    - target: {fileID: 8969763323622578280, guid: baf21253f69581041990a59743f2ffef,
-        type: 3}
-      propertyPath: m_Name
-      value: waterwheel
-      objectReference: {fileID: 0}
     - target: {fileID: 8969763323622868040, guid: baf21253f69581041990a59743f2ffef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -107,6 +102,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969763323622578280, guid: baf21253f69581041990a59743f2ffef,
+        type: 3}
+      propertyPath: m_Name
+      value: waterwheel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baf21253f69581041990a59743f2ffef, type: 3}
