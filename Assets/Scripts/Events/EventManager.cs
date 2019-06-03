@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.VFX;
 
 namespace POTM
 {
@@ -132,34 +133,48 @@ namespace POTM
         private void Event2()
         {
             
-            /*LightPickup[] fireplaces = FeuDeCamp.GetComponentsInChildren<LightPickup>();
-            foreach(LightPickup f in fireplaces)
+            IsFire[] fireplaces = FeuDeCamp.GetComponentsInChildren<IsFire>();
+
+            foreach (IsFire f in fireplaces)
             {
-                f.TurnOff();
+                Destroy(f.transform.GetComponentInChildren<VisualEffect>().gameObject);
             }
-            */
+            
         }
 
         private void Event3()
         {
-            /*LightPickup[] lights = QuartierMarchand.GetComponentsInChildren<LightPickup>();
+            LightPickup[] lights = QuartierMarchand.GetComponentsInChildren<LightPickup>();
             foreach(LightPickup l in lights)
             {
                 l.TurnOff();
-            }*/
+            }
+
+            ShopLights[] sLights = QuartierMarchand.GetComponentsInChildren<ShopLights>();
+            foreach(ShopLights sl in sLights)
+            {
+                sl.TurnOff();
+            }
+
             AkSoundEngine.SetState("MusicSelection", "Part2");
-            //Start fireworkds
+            Firework.SetActive(true);
         }
 
         private void Event4()
         {
-           /* LightPickup[] lights = QuartierRestaurant.GetComponentsInChildren<LightPickup>();
+            Destroy(Firework);
+
+            LightPickup[] lights = QuartierRestaurant.GetComponentsInChildren<LightPickup>();
             foreach (LightPickup l in lights)
             {
                 l.TurnOff();
-            }*/
+            }
 
-            //turn off Fireworks
+            ShopLights[] sLights = QuartierRestaurant.GetComponentsInChildren<ShopLights>();
+            foreach (ShopLights sl in sLights)
+            {
+                sl.TurnOff();
+            }
         }
 
         //End the event currently activated

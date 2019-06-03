@@ -86,6 +86,7 @@ namespace POTM
             currentSpeed = Mathf.Max(player.currentSpeed - player.minSpeed, 0);
             additionalDist = (currentSpeed * distDiff) / speedDiff;
             additionalHeight = (currentSpeed * (cameraHeight-0.01f)) / speedDiff;
+            additionalHeight += 0.5f;
             additionalFOV = (currentSpeed * diffFov) / speedDiff;
             playerRot = player.transform.rotation.eulerAngles;
 
