@@ -58,7 +58,6 @@ namespace POTM
             Debug.Log(Time.time - startTime);
             if(Time.time - startTime > sphereTime && !sphereStarted)
             {
-                AkSoundEngine.PostEvent("Play_OutroPart2", gameObject);
                 GameObject sphereGO = Instantiate(sphereVFX, transform.position, Quaternion.identity, transform);
                 sphereFX = sphereGO.GetComponent<VisualEffect>();
                 //sphereFX.SetInt("nb Stars", SM.getPlayerScore());
