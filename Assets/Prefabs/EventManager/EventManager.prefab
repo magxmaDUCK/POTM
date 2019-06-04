@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74de07c1faa154479cd57e86b4c2cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playing: 0
+  startTime: 0
   timeEvent1: 0
   timeEvent2: 150
   timeEvent3: 300
@@ -51,3 +53,4 @@ MonoBehaviour:
   QuartierRestaurant: {fileID: 0}
   FeuDeCamp: {fileID: 0}
   Firework: {fileID: 0}
+  display: {fileID: 0}
