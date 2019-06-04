@@ -26,6 +26,7 @@ namespace POTM
 
             if(Time.time - startTime > 30.0f)
             {
+                AkSoundEngine.PostEvent("Stop_All", gameObject);
                 lc.FadeToLevel("IslandLevel");
             }
         }

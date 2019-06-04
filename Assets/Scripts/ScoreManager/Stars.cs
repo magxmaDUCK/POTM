@@ -84,7 +84,7 @@ namespace POTM
 
                 //int onlineScore = SM.getOnlineScore();
                 int onlineScore = 40000;
-                if (onlineScore > 1000000)
+                if (onlineScore > 100000)
                 {
                     onlineGalaxies = onlineScore / 1000000;
                     int onlineStars = onlineScore % 1000000;

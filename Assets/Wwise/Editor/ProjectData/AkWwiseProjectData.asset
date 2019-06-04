@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: f3bb76a65116464ab8677079403d8853
     GuidInternal: 
-    m_lastTime: -8586420163112221528
+    m_lastTime: -8586419663481498418
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 02522841b21ceb4ab50a02e82da18aec
     GuidInternal: 
-    m_lastTime: -8586420160855764008
+    m_lastTime: -8586419604996829854
     List:
     - name: PotM
       guid: f2b8e3691563cc4a8113e087753feb8e
@@ -59,7 +59,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: e0aabc591baf36408043515028f544aa
     GuidInternal: 
-    m_lastTime: -8586420163432737321
+    m_lastTime: -8586419604996899336
     List:
     - name: LightNumbers1Relative
       guid: 3f3ed2cc301a6143b4d6781707b79e7d
@@ -82,7 +82,7 @@ MonoBehaviour:
       - ElementName: Load_Dummy_Melodie
         ObjectType: 3
       Path: PotM\Load_Dummy_Melodie
-      maxAttenuation: 60
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_Boost
@@ -106,7 +106,7 @@ MonoBehaviour:
       - ElementName: Play_Bounce
         ObjectType: 3
       Path: PotM\Play_Bounce
-      maxAttenuation: 60
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_FirePlace
@@ -118,7 +118,7 @@ MonoBehaviour:
       - ElementName: Play_FirePlace
         ObjectType: 3
       Path: PotM\Play_FirePlace
-      maxAttenuation: 50
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_FireWorks_Burst
@@ -130,7 +130,7 @@ MonoBehaviour:
       - ElementName: Play_FireWorks_Burst
         ObjectType: 3
       Path: PotM\Play_FireWorks_Burst
-      maxAttenuation: 50
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_FireWorks_Spin
@@ -142,7 +142,19 @@ MonoBehaviour:
       - ElementName: Play_FireWorks_Spin
         ObjectType: 3
       Path: PotM\Play_FireWorks_Spin
-      maxAttenuation: 50
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Foley
+      guid: 1f5f9fa9d583bf47ab6bf2cf2b77c934
+      id: 3113720603
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Play_Foley
+        ObjectType: 3
+      Path: PotM\Play_Foley
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_Ground
@@ -154,7 +166,7 @@ MonoBehaviour:
       - ElementName: Play_Ground
         ObjectType: 3
       Path: PotM\Play_Ground
-      maxAttenuation: 50
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_In_Woosh
@@ -166,7 +178,7 @@ MonoBehaviour:
       - ElementName: Play_In_Woosh
         ObjectType: 3
       Path: PotM\Play_In_Woosh
-      maxAttenuation: 60
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_Init
@@ -190,7 +202,7 @@ MonoBehaviour:
       - ElementName: Play_Kite_Fold
         ObjectType: 3
       Path: PotM\Play_Kite_Fold
-      maxAttenuation: 60
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_Kite_Foley
@@ -202,7 +214,7 @@ MonoBehaviour:
       - ElementName: Play_Kite_Foley
         ObjectType: 3
       Path: PotM\Play_Kite_Foley
-      maxAttenuation: 60
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_Kite_Unfold
@@ -214,7 +226,7 @@ MonoBehaviour:
       - ElementName: Play_Kite_Unfold
         ObjectType: 3
       Path: PotM\Play_Kite_Unfold
-      maxAttenuation: 60
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_Melodie_01
@@ -226,7 +238,7 @@ MonoBehaviour:
       - ElementName: Play_Melodie_01
         ObjectType: 3
       Path: PotM\Play_Melodie_01
-      maxAttenuation: 60
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_Melodie_02
@@ -238,7 +250,7 @@ MonoBehaviour:
       - ElementName: Play_Melodie_02
         ObjectType: 3
       Path: PotM\Play_Melodie_02
-      maxAttenuation: 60
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_Melodie_03
@@ -250,7 +262,7 @@ MonoBehaviour:
       - ElementName: Play_Melodie_03
         ObjectType: 3
       Path: PotM\Play_Melodie_03
-      maxAttenuation: 60
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_Melodie_04
@@ -262,7 +274,7 @@ MonoBehaviour:
       - ElementName: Play_Melodie_04
         ObjectType: 3
       Path: PotM\Play_Melodie_04
-      maxAttenuation: 60
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_Out_Woosh
@@ -274,7 +286,7 @@ MonoBehaviour:
       - ElementName: Play_Out_Woosh
         ObjectType: 3
       Path: PotM\Play_Out_Woosh
-      maxAttenuation: 60
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_OutroPart1
@@ -322,7 +334,7 @@ MonoBehaviour:
       - ElementName: Play_Sea
         ObjectType: 3
       Path: PotM\Play_Sea
-      maxAttenuation: 50
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_Stars
@@ -346,7 +358,7 @@ MonoBehaviour:
       - ElementName: Play_Waterfall
         ObjectType: 3
       Path: PotM\Play_Waterfall
-      maxAttenuation: 50
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_WoodMill
@@ -358,7 +370,19 @@ MonoBehaviour:
       - ElementName: Play_WoodMill
         ObjectType: 3
       Path: PotM\Play_WoodMill
-      maxAttenuation: 50
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_All
+      guid: 105f735182d7ce47a7e250bd9e2a7d14
+      id: 452547817
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Stop_All
+        ObjectType: 3
+      Path: PotM\Stop_All
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
   RtpcWwu:
@@ -372,7 +396,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: fd9bdaf483f2634ba661fa0c42ecb746
     GuidInternal: 
-    m_lastTime: -8586420163432477460
+    m_lastTime: -8586419663481627845
     List:
     - name: Doppler
       guid: 321943c3f5cde34ca697c971f0a054a1

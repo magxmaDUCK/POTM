@@ -93,6 +93,7 @@ namespace POTM
                 GetComponent<Spline.Walker>().enabled = true;
                 startTime = Time.time;
                 started = true;
+                AkSoundEngine.PostEvent("Play_Foley", GameObject.Find("WwiseHandler"));
             }
 
             if(Time.time - startTime > duration && started)

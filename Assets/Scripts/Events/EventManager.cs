@@ -85,6 +85,7 @@ namespace POTM
         public GameObject QuartierRestaurant;
         public GameObject FeuDeCamp;
         public GameObject Firework;
+        //public Text display;
 
 
 
