@@ -40,8 +40,8 @@ namespace POTM
             expFX = expansionVFX.GetComponent<VisualEffect>();
             expFX.Stop();
 
-            expFX.SetInt("nbStars", SM.getPlayerScore());
-            //expFX.SetInt("nbStars", 400);
+            //expFX.SetInt("nbStars", SM.getPlayerScore());
+            expFX.SetInt("nbStars", 400);
 
             expFX.Play();
             startTime = Time.time;
@@ -61,7 +61,8 @@ namespace POTM
                 AkSoundEngine.PostEvent("Play_OutroPart2", gameObject);
                 GameObject sphereGO = Instantiate(sphereVFX, transform.position, Quaternion.identity, transform);
                 sphereFX = sphereGO.GetComponent<VisualEffect>();
-                sphereFX.SetInt("nb Stars", SM.getPlayerScore());
+                //sphereFX.SetInt("nb Stars", SM.getPlayerScore());
+                sphereFX.SetInt("nb Stars", 400);
                 sphereStarted = true;
             }
 
@@ -71,7 +72,8 @@ namespace POTM
                 Destroy(sphereFX);
                 GameObject explosionGO = Instantiate(explosionVFX, transform.position, Quaternion.identity, transform);
                 explosionFX = explosionGO.GetComponent<VisualEffect>();
-                explosionFX.SetInt("nb Stars", SM.getPlayerScore());
+                //explosionFX.SetInt("nb Stars", SM.getPlayerScore());
+                explosionFX.SetInt("nb Stars", 400);
                 explosionStarted = true;
             }
 
@@ -81,7 +83,8 @@ namespace POTM
                 onlineStarsVFX = Instantiate(onlineStarsVFX, transform.position, Quaternion.identity, transform);
                 onlineFX = onlineStarsVFX.GetComponent<VisualEffect>();
 
-                int onlineScore = SM.getOnlineScore();
+                //int onlineScore = SM.getOnlineScore();
+                int onlineScore = 40000;
                 if (onlineScore > 1000000)
                 {
                     onlineGalaxies = onlineScore / 1000000;
