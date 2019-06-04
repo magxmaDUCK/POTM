@@ -560,7 +560,6 @@ MonoBehaviour:
   maxTurningAngle: 45
   topSpeedAnim: 20
   joystickDiffTolerence: 0.4
-  display: {fileID: 0}
   newControls: 1
   yawTurningSpeed: 3
   multiplayer: 1
@@ -600,7 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96a4644398ddc3e4caf3c7bb3d83651d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  islandRadius: 1000
+  islandRadius: 2000
 --- !u!114 &3243748068902447548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1630,11 +1629,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3243748068902680027}
     m_Modifications:
-    - target: {fileID: 521310451864677081, guid: bbe6ed872eca92b409bf23bee74e7381,
-        type: 3}
-      propertyPath: m_Name
-      value: plumeArriere
-      objectReference: {fileID: 0}
     - target: {fileID: 9025927928347712927, guid: bbe6ed872eca92b409bf23bee74e7381,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1689,6 +1683,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 521310451864677081, guid: bbe6ed872eca92b409bf23bee74e7381,
+        type: 3}
+      propertyPath: m_Name
+      value: plumeArriere
       objectReference: {fileID: 0}
     - target: {fileID: 5089697019108464407, guid: bbe6ed872eca92b409bf23bee74e7381,
         type: 3}
@@ -1835,11 +1834,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8155658864398784796}
     m_Modifications:
-    - target: {fileID: 6635129326199828423, guid: eb913e2601201d94b9ebb6b315f61f55,
-        type: 3}
-      propertyPath: m_Name
-      value: Main Camera
-      objectReference: {fileID: 0}
     - target: {fileID: 6635129326199828442, guid: eb913e2601201d94b9ebb6b315f61f55,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1895,6 +1889,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6635129326199828423, guid: eb913e2601201d94b9ebb6b315f61f55,
+        type: 3}
+      propertyPath: m_Name
+      value: Main Camera
+      objectReference: {fileID: 0}
     - target: {fileID: 6635129326199828443, guid: eb913e2601201d94b9ebb6b315f61f55,
         type: 3}
       propertyPath: player
@@ -1920,11 +1919,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3243748068902680027}
     m_Modifications:
-    - target: {fileID: 521310451864677081, guid: bbe6ed872eca92b409bf23bee74e7381,
-        type: 3}
-      propertyPath: m_Name
-      value: plumeArriere (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 9025927928347712927, guid: bbe6ed872eca92b409bf23bee74e7381,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1979,6 +1973,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 521310451864677081, guid: bbe6ed872eca92b409bf23bee74e7381,
+        type: 3}
+      propertyPath: m_Name
+      value: plumeArriere (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5089697019108464407, guid: bbe6ed872eca92b409bf23bee74e7381,
         type: 3}
