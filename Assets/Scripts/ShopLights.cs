@@ -12,7 +12,10 @@ namespace POTM
         {
             foreach (LightPickup l in light)
             {
-                l.TurnOff();
+                if(l != null)
+                {
+                    l.TurnOff();
+                }
             }
         }
     }
