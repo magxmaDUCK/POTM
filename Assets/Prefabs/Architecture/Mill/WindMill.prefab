@@ -71,7 +71,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459952392322310057}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c14c0035061febb4ca0998c6b13139a1, type: 3}
   m_Name: 
@@ -643,7 +643,12 @@ PrefabInstance:
     - target: {fileID: 6184461664221803147, guid: c6263a6ad33676248900037637464112,
         type: 3}
       propertyPath: boostDirections.Array.size
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184461664221803147, guid: c6263a6ad33676248900037637464112,
+        type: 3}
+      propertyPath: directionnalBoost
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6263a6ad33676248900037637464112, type: 3}
