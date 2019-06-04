@@ -23,6 +23,11 @@ namespace Spline
 
         private void Update()
         {
+            if(path == null)
+            {
+                return;
+            }
+
             if (goingForward)
             {
                 progress += Time.deltaTime / duration;
