@@ -31,14 +31,17 @@ namespace POTM
             rocketFX.SetVector3("pos", transform.position);
 
             if (Time.time - startTime > explosionTime && !exploded)
-            {
+            {               
                 Material mat = colors.col[Random.Range(0, colors.col.Count)];
                 for (int i = 0; i < 30; i++)
                 {
                     GameObject go  = Instantiate(spark, transform.position, transform.rotation);
                     Renderer rend = go.GetComponent<Renderer>();
-                    rend.material = mat;
-                    AkSoundEngine.PostEvent("Play_FireWorks_Burst", gameObject);
+                    rend.material = mat;  
+                    if(i == 0)
+                    {
+                        AkSoundEngine.PostEvent("Play_FireWorks_Burst", go);
+                    }
                 }
                 exploded = true;
                 Destroy(gameObject);

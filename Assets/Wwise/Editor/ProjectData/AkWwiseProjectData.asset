@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 02522841b21ceb4ab50a02e82da18aec
     GuidInternal: 
-    m_lastTime: -8586419604996829854
+    m_lastTime: -8586419562825258665
     List:
     - name: PotM
       guid: f2b8e3691563cc4a8113e087753feb8e
@@ -53,13 +53,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 643a38164064c9459658ade970c81302
     GuidInternal: 
-    m_lastTime: -8586420163433027150
+    m_lastTime: -8586419606445501356
     List: []
   - PhysicalPath: Events\PotM.wwu
     ParentPhysicalPath: 
     guid: e0aabc591baf36408043515028f544aa
     GuidInternal: 
-    m_lastTime: -8586419604996899336
+    m_lastTime: -8586419562908660802
     List:
     - name: LightNumbers1Relative
       guid: 3f3ed2cc301a6143b4d6781707b79e7d
@@ -382,6 +382,30 @@ MonoBehaviour:
       - ElementName: Stop_All
         ObjectType: 3
       Path: PotM\Stop_All
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_State1
+      guid: 101220dbe0c5d14e9f2fee912af961bd
+      id: 844159260
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Stop_State1
+        ObjectType: 3
+      Path: PotM\Stop_State1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_State3
+      guid: 301c82124b6d4d428ac6c72278706ea6
+      id: 844159262
+      PathAndIcons:
+      - ElementName: PotM
+        ObjectType: 12
+      - ElementName: Stop_State3
+        ObjectType: 3
+      Path: PotM\Stop_State3
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

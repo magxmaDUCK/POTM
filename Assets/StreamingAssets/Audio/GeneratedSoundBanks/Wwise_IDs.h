@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID PLAY_FIREPLACE = 1501216439U;
         static const AkUniqueID PLAY_FIREWORKS_BURST = 262246631U;
         static const AkUniqueID PLAY_FIREWORKS_SPIN = 2729573343U;
+        static const AkUniqueID PLAY_FOLEY = 3113720603U;
         static const AkUniqueID PLAY_GROUND = 3429773683U;
         static const AkUniqueID PLAY_IN_WOOSH = 3654176658U;
         static const AkUniqueID PLAY_INIT = 426840996U;
@@ -38,6 +39,9 @@ namespace AK
         static const AkUniqueID PLAY_STARS = 2230670293U;
         static const AkUniqueID PLAY_WATERFALL = 467174588U;
         static const AkUniqueID PLAY_WOODMILL = 2171436799U;
+        static const AkUniqueID STOP_ALL = 452547817U;
+        static const AkUniqueID STOP_STATE1 = 844159260U;
+        static const AkUniqueID STOP_STATE3 = 844159262U;
     } // namespace EVENTS
 
     namespace STATES
