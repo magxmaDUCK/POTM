@@ -34,9 +34,6 @@ namespace POTM
         [Range(0,1)]
         public float joystickDiffTolerence = 0.4f;
 
-        [Tooltip("UI for info")]
-        public Text display;
-
         public bool newControls = false;
 
         public float yawTurningSpeed;
@@ -216,10 +213,6 @@ namespace POTM
 
             //Update the speed and pitchAngle varibale
             updateSpeed();
-
-            //Update the display text
-            if (display != null)
-                updateDisplay();
         }
 
         public void AutoEvasion()
@@ -300,11 +293,6 @@ namespace POTM
                     unfold = true;
                 }
             }
-        }
-
-        public void updateDisplay()
-        {
-            display.text = "PLANE\nSpeed : " + currentSpeed + "\nAngle : " + pitchAngle + "\n Roll angle : " + rollStartAngle;
         }
 
         public void resetRoll()

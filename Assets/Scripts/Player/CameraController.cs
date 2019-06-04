@@ -43,8 +43,6 @@ namespace POTM
         public float shakeSpeed;
         public bool rotationShake = true;
 
-        public Text display;
-
         [Tooltip("Use target camera type")]
         public bool target_cam = false;
 
@@ -133,8 +131,6 @@ namespace POTM
             //Set FOV according to speed
             cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, minFOV + additionalFOV, 2f * Time.fixedDeltaTime);
             //cam.fieldOfView = minFOV + additionalFOV;
-
-            UpdateDisplay();
         }
 
         public void ResetRotation()
@@ -142,11 +138,6 @@ namespace POTM
             transform.rotation = Quaternion.Euler(
                 new Vector3(player.transform.rotation.eulerAngles.x + cameraAngle, player.transform.rotation.eulerAngles.y, 0)
                 );
-        }
-
-        public void UpdateDisplay()
-        {
-            display.text = "CAMERA\ncamera offset angle yaw : " + player.yaw * yawOffsetAngle + "\n pitch angle : " + player.pitch * pitchOffsetAngle;
         }
 
         public Vector3 CameraShake()
