@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.VFX;
+using UnityEngine.UI;
 
 namespace POTM
 {
     public class EventManager : MonoBehaviour
     {
-        private static bool m_ShuttingDown = false;
-        private static object m_Lock = new object();
+        //private static object m_Lock = new object();
         private static EventManager m_Instance;
 
         /// <summary>
@@ -18,48 +18,35 @@ namespace POTM
         {
             get
             {
-                if (m_ShuttingDown)
-                {
-                    Debug.LogWarning("[Singleton] Instance '" + typeof(EventManager) +
-                        "' already destroyed. Returning null.");
-                    return null;
-                }
-
-                lock (m_Lock)
-                {
+                //lock (m_Lock)
+                //{
                     if (m_Instance == null)
                     {
                         // Search for existing instance.
-                        m_Instance = (EventManager)FindObjectOfType(typeof(EventManager));
+                        m_Instance = FindObjectOfType<EventManager>();
 
                         // Create new instance if one doesn't already exist.
                         if (m_Instance == null)
                         {
-                            // Need to create a new GameObject to attach the singleton to.
-                            var singletonObject = new GameObject();
-                            m_Instance = singletonObject.AddComponent<EventManager>();
-                            singletonObject.name = typeof(EventManager).ToString() + " (Singleton)";
+                            //// Need to create a new GameObject to attach the singleton to.
+                            //var singletonObject = new GameObject();
+                            //m_Instance = singletonObject.AddComponent<EventManager>();
+                            //singletonObject.name = typeof(EventManager).ToString() + " (Singleton)";
 
-                            // Make instance persistent.
-                            DontDestroyOnLoad(singletonObject);
+                            //// Make instance persistent.
                         }
                     }
 
                     return m_Instance;
-                }
+                //}
             }
         }
-
-
-        private void OnApplicationQuit()
-        {
-            m_ShuttingDown = true;
-        }
+        
 
 
         private void OnDestroy()
         {
-            m_ShuttingDown = true;
+            m_Instance = null;
         }
 
         protected EventManager() { }
@@ -85,14 +72,15 @@ namespace POTM
         public GameObject QuartierRestaurant;
         public GameObject FeuDeCamp;
         public GameObject Firework;
-        //public Text display;
+        public Text display;
 
 
 
 
-        private void Start()
+        private void Awake()
         {
-            
+            m_Instance = this;
+            display.enabled = false;
         }
 
         private void Update()
@@ -144,6 +132,8 @@ namespace POTM
             {
                 Destroy(f.transform.GetComponentInChildren<VisualEffect>().gameObject);
             }
+
+            AkSoundEngine.PostEvent("Stop_State1", gameObject);
             
         }
 
@@ -162,12 +152,17 @@ namespace POTM
             }
 
             AkSoundEngine.SetState("MusicSelection", "Part2");
+            
             Firework.SetActive(true);
         }
 
         private void Event4()
         {
             Destroy(Firework);
+            display.enabled = true;
+            AkSoundEngine.PostEvent("Stop_State3", gameObject);
+            AkSoundEngine.SetState("MusicState", "Far");
+            GameObject.Find("MusicZone").SetActive(false);
 
             LightPickup[] lights = QuartierRestaurant.GetComponentsInChildren<LightPickup>();
             foreach (LightPickup l in lights)
@@ -180,6 +175,7 @@ namespace POTM
             {
                 sl.TurnOff();
             }
+
         }
 
         //End the event currently activated

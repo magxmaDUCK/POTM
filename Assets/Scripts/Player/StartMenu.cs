@@ -26,6 +26,8 @@ namespace POTM
         public float duration = 5f;
 
         private ArduinoReader AR;
+
+        private float sceneStartTime;
         // Start is called before the first frame update
         private void Awake()
         {
@@ -37,6 +39,7 @@ namespace POTM
         {
             AR = GetComponent<ArduinoReader>();
             EventManager.Instance.NewGame();
+            sceneStartTime = Time.time;
         }
 
         // Update is called once per frame
