@@ -57,22 +57,22 @@ public class ArduinoReader : MonoBehaviour
         if (fullSize)
         {
             //L
-            potMaxG = 600;
-            potMaxD = 700;
-            potMinG = 300;
-            potMinD = 400;
-            distMax = 170;
-            distMin = 75;
+            potMaxG = 53;
+            potMaxD = 62;
+            potMinG = 49;
+            potMinD= 57;
+            distMax = 36;
+            distMin = 3;
         }
         else
         {
             //S
-            potMaxG = 600;
-            potMaxD = 700;
-            potMinG = 300;
-            potMinD = 400;
-            distMax = 170;
-            distMin = 75;
+            potMaxG = 53;
+            potMaxD = 61;
+            potMinG = 48;
+            potMinD = 57;
+            distMax = 36;
+            distMin = 3;
         }
     }
     
@@ -185,13 +185,17 @@ public class ArduinoReader : MonoBehaviour
             potP1 = int.Parse(words[3]);
             potP2 = int.Parse(words[5]);
 
-            potP1 = Mathf.Min(potP1, potMaxG);
-            potP1 = Mathf.Max(potP1, potMinG);
-            potP2 = Mathf.Min(potP2, potMaxD);
-            potP2 = Mathf.Max(potP2, potMinD);
+            
+            potP2 = Mathf.Min(potP2, potMaxG);
+            potP2 = Mathf.Max(potP2, potMinG);
+            potP1 = Mathf.Min(potP1, potMaxD);
+            potP1 = Mathf.Max(potP1, potMinD);
 
             dist = Mathf.Min(dist, distMax);
             dist = Mathf.Max(dist, distMin);
+            
+
+            //Debug.Log(dist + "__" + potP1 + "__" + potP2);
         }
     }
 
